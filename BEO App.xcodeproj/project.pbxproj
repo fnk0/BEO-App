@@ -8,12 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */; };
-		2C11A23E1BC0DE7200838E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23D1BC0DE7200838E07 /* ViewController.swift */; };
+		2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23D1BC0DE7200838E07 /* MainController.swift */; };
 		2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A23F1BC0DE7200838E07 /* Main.storyboard */; };
 		2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2421BC0DE7200838E07 /* Assets.xcassets */; };
 		2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */; };
 		2C11A2511BC0DE7200838E07 /* BEO_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */; };
 		2C11A25C1BC0DE7200838E07 /* BEO_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */; };
+		2C11A26A1BC0DF1000838E07 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2691BC0DF1000838E07 /* Podfile */; settings = {ASSET_TAGS = (); }; };
+		2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A26C1BC0F08000838E07 /* marriot_logo.png */; settings = {ASSET_TAGS = (); }; };
+		2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A26E1BC10C0C00838E07 /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2711BC10C4F00838E07 /* NewAccountController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2761BC11A8F00838E07 /* StringExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27A1BC19CEE00838E07 /* Segues.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27C1BC1A95A00838E07 /* HomeController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27E1BC1A99500838E07 /* MyEventsController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2811BC1A9B200838E07 /* UpdatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2801BC1A9B200838E07 /* UpdatesController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2831BC1A9BB00838E07 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2821BC1A9BB00838E07 /* HelpController.swift */; settings = {ASSET_TAGS = (); }; };
+		2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2921BC1AB1F00838E07 /* IMG_1534.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2891BC1AB1F00838E07 /* IMG_1532.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28A1BC1AB1F00838E07 /* IMG_1531.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28B1BC1AB1F00838E07 /* IMG_1530.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28C1BC1AB1F00838E07 /* IMG_1529.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28D1BC1AB1F00838E07 /* IMG_1528.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */; settings = {ASSET_TAGS = (); }; };
+		2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */; settings = {ASSET_TAGS = (); }; };
+		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BF743B10CC334A6F325756D /* Pods-BEO App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.debug.xcconfig"; sourceTree = "<group>"; };
+		1D031ADA42BAC4F845EF70B0 /* Pods-BEO App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.release.xcconfig"; sourceTree = "<group>"; };
 		2C11A2381BC0DE7200838E07 /* BEO App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEO App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C11A23D1BC0DE7200838E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C11A23D1BC0DE7200838E07 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		2C11A2401BC0DE7200838E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C11A2421BC0DE7200838E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C11A2451BC0DE7200838E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +72,29 @@
 		2C11A2571BC0DE7200838E07 /* BEO AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BEO AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEO_AppUITests.swift; sourceTree = "<group>"; };
 		2C11A25D1BC0DE7300838E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C11A2691BC0DF1000838E07 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2C11A26C1BC0F08000838E07 /* marriot_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marriot_logo.png; sourceTree = "<group>"; };
+		2C11A26E1BC10C0C00838E07 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2C11A2711BC10C4F00838E07 /* NewAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountController.swift; sourceTree = "<group>"; };
+		2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		2C11A2761BC11A8F00838E07 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		2C11A27A1BC19CEE00838E07 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		2C11A27C1BC1A95A00838E07 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		2C11A27E1BC1A99500838E07 /* MyEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsController.swift; sourceTree = "<group>"; };
+		2C11A2801BC1A9B200838E07 /* UpdatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesController.swift; sourceTree = "<group>"; };
+		2C11A2821BC1A9BB00838E07 /* HelpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
+		2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1535.JPG; sourceTree = "<group>"; };
+		2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1534.JPG; sourceTree = "<group>"; };
+		2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1533.JPG; sourceTree = "<group>"; };
+		2C11A2891BC1AB1F00838E07 /* IMG_1532.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1532.JPG; sourceTree = "<group>"; };
+		2C11A28A1BC1AB1F00838E07 /* IMG_1531.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1531.JPG; sourceTree = "<group>"; };
+		2C11A28B1BC1AB1F00838E07 /* IMG_1530.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1530.JPG; sourceTree = "<group>"; };
+		2C11A28C1BC1AB1F00838E07 /* IMG_1529.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1529.JPG; sourceTree = "<group>"; };
+		2C11A28D1BC1AB1F00838E07 /* IMG_1528.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1528.JPG; sourceTree = "<group>"; };
+		2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1526.JPG; sourceTree = "<group>"; };
+		2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1527.JPG; sourceTree = "<group>"; };
+		2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1525.JPG; sourceTree = "<group>"; };
+		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +123,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10BB689912473F693370BA10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BF743B10CC334A6F325756D /* Pods-BEO App.debug.xcconfig */,
+				1D031ADA42BAC4F845EF70B0 /* Pods-BEO App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2C11A22F1BC0DE7200838E07 = {
 			isa = PBXGroup;
 			children = (
+				2C11A2851BC1AB1200838E07 /* Wireframe */,
+				2C11A2691BC0DF1000838E07 /* Podfile */,
 				2C11A23A1BC0DE7200838E07 /* BEO App */,
 				2C11A24F1BC0DE7200838E07 /* BEO AppTests */,
 				2C11A25A1BC0DE7200838E07 /* BEO AppUITests */,
 				2C11A2391BC0DE7200838E07 /* Products */,
+				10BB689912473F693370BA10 /* Pods */,
+				6F1BA9CE955EA931940A6009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +159,12 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				2C11A2791BC19CE500838E07 /* constants */,
+				2C11A2781BC19CB900838E07 /* Main */,
+				2C11A2751BC11A8200838E07 /* extensions */,
+				2C11A2701BC10C3800838E07 /* login */,
+				2C11A26B1BC0F06F00838E07 /* images */,
 				2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */,
-				2C11A23D1BC0DE7200838E07 /* ViewController.swift */,
 				2C11A23F1BC0DE7200838E07 /* Main.storyboard */,
 				2C11A2421BC0DE7200838E07 /* Assets.xcassets */,
 				2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */,
@@ -125,6 +191,78 @@
 			path = "BEO AppUITests";
 			sourceTree = "<group>";
 		};
+		2C11A26B1BC0F06F00838E07 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A26C1BC0F08000838E07 /* marriot_logo.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		2C11A2701BC10C3800838E07 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A26E1BC10C0C00838E07 /* LoginController.swift */,
+				2C11A2711BC10C4F00838E07 /* NewAccountController.swift */,
+				2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		2C11A2751BC11A8200838E07 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A2761BC11A8F00838E07 /* StringExtensions.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		2C11A2781BC19CB900838E07 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A23D1BC0DE7200838E07 /* MainController.swift */,
+				2C11A27C1BC1A95A00838E07 /* HomeController.swift */,
+				2C11A27E1BC1A99500838E07 /* MyEventsController.swift */,
+				2C11A2801BC1A9B200838E07 /* UpdatesController.swift */,
+				2C11A2821BC1A9BB00838E07 /* HelpController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2C11A2791BC19CE500838E07 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A27A1BC19CEE00838E07 /* Segues.swift */,
+			);
+			name = constants;
+			sourceTree = "<group>";
+		};
+		2C11A2851BC1AB1200838E07 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */,
+				2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */,
+				2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */,
+				2C11A2891BC1AB1F00838E07 /* IMG_1532.JPG */,
+				2C11A28A1BC1AB1F00838E07 /* IMG_1531.JPG */,
+				2C11A28B1BC1AB1F00838E07 /* IMG_1530.JPG */,
+				2C11A28C1BC1AB1F00838E07 /* IMG_1529.JPG */,
+				2C11A28D1BC1AB1F00838E07 /* IMG_1528.JPG */,
+				2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */,
+				2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */,
+				2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		6F1BA9CE955EA931940A6009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C11A2601BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO App" */;
 			buildPhases = (
+				B98378B426B3F68BEEF3B480 /* Check Pods Manifest.lock */,
 				2C11A2341BC0DE7200838E07 /* Sources */,
 				2C11A2351BC0DE7200838E07 /* Frameworks */,
 				2C11A2361BC0DE7200838E07 /* Resources */,
+				10AAFB342461DDA5E973C22C /* Copy Pods Resources */,
+				674B753CF676DC47865E6B4B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +333,7 @@
 				TargetAttributes = {
 					2C11A2371BC0DE7200838E07 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = TVVT3U24R7;
 					};
 					2C11A24B1BC0DE7200838E07 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -228,9 +370,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
+				2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */,
+				2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */,
+				2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */,
+				2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */,
 				2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */,
 				2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */,
+				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
+				2C11A26A1BC0DF1000838E07 /* Podfile in Resources */,
+				2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */,
+				2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */,
+				2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */,
+				2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */,
+				2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */,
 				2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */,
+				2C11A2921BC1AB1F00838E07 /* IMG_1534.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,12 +405,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10AAFB342461DDA5E973C22C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEO App/Pods-BEO App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		674B753CF676DC47865E6B4B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEO App/Pods-BEO App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98378B426B3F68BEEF3B480 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C11A2341BC0DE7200838E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C11A23E1BC0DE7200838E07 /* ViewController.swift in Sources */,
+				2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */,
+				2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */,
+				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
+				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
+				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
+				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
+				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
+				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
+				2C11A2831BC1A9BB00838E07 /* HelpController.swift in Sources */,
+				2C11A2811BC1A9B200838E07 /* UpdatesController.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,23 +608,31 @@
 		};
 		2C11A2611BC0DE7300838E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF743B10CC334A6F325756D /* Pods-BEO App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BEO App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		2C11A2621BC0DE7300838E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D031ADA42BAC4F845EF70B0 /* Pods-BEO App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BEO App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -483,6 +703,7 @@
 				2C11A2621BC0DE7300838E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C11A2631BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +712,7 @@
 				2C11A2651BC0DE7300838E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C11A2661BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +721,7 @@
 				2C11A2681BC0DE7300838E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,36 @@
+PODS:
+  - B68UIFloatLabelTextField (0.1.2)
+  - Bolts/Tasks (1.3.0)
+  - Parse (1.8.5):
+    - Bolts/Tasks (>= 1.2.2)
+  - PKHUD (2.1.0)
+
+DEPENDENCIES:
+  - B68UIFloatLabelTextField (from `https://github.com/dirkfabisch/B68FloatingLabelTextField.git`,
+    branch `Swift_2.0`)
+  - Parse
+  - PKHUD (from `https://github.com/pkluz/PKHUD.git`, branch `swift-2.0`)
+
+EXTERNAL SOURCES:
+  B68UIFloatLabelTextField:
+    :branch: Swift_2.0
+    :git: https://github.com/dirkfabisch/B68FloatingLabelTextField.git
+  PKHUD:
+    :branch: swift-2.0
+    :git: https://github.com/pkluz/PKHUD.git
+
+CHECKOUT OPTIONS:
+  B68UIFloatLabelTextField:
+    :commit: a46ce1a319b7ade8b083c66f1e868549bba912a2
+    :git: https://github.com/dirkfabisch/B68FloatingLabelTextField.git
+  PKHUD:
+    :commit: 0383b02b5552dc4596e3fa24829da67e38cb6bc8
+    :git: https://github.com/pkluz/PKHUD.git
+
+SPEC CHECKSUMS:
+  B68UIFloatLabelTextField: 337894ff837df84e19636c99f3f5f88c4fad60d7
+  Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
+  Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
+  PKHUD: 7f64bacc94bb0f91ad0e15118bb4013ef229e187
+
+COCOAPODS: 0.38.2
