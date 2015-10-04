@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */; };
+		2C11A23E1BC0DE7200838E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23D1BC0DE7200838E07 /* ViewController.swift */; };
+		2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A23F1BC0DE7200838E07 /* Main.storyboard */; };
+		2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2421BC0DE7200838E07 /* Assets.xcassets */; };
+		2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */; };
+		2C11A2511BC0DE7200838E07 /* BEO_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */; };
+		2C11A25C1BC0DE7200838E07 /* BEO_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C11A24D1BC0DE7200838E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C11A2301BC0DE7200838E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C11A2371BC0DE7200838E07;
+			remoteInfo = "BEO App";
+		};
+		2C11A2581BC0DE7200838E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C11A2301BC0DE7200838E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C11A2371BC0DE7200838E07;
+			remoteInfo = "BEO App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C11A2381BC0DE7200838E07 /* BEO App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEO App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C11A23D1BC0DE7200838E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C11A2401BC0DE7200838E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C11A2421BC0DE7200838E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C11A2451BC0DE7200838E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C11A2471BC0DE7200838E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C11A24C1BC0DE7200838E07 /* BEO AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BEO AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEO_AppTests.swift; sourceTree = "<group>"; };
+		2C11A2521BC0DE7200838E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C11A2571BC0DE7200838E07 /* BEO AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BEO AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEO_AppUITests.swift; sourceTree = "<group>"; };
+		2C11A25D1BC0DE7300838E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C11A2351BC0DE7200838E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A2491BC0DE7200838E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A2541BC0DE7200838E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C11A22F1BC0DE7200838E07 = {
+			isa = PBXGroup;
+			children = (
+				2C11A23A1BC0DE7200838E07 /* BEO App */,
+				2C11A24F1BC0DE7200838E07 /* BEO AppTests */,
+				2C11A25A1BC0DE7200838E07 /* BEO AppUITests */,
+				2C11A2391BC0DE7200838E07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C11A2391BC0DE7200838E07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A2381BC0DE7200838E07 /* BEO App.app */,
+				2C11A24C1BC0DE7200838E07 /* BEO AppTests.xctest */,
+				2C11A2571BC0DE7200838E07 /* BEO AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */,
+				2C11A23D1BC0DE7200838E07 /* ViewController.swift */,
+				2C11A23F1BC0DE7200838E07 /* Main.storyboard */,
+				2C11A2421BC0DE7200838E07 /* Assets.xcassets */,
+				2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */,
+				2C11A2471BC0DE7200838E07 /* Info.plist */,
+			);
+			path = "BEO App";
+			sourceTree = "<group>";
+		};
+		2C11A24F1BC0DE7200838E07 /* BEO AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */,
+				2C11A2521BC0DE7200838E07 /* Info.plist */,
+			);
+			path = "BEO AppTests";
+			sourceTree = "<group>";
+		};
+		2C11A25A1BC0DE7200838E07 /* BEO AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */,
+				2C11A25D1BC0DE7300838E07 /* Info.plist */,
+			);
+			path = "BEO AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C11A2371BC0DE7200838E07 /* BEO App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C11A2601BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO App" */;
+			buildPhases = (
+				2C11A2341BC0DE7200838E07 /* Sources */,
+				2C11A2351BC0DE7200838E07 /* Frameworks */,
+				2C11A2361BC0DE7200838E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BEO App";
+			productName = "BEO App";
+			productReference = 2C11A2381BC0DE7200838E07 /* BEO App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C11A24B1BC0DE7200838E07 /* BEO AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C11A2631BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppTests" */;
+			buildPhases = (
+				2C11A2481BC0DE7200838E07 /* Sources */,
+				2C11A2491BC0DE7200838E07 /* Frameworks */,
+				2C11A24A1BC0DE7200838E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C11A24E1BC0DE7200838E07 /* PBXTargetDependency */,
+			);
+			name = "BEO AppTests";
+			productName = "BEO AppTests";
+			productReference = 2C11A24C1BC0DE7200838E07 /* BEO AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C11A2561BC0DE7200838E07 /* BEO AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C11A2661BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppUITests" */;
+			buildPhases = (
+				2C11A2531BC0DE7200838E07 /* Sources */,
+				2C11A2541BC0DE7200838E07 /* Frameworks */,
+				2C11A2551BC0DE7200838E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C11A2591BC0DE7200838E07 /* PBXTargetDependency */,
+			);
+			name = "BEO AppUITests";
+			productName = "BEO AppUITests";
+			productReference = 2C11A2571BC0DE7200838E07 /* BEO AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C11A2301BC0DE7200838E07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Team Black";
+				TargetAttributes = {
+					2C11A2371BC0DE7200838E07 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					2C11A24B1BC0DE7200838E07 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 2C11A2371BC0DE7200838E07;
+					};
+					2C11A2561BC0DE7200838E07 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 2C11A2371BC0DE7200838E07;
+					};
+				};
+			};
+			buildConfigurationList = 2C11A2331BC0DE7200838E07 /* Build configuration list for PBXProject "BEO App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C11A22F1BC0DE7200838E07;
+			productRefGroup = 2C11A2391BC0DE7200838E07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C11A2371BC0DE7200838E07 /* BEO App */,
+				2C11A24B1BC0DE7200838E07 /* BEO AppTests */,
+				2C11A2561BC0DE7200838E07 /* BEO AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C11A2361BC0DE7200838E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */,
+				2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */,
+				2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A24A1BC0DE7200838E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A2551BC0DE7200838E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C11A2341BC0DE7200838E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11A23E1BC0DE7200838E07 /* ViewController.swift in Sources */,
+				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A2481BC0DE7200838E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11A2511BC0DE7200838E07 /* BEO_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11A2531BC0DE7200838E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11A25C1BC0DE7200838E07 /* BEO_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C11A24E1BC0DE7200838E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C11A2371BC0DE7200838E07 /* BEO App */;
+			targetProxy = 2C11A24D1BC0DE7200838E07 /* PBXContainerItemProxy */;
+		};
+		2C11A2591BC0DE7200838E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C11A2371BC0DE7200838E07 /* BEO App */;
+			targetProxy = 2C11A2581BC0DE7200838E07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C11A23F1BC0DE7200838E07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C11A2401BC0DE7200838E07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C11A2451BC0DE7200838E07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C11A25E1BC0DE7300838E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C11A25F1BC0DE7300838E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C11A2611BC0DE7300838E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BEO App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C11A2621BC0DE7300838E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BEO App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C11A2641BC0DE7300838E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BEO AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEO App.app/BEO App";
+			};
+			name = Debug;
+		};
+		2C11A2651BC0DE7300838E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BEO AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEO App.app/BEO App";
+			};
+			name = Release;
+		};
+		2C11A2671BC0DE7300838E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BEO AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BEO App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2C11A2681BC0DE7300838E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BEO AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BEO App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C11A2331BC0DE7200838E07 /* Build configuration list for PBXProject "BEO App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C11A25E1BC0DE7300838E07 /* Debug */,
+				2C11A25F1BC0DE7300838E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C11A2601BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C11A2611BC0DE7300838E07 /* Debug */,
+				2C11A2621BC0DE7300838E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C11A2631BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C11A2641BC0DE7300838E07 /* Debug */,
+				2C11A2651BC0DE7300838E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C11A2661BC0DE7300838E07 /* Build configuration list for PBXNativeTarget "BEO AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C11A2671BC0DE7300838E07 /* Debug */,
+				2C11A2681BC0DE7300838E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C11A2301BC0DE7200838E07 /* Project object */;
+}
