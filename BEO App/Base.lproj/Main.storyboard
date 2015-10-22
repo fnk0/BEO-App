@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IFR-bW-eFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IFR-bW-eFf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -177,47 +177,89 @@
             </objects>
             <point key="canvasLocation" x="2876" y="408"/>
         </scene>
-        <!--MY EVENTS-->
-        <scene sceneID="SLH-Mg-jdS">
-            <objects>
-                <viewController id="PWX-aW-sRC" customClass="MyEventsController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RPt-Cl-TNa"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZYL-M1-ymf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4mC-ai-oay">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="My Events" id="MqP-I9-Juj"/>
-                    <navigationItem key="navigationItem" title="MY EVENTS" id="2dL-Ef-rUU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JuS-Ez-YCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1805" y="2449"/>
-        </scene>
         <!--HOME-->
-        <scene sceneID="87m-QH-58K">
+        <scene sceneID="gcf-Cn-Gvg">
             <objects>
-                <viewController id="F3Z-iK-fe3" customClass="HomeController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DWt-4D-stc"/>
-                        <viewControllerLayoutGuide type="bottom" id="H67-5g-8Jc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pFx-iQ-Zhn">
+                <tableViewController title="HOME" id="XBb-QU-gIa" customClass="HomeTableViewController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JIH-yU-Ydc">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Bpt-D5-WsJ"/>
-                    <navigationItem key="navigationItem" title="HOME" id="TZE-t1-jpB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="srW-l6-Ja5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeTableCell" id="pFg-0Z-GbR">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pFg-0Z-GbR" id="0ZW-88-Y1e">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XBb-QU-gIa" id="MOk-c1-tbX"/>
+                            <outlet property="delegate" destination="XBb-QU-gIa" id="TXC-lM-8cX"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="65t-LK-R4a"/>
+                    <toolbarItems>
+                        <barButtonItem title="Home" id="VjD-ST-xK3"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4WC-vM-sNO"/>
+                        <barButtonItem title="My Events" id="g1u-kd-O1h">
+                            <connections>
+                                <segue destination="VYq-kf-9Ek" kind="show" id="pfA-TQ-v44"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Q8X-Yn-PkW"/>
+                        <barButtonItem title="Updates and Alerts" id="ejU-2b-f7T"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="KLz-wS-Ovq"/>
+                        <barButtonItem title="Help" id="BOg-bT-08K"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="HOME" id="5xO-yH-5NT"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YW-5n-WCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="2449"/>
+            <point key="canvasLocation" x="1142" y="2449"/>
+        </scene>
+        <!--MY EVENTS-->
+        <scene sceneID="LDw-Tx-uOY">
+            <objects>
+                <tableViewController title="MY EVENTS" id="VYq-kf-9Ek" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8Ln-l8-6ht">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myEventsTableCell" id="cJD-VL-C7I">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJD-VL-C7I" id="Gei-TS-OQR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VYq-kf-9Ek" id="9I0-Qw-ge5"/>
+                            <outlet property="delegate" destination="VYq-kf-9Ek" id="qBI-aG-c17"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="OrG-9N-Sz7"/>
+                    <toolbarItems>
+                        <barButtonItem title="Home" id="My9-cv-EeR"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="BQC-gy-Xff"/>
+                        <barButtonItem title="My Events" id="uwx-FK-lX8"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="P2z-TV-09Y"/>
+                        <barButtonItem title="Updates and Alerts" id="trd-hJ-IKL"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="0fk-Bo-K26"/>
+                        <barButtonItem title="Help" id="dco-BW-Qxm"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="MY EVENTS" id="rfu-SA-4CH"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcc-hO-YaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="2449"/>
         </scene>
         <!--UPDATES-->
         <scene sceneID="8fa-ft-8tb">
@@ -290,6 +332,7 @@
             <objects>
                 <tabBarController id="xMe-6K-dqq" userLabel="MainController" customClass="MainController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Marriot" id="Thg-cq-Kpd"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ALw-k6-oKy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -297,10 +340,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="F3Z-iK-fe3" kind="relationship" relationship="viewControllers" id="cBV-Im-6OO"/>
-                        <segue destination="PWX-aW-sRC" kind="relationship" relationship="viewControllers" id="I0t-mt-wAD"/>
                         <segue destination="Ccy-5R-T5x" kind="relationship" relationship="viewControllers" id="vNX-WB-m6Y"/>
                         <segue destination="bZp-bh-eNM" kind="relationship" relationship="viewControllers" id="bac-zE-fug"/>
+                        <segue destination="XBb-QU-gIa" kind="relationship" relationship="viewControllers" id="YWT-8B-akm"/>
+                        <segue destination="VYq-kf-9Ek" kind="relationship" relationship="viewControllers" id="0ZD-xr-Wdd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSX-js-sHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -513,5 +556,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kVy-g0-v1c"/>
+        <segue reference="pfA-TQ-v44"/>
     </inferredMetricsTieBreakers>
 </document>

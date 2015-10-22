@@ -37,6 +37,8 @@
 		2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */; settings = {ASSET_TAGS = (); }; };
 		2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */; settings = {ASSET_TAGS = (); }; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
+		8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1527.JPG; sourceTree = "<group>"; };
 		2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1525.JPG; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				8556F48B1BD9403E006CA928 /* My Events */,
+				8556F48A1BD94028006CA928 /* Home */,
 				2C11A2791BC19CE500838E07 /* constants */,
 				2C11A2781BC19CB900838E07 /* Main */,
 				2C11A2751BC11A8200838E07 /* extensions */,
@@ -221,8 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				2C11A23D1BC0DE7200838E07 /* MainController.swift */,
-				2C11A27C1BC1A95A00838E07 /* HomeController.swift */,
-				2C11A27E1BC1A99500838E07 /* MyEventsController.swift */,
 				2C11A2801BC1A9B200838E07 /* UpdatesController.swift */,
 				2C11A2821BC1A9BB00838E07 /* HelpController.swift */,
 			);
@@ -261,6 +265,24 @@
 				38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8556F48A1BD94028006CA928 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C11A27C1BC1A95A00838E07 /* HomeController.swift */,
+				8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		8556F48B1BD9403E006CA928 /* My Events */ = {
+			isa = PBXGroup;
+			children = (
+				8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */,
+				2C11A27E1BC1A99500838E07 /* MyEventsController.swift */,
+			);
+			name = "My Events";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,9 +480,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */,
 				2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */,
 				2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */,
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
+				8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
