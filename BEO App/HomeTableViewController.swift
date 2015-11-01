@@ -11,26 +11,18 @@ import UIKit
 class HomeTableViewController: UITableViewController {
 
     // Section headers
-    var sections = [ "MON. OCT 6",
-                     "TUE. OCT 8",
-                     "WED. OCT 8",
-                     "THU. OCT 10",
-                     "FRI. OCT 11",
-                     "SAT. OCT 12",
-                     "SUN. OCT 13"]
+    var sections = [ "TUE. OCT 6",
+                     "FRI. OCT 9",
+                     "SAT. OCT 10",
+                     "SUN. OCT 11"]
     
-    var events = [ [ (name: "Dummy event #1", startTime: "8:00am", endTime: "10:00pm") ],
-                   [ (name: "Dummy event #2", startTime: "7:15am", endTime: "8:00pm"),
+    // Array of events
+    var events = [ [ (name: "Dummy event #2", startTime: "7:15am", endTime: "8:00pm"),
                      (name: "Dummy event #3", startTime: "3:00pm", endTime: "6:00pm") ],
-                   [ (name: "Dummy event #4", startTime: "12:00pm", endTime: "1:30pm") ],
-                   [ (name: "Dummy event #5", startTime: "3:00pm", endTime: "4:30pm"),
-                     (name: "Dummy event #6", startTime: "9:00am", endTime: "11:00pm") ],
                    [ (name: "Dummy event #7", startTime: "6:00pm", endTime: "10:00pm"),
                      (name: "Dummy event #8", startTime: "8:30am", endTime: "10:30am") ],
                    [ (name: "Dummy event #9", startTime: "10:00am", endTime: "1:00pm") ],
-                   [ (name: "Dummy event #10", startTime: "2:00pm", endTime: "3:15pm"),
-                     (name: "Dummy event #11", startTime: "10:00am", endTime: "10:30am"),
-                     (name: "Dummy event #12", startTime: "7:00am", endTime: "9:00am") ] ]
+                   [ (name: "Dummy event #12", startTime: "7:00am", endTime: "9:00am") ] ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +57,12 @@ class HomeTableViewController: UITableViewController {
         // Get the appropriate cell from indexPath and reuse identifier
         let cell = tableView.dequeueReusableCellWithIdentifier("homeTableCell", forIndexPath: indexPath)
         
+        let name = events[indexPath.section][indexPath.row].name
+        let startTime = events[indexPath.section][indexPath.row].startTime
+        let endTime = events[indexPath.section][indexPath.row].endTime
+        
         // Set cell's title text
-        cell.textLabel?.text = events[indexPath.section][indexPath.row].name
+        cell.textLabel?.text = "\(startTime) - \(endTime) | \(name)"
         
         return cell
     }
