@@ -9,17 +9,34 @@
 import UIKit
 import Parse
 
-class MainController: UITabBarController {
-
+class MainController: UIViewController {
+    
+    @IBOutlet weak var listButton: UIButton!
+    @IBOutlet weak var listContainer: UIView!
+    @IBOutlet weak var calendarContainer: UIView!
+    @IBOutlet weak var calendarButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    //TODO => Refactor this
+    @IBAction func showListController(sender: UIButton) {
+        listContainer.hidden = false
+        sender.tintColor = Colors.DarkBlue
+        calendarButton.tintColor = Colors.LightGrey
+
+    }
+    @IBAction func showCalendarController(sender: UIButton) {
+        listContainer.hidden = true
+        sender.tintColor = Colors.DarkBlue
+        listButton.tintColor = Colors.LightGrey
+    }
+    
     
 }
 

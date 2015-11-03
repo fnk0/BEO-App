@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E4921A1C765F5DD4E0C627AF95306FAC5DA8A4E2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AA6C119E1338FBD73178878BFE7577269D98DD8A" : 0,
+    "E4921A1C765F5DD4E0C627AF95306FAC5DA8A4E2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "62C03338-A594-4E30-A281-1D0EAC99A73F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AA6C119E1338FBD73178878BFE7577269D98DD8A" : "BEO%20App\/BEO%20App\/",
+    "E4921A1C765F5DD4E0C627AF95306FAC5DA8A4E2" : "BEO%20App\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BEO App",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BEO App.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fnk0\/TeamBlack-BEO-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA6C119E1338FBD73178878BFE7577269D98DD8A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/fnk0\/BEO-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E4921A1C765F5DD4E0C627AF95306FAC5DA8A4E2"
+    }
+  ]
+}

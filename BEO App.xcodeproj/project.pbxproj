@@ -14,29 +14,41 @@
 		2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2441BC0DE7200838E07 /* LaunchScreen.storyboard */; };
 		2C11A2511BC0DE7200838E07 /* BEO_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */; };
 		2C11A25C1BC0DE7200838E07 /* BEO_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */; };
-		2C11A26A1BC0DF1000838E07 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2691BC0DF1000838E07 /* Podfile */; settings = {ASSET_TAGS = (); }; };
-		2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A26C1BC0F08000838E07 /* marriot_logo.png */; settings = {ASSET_TAGS = (); }; };
-		2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A26E1BC10C0C00838E07 /* LoginController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2711BC10C4F00838E07 /* NewAccountController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2761BC11A8F00838E07 /* StringExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27A1BC19CEE00838E07 /* Segues.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27C1BC1A95A00838E07 /* HomeController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27E1BC1A99500838E07 /* MyEventsController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2811BC1A9B200838E07 /* UpdatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2801BC1A9B200838E07 /* UpdatesController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2831BC1A9BB00838E07 /* HelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2821BC1A9BB00838E07 /* HelpController.swift */; settings = {ASSET_TAGS = (); }; };
-		2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2921BC1AB1F00838E07 /* IMG_1534.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2891BC1AB1F00838E07 /* IMG_1532.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28A1BC1AB1F00838E07 /* IMG_1531.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28B1BC1AB1F00838E07 /* IMG_1530.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28C1BC1AB1F00838E07 /* IMG_1529.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28D1BC1AB1F00838E07 /* IMG_1528.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */; settings = {ASSET_TAGS = (); }; };
-		2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */; settings = {ASSET_TAGS = (); }; };
-		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2C11A26A1BC0DF1000838E07 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2691BC0DF1000838E07 /* Podfile */; };
+		2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A26C1BC0F08000838E07 /* marriot_logo.png */; };
+		2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A26E1BC10C0C00838E07 /* LoginController.swift */; };
+		2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2711BC10C4F00838E07 /* NewAccountController.swift */; };
+		2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */; };
+		2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2761BC11A8F00838E07 /* StringExtensions.swift */; };
+		2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27A1BC19CEE00838E07 /* Segues.swift */; };
+		2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27C1BC1A95A00838E07 /* HomeController.swift */; };
+		2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A27E1BC1A99500838E07 /* MyEventsController.swift */; };
+		2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */; };
+		2C11A2921BC1AB1F00838E07 /* IMG_1534.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */; };
+		2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */; };
+		2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2891BC1AB1F00838E07 /* IMG_1532.JPG */; };
+		2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28A1BC1AB1F00838E07 /* IMG_1531.JPG */; };
+		2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28B1BC1AB1F00838E07 /* IMG_1530.JPG */; };
+		2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28C1BC1AB1F00838E07 /* IMG_1529.JPG */; };
+		2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28D1BC1AB1F00838E07 /* IMG_1528.JPG */; };
+		2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */; };
+		2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */; };
+		2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */; };
+		2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A571BE89DCC003A6897 /* Calendar.png */; };
+		2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */; };
+		2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A591BE89DCC003A6897 /* Info.png */; };
+		2CB37A601BE89DCC003A6897 /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A5A1BE89DCC003A6897 /* Login.png */; };
+		2CB37A611BE89DCC003A6897 /* ManagerEventList.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A5B1BE89DCC003A6897 /* ManagerEventList.png */; };
+		2CB37A621BE89DCC003A6897 /* ManagerTasks.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A5C1BE89DCC003A6897 /* ManagerTasks.png */; };
+		2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A631BE8A2A8003A6897 /* ListController.swift */; };
+		2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A651BE8A2C8003A6897 /* CalendarController.swift */; };
+		2CB37A681BE8A465003A6897 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A671BE8A465003A6897 /* README.md */; };
+		2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */; };
+		2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A6B1BE8A916003A6897 /* Colors.swift */; };
+		2CB37A701BE90E50003A6897 /* BEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A6F1BE90E50003A6897 /* BEO.swift */; };
+		2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A711BE90F57003A6897 /* DinnerStyle.swift */; };
+		2CB37A741BE90FCF003A6897 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A731BE90FCF003A6897 /* Task.swift */; };
+		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
 		8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,8 +95,6 @@
 		2C11A27A1BC19CEE00838E07 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		2C11A27C1BC1A95A00838E07 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		2C11A27E1BC1A99500838E07 /* MyEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsController.swift; sourceTree = "<group>"; };
-		2C11A2801BC1A9B200838E07 /* UpdatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesController.swift; sourceTree = "<group>"; };
-		2C11A2821BC1A9BB00838E07 /* HelpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpController.swift; sourceTree = "<group>"; };
 		2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1535.JPG; sourceTree = "<group>"; };
 		2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1534.JPG; sourceTree = "<group>"; };
 		2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1533.JPG; sourceTree = "<group>"; };
@@ -96,6 +106,20 @@
 		2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1526.JPG; sourceTree = "<group>"; };
 		2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1527.JPG; sourceTree = "<group>"; };
 		2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1525.JPG; sourceTree = "<group>"; };
+		2CB37A571BE89DCC003A6897 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmployeeEventTaskList.png; sourceTree = "<group>"; };
+		2CB37A591BE89DCC003A6897 /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
+		2CB37A5A1BE89DCC003A6897 /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		2CB37A5B1BE89DCC003A6897 /* ManagerEventList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManagerEventList.png; sourceTree = "<group>"; };
+		2CB37A5C1BE89DCC003A6897 /* ManagerTasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManagerTasks.png; sourceTree = "<group>"; };
+		2CB37A631BE8A2A8003A6897 /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		2CB37A651BE8A2C8003A6897 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		2CB37A671BE8A465003A6897 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		2CB37A6B1BE8A916003A6897 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2CB37A6F1BE90E50003A6897 /* BEO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEO.swift; sourceTree = "<group>"; };
+		2CB37A711BE90F57003A6897 /* DinnerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerStyle.swift; sourceTree = "<group>"; };
+		2CB37A731BE90FCF003A6897 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +163,7 @@
 		2C11A22F1BC0DE7200838E07 = {
 			isa = PBXGroup;
 			children = (
+				2CB37A671BE8A465003A6897 /* README.md */,
 				2C11A2851BC1AB1200838E07 /* Wireframe */,
 				2C11A2691BC0DF1000838E07 /* Podfile */,
 				2C11A23A1BC0DE7200838E07 /* BEO App */,
@@ -163,6 +188,8 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				2CB37A6E1BE90E40003A6897 /* models */,
+				2CB37A561BE89DCC003A6897 /* GD Screenshots */,
 				8556F48B1BD9403E006CA928 /* My Events */,
 				8556F48A1BD94028006CA928 /* Home */,
 				2C11A2791BC19CE500838E07 /* constants */,
@@ -219,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				2C11A2761BC11A8F00838E07 /* StringExtensions.swift */,
+				2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -227,8 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				2C11A23D1BC0DE7200838E07 /* MainController.swift */,
-				2C11A2801BC1A9B200838E07 /* UpdatesController.swift */,
-				2C11A2821BC1A9BB00838E07 /* HelpController.swift */,
+				2CB37A631BE8A2A8003A6897 /* ListController.swift */,
+				2CB37A651BE8A2C8003A6897 /* CalendarController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -237,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				2C11A27A1BC19CEE00838E07 /* Segues.swift */,
+				2CB37A6B1BE8A916003A6897 /* Colors.swift */,
 			);
 			name = constants;
 			sourceTree = "<group>";
@@ -257,6 +286,29 @@
 				2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		2CB37A561BE89DCC003A6897 /* GD Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				2CB37A571BE89DCC003A6897 /* Calendar.png */,
+				2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */,
+				2CB37A591BE89DCC003A6897 /* Info.png */,
+				2CB37A5A1BE89DCC003A6897 /* Login.png */,
+				2CB37A5B1BE89DCC003A6897 /* ManagerEventList.png */,
+				2CB37A5C1BE89DCC003A6897 /* ManagerTasks.png */,
+			);
+			path = "GD Screenshots";
+			sourceTree = "<group>";
+		};
+		2CB37A6E1BE90E40003A6897 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2CB37A6F1BE90E50003A6897 /* BEO.swift */,
+				2CB37A711BE90F57003A6897 /* DinnerStyle.swift */,
+				2CB37A731BE90FCF003A6897 /* Task.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		6F1BA9CE955EA931940A6009 /* Frameworks */ = {
@@ -395,13 +447,19 @@
 				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
 				2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */,
 				2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */,
+				2CB37A611BE89DCC003A6897 /* ManagerEventList.png in Resources */,
 				2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */,
 				2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */,
+				2CB37A621BE89DCC003A6897 /* ManagerTasks.png in Resources */,
 				2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */,
 				2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */,
+				2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */,
 				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
+				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
+				2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */,
 				2C11A26A1BC0DF1000838E07 /* Podfile in Resources */,
 				2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */,
+				2CB37A601BE89DCC003A6897 /* Login.png in Resources */,
 				2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */,
 				2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */,
 				2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */,
@@ -486,13 +544,19 @@
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
 				8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
+				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
+				2CB37A741BE90FCF003A6897 /* Task.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
+				2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */,
+				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
+				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
+				2CB37A681BE8A465003A6897 /* README.md in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
-				2C11A2831BC1A9BB00838E07 /* HelpController.swift in Sources */,
-				2C11A2811BC1A9B200838E07 /* UpdatesController.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
+				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
+				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +706,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -657,6 +722,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

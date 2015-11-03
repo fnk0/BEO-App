@@ -8,6 +8,7 @@ target 'BEO App' do
     pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git', :branch => 'swift-2.0'
     pod 'B68UIFloatLabelTextField', :git => 'https://github.com/dirkfabisch/B68FloatingLabelTextField.git', :branch => 'Swift_2.0'
     pod 'Parse'
+    pod 'CVCalendar', '~> 1.2'
 end
 
 target 'BEO AppTests' do

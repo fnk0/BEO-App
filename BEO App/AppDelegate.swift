@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.enableLocalDatastore()
         Parse.setApplicationId("47TvyUq7DP4QegaQgV1fHXRx6yGO86T483CMP4xh", clientKey: "IHkJ5QwX5Qnnbi4Fj6kseOf6TFFwnzRtIYDeZzny")
         
+        // Registering subclasses
+        BEO.registerSubclass()
+        
         
         if let _ = PFUser.currentUser() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
