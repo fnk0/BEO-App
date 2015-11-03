@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2FC2B308BD520C506025F4C8EB85ED1B</key>
+		<key>15DA0884D2FA70BB383FE760B2AE106E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5248EB51BB683532D13C8403A51939E9</key>
+		<key>708E01B006A9F88B3C13711562282B5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B79F44AA408419AC7DDB7F17B8CA9FA5</key>
+		<key>85CBA22E5A9DEDB32138C3B497D4B5C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF63AF185D98532B0171D1EAB2351584</key>
+		<key>B8A759F57254B6094CF99273E5ECEE8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4AB2D36BE48932B55698C46E41A2895</key>
+		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF8E8DE62CFA6449514883243FBA01D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
