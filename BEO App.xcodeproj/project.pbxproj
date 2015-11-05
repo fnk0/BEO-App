@@ -51,6 +51,11 @@
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
 		8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */; };
+		85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */; };
+		85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */; };
+		85ECCCB41BEBC63300A98F88 /* EmployeeTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */; };
+		85ECCCB51BEBC63300A98F88 /* EmployeeTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */; };
+		85ECCCBB1BEBC84900A98F88 /* EmployeeTaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +128,11 @@
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
+		85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEventCell.swift; sourceTree = "<group>"; };
+		85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeEventCell.xib; sourceTree = "<group>"; };
+		85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskCell.swift; sourceTree = "<group>"; };
+		85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTaskCell.xib; sourceTree = "<group>"; };
+		85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +200,7 @@
 			children = (
 				2CB37A6E1BE90E40003A6897 /* models */,
 				2CB37A561BE89DCC003A6897 /* GD Screenshots */,
+				85ECCCA71BEBBFFB00A98F88 /* Employee Events/Tasks List */,
 				8556F48B1BD9403E006CA928 /* My Events */,
 				8556F48A1BD94028006CA928 /* Home */,
 				2C11A2791BC19CE500838E07 /* constants */,
@@ -337,6 +348,18 @@
 			name = "My Events";
 			sourceTree = "<group>";
 		};
+		85ECCCA71BEBBFFB00A98F88 /* Employee Events/Tasks List */ = {
+			isa = PBXGroup;
+			children = (
+				85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */,
+				85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */,
+				85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */,
+				85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */,
+				85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */,
+			);
+			name = "Employee Events/Tasks List";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,9 +475,11 @@
 				2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */,
 				2CB37A621BE89DCC003A6897 /* ManagerTasks.png in Resources */,
 				2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */,
+				85ECCCB51BEBC63300A98F88 /* EmployeeTaskCell.xib in Resources */,
 				2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */,
 				2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */,
 				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
+				85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */,
 				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
 				2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */,
 				2C11A26A1BC0DF1000838E07 /* Podfile in Resources */,
@@ -543,9 +568,11 @@
 				2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */,
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
 				8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */,
+				85ECCCB41BEBC63300A98F88 /* EmployeeTaskCell.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
 				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
 				2CB37A741BE90FCF003A6897 /* Task.swift in Sources */,
+				85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
 				2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */,
@@ -554,6 +581,7 @@
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
 				2CB37A681BE8A465003A6897 /* README.md in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
+				85ECCCBB1BEBC84900A98F88 /* EmployeeTaskTableView.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
 				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
 				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
