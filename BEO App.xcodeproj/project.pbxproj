@@ -55,7 +55,8 @@
 		85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */; };
 		85ECCCB41BEBC63300A98F88 /* EmployeeTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */; };
 		85ECCCB51BEBC63300A98F88 /* EmployeeTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */; };
-		85ECCCBB1BEBC84900A98F88 /* EmployeeTaskTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */; };
+		85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FFC2E31BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift */; };
+		85FFC2E61BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85FFC2E41BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +133,8 @@
 		85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeEventCell.xib; sourceTree = "<group>"; };
 		85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskCell.swift; sourceTree = "<group>"; };
 		85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTaskCell.xib; sourceTree = "<group>"; };
-		85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTaskTableView.swift; sourceTree = "<group>"; };
+		85FFC2E31BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEventSectionHeader.swift; sourceTree = "<group>"; };
+		85FFC2E41BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeEventSectionHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,9 +355,10 @@
 			children = (
 				85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */,
 				85ECCCAF1BEBC16500A98F88 /* EmployeeEventCell.xib */,
-				85ECCCBA1BEBC84900A98F88 /* EmployeeTaskTableView.swift */,
 				85ECCCB21BEBC63300A98F88 /* EmployeeTaskCell.swift */,
 				85ECCCB31BEBC63300A98F88 /* EmployeeTaskCell.xib */,
+				85FFC2E31BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift */,
+				85FFC2E41BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib */,
 			);
 			name = "Employee Events/Tasks List";
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */,
 				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
 				85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */,
+				85FFC2E61BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib in Resources */,
 				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
 				2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */,
 				2C11A26A1BC0DF1000838E07 /* Podfile in Resources */,
@@ -575,13 +579,13 @@
 				85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
+				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
 				2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
 				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
 				2CB37A681BE8A465003A6897 /* README.md in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
-				85ECCCBB1BEBC84900A98F88 /* EmployeeTaskTableView.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
 				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
 				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
