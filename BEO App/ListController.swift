@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class ListController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +18,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
                      "FRIDAY, MAY 20, 2016" ]
     var events = [ ["Event 1"],
                    ["Event 2"] ]
+    //var events = [ [PFObject] ]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         nib = UINib(nibName: "EmployeeEventSectionHeader", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "employeeEventSectionHeader")
+        
+        var query = PFQuery(className: "EmployeeEvent")
     }
     
     
