@@ -10,6 +10,11 @@ import UIKit
 
 class EmployeeTaskCell: UITableViewCell {
 
+    @IBOutlet weak var taskNamaLabel: UILabel!
+    @IBOutlet weak var timeRemainingLabel: UILabel!
+    @IBOutlet weak var checkboxImage: UIImageView!
+    @IBOutlet weak var clockIconImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
