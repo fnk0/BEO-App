@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeeEventCell" rowHeight="100" id="cJG-2D-Y5O" customClass="EmployeeEventCell" customModule="BEO_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeeEventCell" rowHeight="189" id="cJG-2D-Y5O" customClass="EmployeeEventCell" customModule="BEO_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJG-2D-Y5O" id="tHK-fI-BxE">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swanson Breakfast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-8a-vke">
@@ -52,19 +52,6 @@
                             <constraint firstAttribute="width" constant="21" id="yDK-No-DgL"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buffet food put out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-dg-awJ">
-                        <rect key="frame" x="49" y="59" width="108" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qse-Di-aMW">
-                        <rect key="frame" x="20" y="56" width="21" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="21" id="Fhk-7r-4kb"/>
-                            <constraint firstAttribute="height" constant="21" id="Zkf-5r-GxT"/>
-                        </constraints>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-cV-GbA">
                         <rect key="frame" x="291" y="5" width="21" height="21"/>
                         <constraints>
@@ -79,20 +66,16 @@
                     <constraint firstAttribute="trailingMargin" secondItem="lqY-cV-GbA" secondAttribute="trailing" id="KUz-le-mTP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="kb6-Vf-tb7" secondAttribute="trailing" id="OoD-RW-1VS"/>
                     <constraint firstAttribute="leadingMargin" secondItem="SLk-jJ-Hwe" secondAttribute="leading" id="Osg-0R-izY"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Qse-Di-aMW" secondAttribute="bottom" constant="14" id="Ps0-d5-LIh"/>
                     <constraint firstAttribute="topMargin" secondItem="brd-kP-B3c" secondAttribute="top" id="XrW-cw-pWK"/>
                     <constraint firstItem="kb6-Vf-tb7" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="11" id="en7-yj-V3j"/>
-                    <constraint firstItem="Qse-Di-aMW" firstAttribute="top" secondItem="SLk-jJ-Hwe" secondAttribute="bottom" constant="5" id="gQ9-rT-n9h"/>
                     <constraint firstItem="kb6-Vf-tb7" firstAttribute="leading" secondItem="fDe-dD-NIb" secondAttribute="trailing" constant="13" id="gzA-Ke-Ebq"/>
                     <constraint firstItem="fDe-dD-NIb" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="7" id="jCl-UU-41e"/>
                     <constraint firstItem="gcw-EZ-vpY" firstAttribute="leading" secondItem="SLk-jJ-Hwe" secondAttribute="trailing" constant="8" id="jIh-jo-A9J"/>
-                    <constraint firstItem="Qse-Di-aMW" firstAttribute="leading" secondItem="tHK-fI-BxE" secondAttribute="leadingMargin" constant="12" id="jhp-5k-TNg"/>
                     <constraint firstAttribute="leadingMargin" secondItem="LLM-8a-vke" secondAttribute="leading" id="rIH-fw-lMH"/>
-                    <constraint firstItem="LQg-dg-awJ" firstAttribute="top" secondItem="SLk-jJ-Hwe" secondAttribute="bottom" constant="8" id="rOF-h0-Dhb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="brd-kP-B3c" secondAttribute="trailing" constant="87" id="sn5-hJ-qae"/>
                     <constraint firstItem="gcw-EZ-vpY" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="10" id="wZd-8e-uI3"/>
                     <constraint firstItem="lqY-cV-GbA" firstAttribute="top" secondItem="tHK-fI-BxE" secondAttribute="topMargin" constant="-3" id="x5U-RM-q7N"/>
-                    <constraint firstItem="LQg-dg-awJ" firstAttribute="leading" secondItem="Qse-Di-aMW" secondAttribute="trailing" constant="8" id="yXx-JZ-93X"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SLk-jJ-Hwe" secondAttribute="bottom" constant="129" id="yUE-71-PUI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -103,10 +86,8 @@
                 <outlet property="eventNameLabel" destination="LLM-8a-vke" id="uh2-yP-2bq"/>
                 <outlet property="eventTimeLabel" destination="brd-kP-B3c" id="u2B-XQ-g8k"/>
                 <outlet property="infoIconImage" destination="lqY-cV-GbA" id="VMz-D9-r0n"/>
-                <outlet property="task0DescriptionLabel" destination="LQg-dg-awJ" id="o64-m0-aqZ"/>
-                <outlet property="task0IconImage" destination="Qse-Di-aMW" id="B3n-o4-9oc"/>
             </connections>
-            <point key="canvasLocation" x="796" y="934"/>
+            <point key="canvasLocation" x="785" y="948.5"/>
         </tableViewCell>
     </objects>
 </document>

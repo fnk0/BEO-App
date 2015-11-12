@@ -14,17 +14,47 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var completionTimeLabel: UILabel!
     @IBOutlet weak var cleanTimeLabel: UILabel!
-    @IBOutlet weak var task0DescriptionLabel: UILabel!
+    //@IBOutlet weak var task0DescriptionLabel: UILabel!
     @IBOutlet weak var infoIconImage: UIImageView!
     @IBOutlet weak var clockIconImage: UIImageView!
     @IBOutlet weak var broomIconImage: UIImageView!
-    @IBOutlet weak var task0IconImage: UIImageView!
+    //@IBOutlet weak var task0IconImage: UIImageView!
     //@IBOutlet weak var taskTableView: UITableView!
     
+    var tasks = [ "Test task 1",
+                  "Test task 2",
+                  "Test task 3",
+                  "Test task 4" ]
     var taskLabels = [UILabel]()
+    var taskImageViews = [UIImageView]()
+    
+    let taskLabelHeight = 20
+    let taskLabelWidth = 100
+    let taskLabelCenterX = 100
+    let taskLabelCenterY = 60
+    let taskLabelSpacing = 4
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        for index in 0..<tasks.count
+        {
+            let label = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabelWidth), CGFloat(taskLabelHeight)))
+            label.center.x = CGFloat(taskLabelCenterX)
+            label.center.y = CGFloat(taskLabelCenterY + (taskLabelHeight * index) + taskLabelSpacing)
+            label.textAlignment = NSTextAlignment.Left
+            label.font = UIFont.systemFontOfSize(12)
+            label.text = tasks[index]
+            label.userInteractionEnabled = true
+            self.addSubview(label)
+            taskLabels.append(label)
+            //self.frame.height = self.frame.height + taskLabelHeight + taskLabelSpacing
+            
+            let tapRecognizer = UITapGestureRecognizer()
+            tapRecognizer.addTarget(self, action: "tap")
+            label.addGestureRecognizer(tapRecognizer)
+        }
+        self.sizeToFit()
     }
     
     
@@ -114,6 +144,7 @@ class EmployeeEventCell: UITableViewCell {
         // Fill the path for divider 2
         CGContextFillPath(context)
         
+        /*
         // Create an array of points representing the third divider
         let divider3Points = [
             CGPoint(x:0, y:self.bounds.size.height),
@@ -146,12 +177,18 @@ class EmployeeEventCell: UITableViewCell {
         
         // Fill the path for divider 3
         CGContextFillPath(context)
+        */
         
         // Restore the saved context
         CGContextRestoreGState(context)
         
     }
     
+    
+    func tap()
+    {
+        print("Tapped")
+    }
     
     /*
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
