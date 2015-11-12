@@ -14,17 +14,11 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var completionTimeLabel: UILabel!
     @IBOutlet weak var cleanTimeLabel: UILabel!
-    //@IBOutlet weak var task0DescriptionLabel: UILabel!
     @IBOutlet weak var infoIconImage: UIImageView!
     @IBOutlet weak var clockIconImage: UIImageView!
     @IBOutlet weak var broomIconImage: UIImageView!
-    //@IBOutlet weak var task0IconImage: UIImageView!
-    //@IBOutlet weak var taskTableView: UITableView!
     
-    var tasks = [ "Test task 1",
-                  "Test task 2",
-                  "Test task 3",
-                  "Test task 4" ]
+    var tasks = [ "No tasks" ]
     var taskLabels = [UILabel]()
     var taskImageViews = [UIImageView]()
     
@@ -33,6 +27,7 @@ class EmployeeEventCell: UITableViewCell {
     let taskLabelCenterX = 100
     let taskLabelCenterY = 60
     let taskLabelSpacing = 4
+    let defaultCellHeight = 60
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,13 +43,11 @@ class EmployeeEventCell: UITableViewCell {
             label.userInteractionEnabled = true
             self.addSubview(label)
             taskLabels.append(label)
-            //self.frame.height = self.frame.height + taskLabelHeight + taskLabelSpacing
             
             let tapRecognizer = UITapGestureRecognizer()
             tapRecognizer.addTarget(self, action: "tap")
             label.addGestureRecognizer(tapRecognizer)
         }
-        self.sizeToFit()
     }
     
     
