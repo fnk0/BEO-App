@@ -55,20 +55,20 @@
                             <constraint firstAttribute="width" constant="21" id="yDK-No-DgL"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-cV-GbA">
-                        <rect key="frame" x="291" y="5" width="21" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="LyQ-Tw-muZ"/>
-                            <constraint firstAttribute="width" constant="21" id="kGg-qf-D08"/>
-                        </constraints>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
+                        <rect key="frame" x="290" y="5" width="22" height="22"/>
+                        <connections>
+                            <action selector="infoButtonTap:" destination="cJG-2D-Y5O" eventType="touchUpInside" id="TtE-3V-ZUB"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="rX8-Cs-jMA" secondAttribute="trailing" id="4HX-GP-8Dk"/>
                     <constraint firstAttribute="topMargin" secondItem="LLM-8a-vke" secondAttribute="top" id="4ve-lf-QCG"/>
                     <constraint firstItem="SLk-jJ-Hwe" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="7" id="72d-RY-4af"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="lqY-cV-GbA" secondAttribute="trailing" id="KUz-le-mTP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="kb6-Vf-tb7" secondAttribute="trailing" id="OoD-RW-1VS"/>
                     <constraint firstAttribute="leadingMargin" secondItem="SLk-jJ-Hwe" secondAttribute="leading" id="Osg-0R-izY"/>
+                    <constraint firstItem="rX8-Cs-jMA" firstAttribute="top" secondItem="tHK-fI-BxE" secondAttribute="topMargin" constant="-3" id="Pqz-3k-Qd0"/>
                     <constraint firstAttribute="topMargin" secondItem="brd-kP-B3c" secondAttribute="top" id="XrW-cw-pWK"/>
                     <constraint firstItem="kb6-Vf-tb7" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="11" id="en7-yj-V3j"/>
                     <constraint firstItem="kb6-Vf-tb7" firstAttribute="leading" secondItem="fDe-dD-NIb" secondAttribute="trailing" constant="13" id="gzA-Ke-Ebq"/>
@@ -78,7 +78,6 @@
                     <constraint firstAttribute="leadingMargin" secondItem="LLM-8a-vke" secondAttribute="leading" id="rIH-fw-lMH"/>
                     <constraint firstAttribute="trailingMargin" secondItem="brd-kP-B3c" secondAttribute="trailing" constant="87" id="sn5-hJ-qae"/>
                     <constraint firstItem="gcw-EZ-vpY" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="10" id="wZd-8e-uI3"/>
-                    <constraint firstItem="lqY-cV-GbA" firstAttribute="top" secondItem="tHK-fI-BxE" secondAttribute="topMargin" constant="-3" id="x5U-RM-q7N"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -88,7 +87,7 @@
                 <outlet property="completionTimeLabel" destination="gcw-EZ-vpY" id="Mul-Y4-mcO"/>
                 <outlet property="eventNameLabel" destination="LLM-8a-vke" id="uh2-yP-2bq"/>
                 <outlet property="eventTimeLabel" destination="brd-kP-B3c" id="u2B-XQ-g8k"/>
-                <outlet property="infoIconImage" destination="lqY-cV-GbA" id="VMz-D9-r0n"/>
+                <outlet property="infoButton" destination="rX8-Cs-jMA" id="RLc-jy-pDE"/>
             </connections>
             <point key="canvasLocation" x="785" y="918.5"/>
         </tableViewCell>

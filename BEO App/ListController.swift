@@ -60,7 +60,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let cell = tableView.dequeueReusableCellWithIdentifier("employeeEventCell") as! EmployeeEventCell
         
-        return CGFloat( cell.defaultCellHeight + ( cell.taskLabelHeight * cell.tasks.count ) ) //UITableViewAutomaticDimension
+        return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing )
+        //return UITableViewAutomaticDimension
     }
     
     

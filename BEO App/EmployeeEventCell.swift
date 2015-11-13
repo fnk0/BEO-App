@@ -14,19 +14,43 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var completionTimeLabel: UILabel!
     @IBOutlet weak var cleanTimeLabel: UILabel!
-    @IBOutlet weak var infoIconImage: UIImageView!
+    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var clockIconImage: UIImageView!
     @IBOutlet weak var broomIconImage: UIImageView!
     
-    var tasks = [ "No tasks" ]
+    var tasks = [ "Task 1",
+                  "Task 2",
+                  "Task 3",
+                  "Task 4",
+                  "Task 5" ]
     var taskLabels = [UILabel]()
-    var taskImageViews = [UIImageView]()
+    var taskButtons = [UIButton]()
+    var taskImages = [UIImageView]()
     
-    let taskLabelHeight = 20
-    let taskLabelWidth = 100
-    let taskLabelCenterX = 100
-    let taskLabelCenterY = 60
-    let taskLabelSpacing = 4
+    let taskLabel1Height = 20
+    let taskLabel1Width = 100
+    let taskLabel1CenterX = 100
+    let taskLabel1CenterY = 60
+    let taskLabel1Spacing = 4
+    
+    let taskLabel2Height = 20
+    let taskLabel2Width = 50
+    let taskLabel2CenterX = 325
+    let taskLabel2CenterY = 60
+    let taskLabel2Spacing = 4
+    
+    let taskButtonHeight = 20
+    let taskButtonWidth = 20
+    let taskButtonCenterX = 25
+    let taskButtonCenterY = 60
+    let taskButtonSpacing = 4
+    
+    let taskImageHeight = 15
+    let taskImageWidth = 15
+    var taskImageCenterX = 362
+    let taskImageCenterY = 60
+    let taskImageSpacing = 4
+    
     let defaultCellHeight = 60
     
     override func awakeFromNib() {
@@ -34,20 +58,47 @@ class EmployeeEventCell: UITableViewCell {
         
         for index in 0..<tasks.count
         {
-            let label = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabelWidth), CGFloat(taskLabelHeight)))
-            label.center.x = CGFloat(taskLabelCenterX)
-            label.center.y = CGFloat(taskLabelCenterY + (taskLabelHeight * index) + taskLabelSpacing)
-            label.textAlignment = NSTextAlignment.Left
-            label.font = UIFont.systemFontOfSize(12)
-            label.text = tasks[index]
-            label.userInteractionEnabled = true
-            self.addSubview(label)
-            taskLabels.append(label)
+            // Create button for checkbox
+            let button = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
+            button.center.x = CGFloat(taskButtonCenterX)
+            button.center.y = CGFloat(taskButtonCenterY + (taskLabel1Height * index) + taskButtonSpacing)
+            button.backgroundColor = UIColor.grayColor()
+            button.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.addSubview(button)
+            taskButtons.append(button)
             
-            let tapRecognizer = UITapGestureRecognizer()
-            tapRecognizer.addTarget(self, action: "tap")
-            label.addGestureRecognizer(tapRecognizer)
+            // Create label for task description
+            let label1 = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabel1Width), CGFloat(taskLabel1Height)))
+            label1.center.x = CGFloat(taskLabel1CenterX)
+            label1.center.y = CGFloat(taskLabel1CenterY + (taskLabel1Height * index) + taskLabel1Spacing)
+            label1.textAlignment = NSTextAlignment.Left
+            label1.font = UIFont.systemFontOfSize(12)
+            label1.text = tasks[index]
+            self.addSubview(label1)
+            taskLabels.append(label1)
+            
+            // Create image for clock icon
+            let image = UIImageView(frame: CGRectMake(0, 0, CGFloat(taskImageWidth), CGFloat(taskImageHeight)))
+            image.center.x = CGFloat(taskImageCenterX)
+            image.center.y = CGFloat(taskImageCenterY + (taskLabel1Height * index) + taskImageSpacing)
+            image.backgroundColor = UIColor.grayColor()
+            self.addSubview(image)
+            taskImages.append(image)
+            
+            // Create label for time remaining
+            let label2 = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabel2Width), CGFloat(taskLabel2Height)))
+            label2.center.x = CGFloat(taskLabel2CenterX)
+            label2.center.y = CGFloat(taskLabel2CenterY + (taskLabel2Height * index) + taskLabel2Spacing)
+            label2.textAlignment = NSTextAlignment.Right
+            label2.font = UIFont.systemFontOfSize(8)
+            label2.text = "12h 30m"
+            self.addSubview(label2)
+            taskLabels.append(label2)
         }
+        
+        clockIconImage.backgroundColor = UIColor.grayColor()
+        broomIconImage.backgroundColor = UIColor.grayColor()
+        
     }
     
     
@@ -137,50 +188,35 @@ class EmployeeEventCell: UITableViewCell {
         // Fill the path for divider 2
         CGContextFillPath(context)
         
-        /*
-        // Create an array of points representing the third divider
-        let divider3Points = [
-            CGPoint(x:0, y:self.bounds.size.height),
-            CGPoint(x:self.bounds.size.width, y:self.bounds.size.height),
-            CGPoint(x:self.bounds.size.width, y:self.bounds.size.height - 10),
-            CGPoint(x:0, y:self.bounds.size.height - 10)
-        ]
-        
-        // Create an empty path for divider 3
-        let divider3Path = CGPathCreateMutable()
-        
-        // Draw the path for divider 3
-        for point in divider3Points
-        {
-            if point == divider3Points[0]
-            {
-                CGPathMoveToPoint(divider3Path, nil, point.x, point.y)
-            }
-            else
-            {
-                CGPathAddLineToPoint(divider3Path, nil, point.x, point.y)
-            }
-        }
-        
-        // Close the path for divider 3
-        CGPathCloseSubpath(divider3Path)
-        
-        // Add the path for divider 3 to the context
-        CGContextAddPath(context, divider3Path)
-        
-        // Fill the path for divider 3
-        CGContextFillPath(context)
-        */
-        
         // Restore the saved context
         CGContextRestoreGState(context)
         
     }
     
     
-    func tap()
+    func checkBoxTap(sender:UIButton!)
     {
-        print("Tapped")
+        var buttonIndex = -1
+        
+        for index in 0..<taskButtons.count
+        {
+            if taskButtons[index] == sender
+            {
+                buttonIndex = index
+                break
+            }
+        }
+        
+        if !(buttonIndex == -1)
+        {
+            print("\(tasks[buttonIndex]) checkbox tapped")
+        }
+    }
+    
+    
+    @IBAction func infoButtonTap(sender: AnyObject)
+    {
+        print("Info button tapped")
     }
     
     /*
