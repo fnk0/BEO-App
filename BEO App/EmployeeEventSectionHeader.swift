@@ -12,8 +12,16 @@ class EmployeeEventSectionHeader: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     
+    // Color constants
+    let redColor = UIColor(red: 227/255, green: 102/255, blue: 102/255, alpha: 1.0)
+    let lightGrayColor = UIColor(red: 222/255, green: 222/255, blue: 222/255, alpha: 1.0)
+    let goldColor = UIColor(red: 163/255, green: 141/255, blue: 103/255, alpha: 1.0)
+    let blueColor = UIColor(red: 46/255, green: 49/255, blue: 133/255, alpha: 1.0)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.backgroundColor = goldColor
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -32,8 +40,8 @@ class EmployeeEventSectionHeader: UITableViewCell {
         CGContextSaveGState(context)
         
         // Set fill and stroke colors for drawing the dividers
-        CGContextSetFillColorWithColor(context, colorBlue.CGColor)
-        CGContextSetStrokeColorWithColor(context, colorBlue.CGColor)
+        CGContextSetFillColorWithColor(context, blueColor.CGColor)
+        CGContextSetStrokeColorWithColor(context, blueColor.CGColor)
         
         // Create an array of points representing the first divider
         let divider1Points = [

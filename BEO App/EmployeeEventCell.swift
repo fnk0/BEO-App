@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class EmployeeEventCell: UITableViewCell {
     
+    // Storyboard outlets
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var completionTimeLabel: UILabel!
@@ -18,18 +20,24 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var clockIconImage: UIImageView!
     @IBOutlet weak var broomIconImage: UIImageView!
     
+    // Data arrays
+    /*
     var tasks = [ "Task 1",
                   "Task 2",
                   "Task 3",
                   "Task 4",
                   "Task 5" ]
+    */
+    var tasks = [PFObject]()
     var taskLabels = [UILabel]()
+    var taskCompletionLabels = [UILabel]()
     var taskButtons = [UIButton]()
     var taskImages = [UIImageView]()
     
+    // Positioning constants for UI elements
     let taskLabel1Height = 20
-    let taskLabel1Width = 100
-    let taskLabel1CenterX = 100
+    let taskLabel1Width = 250
+    let taskLabel1CenterX = 170
     let taskLabel1CenterY = 60
     let taskLabel1Spacing = 4
     
@@ -47,14 +55,33 @@ class EmployeeEventCell: UITableViewCell {
     
     let taskImageHeight = 15
     let taskImageWidth = 15
-    var taskImageCenterX = 362
+    let taskImageCenterX = 362
     let taskImageCenterY = 60
     let taskImageSpacing = 4
     
     let defaultCellHeight = 60
     
+    // Color constants
+    let redColor = UIColor(red: 227/255, green: 102/255, blue: 102/255, alpha: 1.0)
+    let lightGrayColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)
+    let goldColor = UIColor(red: 163/255, green: 141/255, blue: 103/255, alpha: 1.0)
+    let blueColor = UIColor(red: 46/255, green: 49/255, blue: 133/255, alpha: 1.0)
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        updateAppearance(printDebug: false)
+    }
+    
+    
+    func updateAppearance(printDebug printDebug: Bool)
+    {
+        if printDebug
+        {
+            let countToPrint = tasks.count
+            print("Length of tasks array = \(countToPrint)")
+        }
         
         for index in 0..<tasks.count
         {
@@ -62,7 +89,7 @@ class EmployeeEventCell: UITableViewCell {
             let button = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
             button.center.x = CGFloat(taskButtonCenterX)
             button.center.y = CGFloat(taskButtonCenterY + (taskLabel1Height * index) + taskButtonSpacing)
-            button.backgroundColor = UIColor.grayColor()
+            button.backgroundColor = lightGrayColor
             button.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
             self.addSubview(button)
             taskButtons.append(button)
@@ -73,7 +100,15 @@ class EmployeeEventCell: UITableViewCell {
             label1.center.y = CGFloat(taskLabel1CenterY + (taskLabel1Height * index) + taskLabel1Spacing)
             label1.textAlignment = NSTextAlignment.Left
             label1.font = UIFont.systemFontOfSize(12)
-            label1.text = tasks[index]
+            do
+            {
+                try tasks[0].fetchIfNeeded()
+            }
+            catch
+            {
+                print("Database read failed.");
+            }
+            label1.text = String(tasks[index].valueForKey("desc")!)
             self.addSubview(label1)
             taskLabels.append(label1)
             
@@ -81,7 +116,7 @@ class EmployeeEventCell: UITableViewCell {
             let image = UIImageView(frame: CGRectMake(0, 0, CGFloat(taskImageWidth), CGFloat(taskImageHeight)))
             image.center.x = CGFloat(taskImageCenterX)
             image.center.y = CGFloat(taskImageCenterY + (taskLabel1Height * index) + taskImageSpacing)
-            image.backgroundColor = UIColor.grayColor()
+            image.backgroundColor = redColor
             self.addSubview(image)
             taskImages.append(image)
             
@@ -92,15 +127,18 @@ class EmployeeEventCell: UITableViewCell {
             label2.textAlignment = NSTextAlignment.Right
             label2.font = UIFont.systemFontOfSize(8)
             label2.text = "12h 30m"
+            label2.textColor = redColor
             self.addSubview(label2)
-            taskLabels.append(label2)
+            taskCompletionLabels.append(label2)
         }
         
-        clockIconImage.backgroundColor = UIColor.grayColor()
-        broomIconImage.backgroundColor = UIColor.grayColor()
-        
+        eventNameLabel.textColor = blueColor
+        eventTimeLabel.textColor = goldColor
+        completionTimeLabel.textColor = redColor
+        cleanTimeLabel.textColor = redColor
+        clockIconImage.backgroundColor = redColor
+        broomIconImage.backgroundColor = redColor
     }
-    
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -209,7 +247,19 @@ class EmployeeEventCell: UITableViewCell {
         
         if !(buttonIndex == -1)
         {
-            print("\(tasks[buttonIndex]) checkbox tapped")
+            if sender.backgroundColor == lightGrayColor
+            {
+                sender.backgroundColor = UIColor.blackColor()
+                taskCompletionLabels[buttonIndex].textColor = lightGrayColor
+                taskImages[buttonIndex].backgroundColor = lightGrayColor
+                
+            }
+            else
+            {
+                sender.backgroundColor = lightGrayColor
+                taskCompletionLabels[buttonIndex].textColor = redColor
+                taskImages[buttonIndex].backgroundColor = redColor
+            }
         }
     }
     
@@ -218,45 +268,5 @@ class EmployeeEventCell: UITableViewCell {
     {
         print("Info button tapped")
     }
-    
-    /*
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("employeeTaskCell", forIndexPath: indexPath) as! EmployeeTaskCell
-        
-        if let taskNameLabel = cell.taskNamaLabel
-        {
-            taskNameLabel.text = tasks[indexPath.row]
-        }
-        
-        return cell
-    }
-    
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 20
-    }
-    
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 20
-    }
-    
-    
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    */
     
 }
