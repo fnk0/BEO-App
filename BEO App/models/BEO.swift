@@ -11,14 +11,22 @@ import Parse
 
 class BEO : PFObject, PFSubclassing {
 
+    // This is what is part of a BEO but we really don't care about this..
+    // Since we don't show this stuff on the UI
     @NSManaged var beoNumber: Int
     @NSManaged var accountName: String
     @NSManaged var postAs: String
     @NSManaged var methodOfPayment: String
+    
+    // This is mainly the part we care about
     @NSManaged var manager: PFUser
     @NSManaged var expecting: Int
     @NSManaged var rsvp: Int
     @NSManaged var date: NSDate
+    
+    // Format 6-8am 5:30-8:30pm
+    @NSManaged var timePeriod: String
+    @NSManaged var title: String
     
     @NSManaged var estimatedCharges: EstimatedCharges
     

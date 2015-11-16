@@ -16,6 +16,7 @@ class Task : PFObject, PFSubclassing {
     @NSManaged var due: NSDate
     @NSManaged var completed: Bool
     @NSManaged var beo: BEO
+    @NSManaged var desc: String
  
     static func parseClassName() -> String {
         return "Task"

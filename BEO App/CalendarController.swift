@@ -9,14 +9,19 @@
 import Foundation
 import UIKit
 import CVCalendar
+import Parse
 
-class CalendarController : UIViewController,
-            CVCalendarViewDelegate, CVCalendarMenuViewDelegate, CVCalendarViewAppearanceDelegate {
+class CalendarController : UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDelegate, CVCalendarViewAppearanceDelegate,
+        UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var calendarMenuView: CVCalendarMenuView!
     @IBOutlet weak var eventsTableView: UITableView!
+    
+    @IBOutlet weak var beosTableView: UITableView!
+    
+    var beos: [BEO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +35,31 @@ class CalendarController : UIViewController,
         
         calendarView.appearance = appearance
         
-        let dateStr = CVDate(date: NSDate()).globalDescription.uppercaseString
+        let date = CVDate(date: NSDate())
+        let dateStr = date.globalDescription.uppercaseString
         calendarLabel.text = dateStr.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+    }
+    
+    func updateBEOList(date: CVDate) -> Void {
+        let query = BEO.query()
+        query?.whereKey(Const.DATE, equalTo: date.convertedDate()!)
+        query!.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) beos.")
+
+                if let objects = objects as? [BEO] {
+                    self.beos = objects
+                    self.beosTableView.reloadData()
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,11 +71,30 @@ class CalendarController : UIViewController,
 
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return beos.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell : MyEventsCalendarTableCell = tableView.dequeueReusableCellWithIdentifier(Const.MyEventsCalendarTableCell) as! MyEventsCalendarTableCell
+        let beo = self.beos[indexPath.row]
+        
+        cell.titleLabel.text = beo.title
+        cell.timeLabel.text = beo.timePeriod
+        
+        return cell
+    }
+    
     func presentedDateUpdated(date: Date) {
         let dateStr = date.globalDescription.uppercaseString
         calendarLabel.text = dateStr.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        updateBEOList(date)
     }
-    
     
     func shouldShowWeekdaysOut() -> Bool {
         return true
