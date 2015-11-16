@@ -58,6 +58,9 @@
 		2C40146B1BF9A8560067F693 /* Time_Icon_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014521BF9A8560067F693 /* Time_Icon_Red.png */; };
 		2C40146C1BF9A8560067F693 /* WhiteBox_Employee.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014531BF9A8560067F693 /* WhiteBox_Employee.png */; };
 		2C40146D1BF9A8560067F693 /* WhiteBox_Manager.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */; };
+		2C7783231BFA87AD00D56A88 /* All Things BEO.docx in Resources */ = {isa = PBXBuildFile; fileRef = 2C7783211BFA87AD00D56A88 /* All Things BEO.docx */; };
+		2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7783221BFA87AD00D56A88 /* BEO Example.pdf */; };
+		2C7783261BFA87FD00D56A88 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7783251BFA87FD00D56A88 /* Const.swift */; };
 		2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A571BE89DCC003A6897 /* Calendar.png */; };
 		2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */; };
 		2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A591BE89DCC003A6897 /* Info.png */; };
@@ -163,6 +166,9 @@
 		2C4014521BF9A8560067F693 /* Time_Icon_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time_Icon_Red.png; sourceTree = "<group>"; };
 		2C4014531BF9A8560067F693 /* WhiteBox_Employee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBox_Employee.png; sourceTree = "<group>"; };
 		2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBox_Manager.png; sourceTree = "<group>"; };
+		2C7783211BFA87AD00D56A88 /* All Things BEO.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "All Things BEO.docx"; sourceTree = "<group>"; };
+		2C7783221BFA87AD00D56A88 /* BEO Example.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BEO Example.pdf"; sourceTree = "<group>"; };
+		2C7783251BFA87FD00D56A88 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		2CB37A571BE89DCC003A6897 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmployeeEventTaskList.png; sourceTree = "<group>"; };
 		2CB37A591BE89DCC003A6897 /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
@@ -337,6 +343,7 @@
 			children = (
 				2C11A27A1BC19CEE00838E07 /* Segues.swift */,
 				2CB37A6B1BE8A916003A6897 /* Colors.swift */,
+				2C7783251BFA87FD00D56A88 /* Const.swift */,
 			);
 			name = constants;
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 		2C11A2851BC1AB1200838E07 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				2C7783211BFA87AD00D56A88 /* All Things BEO.docx */,
+				2C7783221BFA87AD00D56A88 /* BEO Example.pdf */,
 				2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */,
 				2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */,
 				2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */,
@@ -559,9 +568,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */,
 				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
 				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
 				2C40145F1BF9A8560067F693 /* Clock_Icon_Red.png in Resources */,
+				2C7783231BFA87AD00D56A88 /* All Things BEO.docx in Resources */,
 				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
 				2C4014631BF9A8560067F693 /* Hotel Picture.png in Resources */,
 				2C4014661BF9A8560067F693 /* Logo.png in Resources */,
@@ -687,6 +698,7 @@
 				2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */,
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
 				8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */,
+				2C7783261BFA87FD00D56A88 /* Const.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
 				2CCE9CF41BF3AADE002B4ABD /* Beverage.swift in Sources */,
 				2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */,
