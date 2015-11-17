@@ -85,6 +85,8 @@
 		2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF51BF3AB52002B4ABD /* Food.swift */; };
 		2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
+		554434C61BFB911A00BF503A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554434C51BFB911A00BF503A /* LocationCell.swift */; settings = {ASSET_TAGS = (); }; };
+		554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554434CA1BFB91A500BF503A /* LocationCell.xib */; settings = {ASSET_TAGS = (); }; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
 		8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */; };
 		85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */; };
@@ -199,6 +201,8 @@
 		2CCE9CF51BF3AB52002B4ABD /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedCharges.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		554434C51BFB911A00BF503A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		554434CA1BFB91A500BF503A /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		85ECCCAE1BEBC16500A98F88 /* EmployeeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeEventCell.swift; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				2CB37A561BE89DCC003A6897 /* GD Screenshots */,
 				85ECCCA71BEBBFFB00A98F88 /* Employee Events/Tasks List */,
 				8556F48B1BD9403E006CA928 /* My Events */,
+				554434C41BFB90BF00BF503A /* Info Screen */,
 				8556F48A1BD94028006CA928 /* Home */,
 				2C11A2791BC19CE500838E07 /* constants */,
 				2C11A2781BC19CB900838E07 /* Main */,
@@ -448,6 +453,15 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		554434C41BFB90BF00BF503A /* Info Screen */ = {
+			isa = PBXGroup;
+			children = (
+				554434C51BFB911A00BF503A /* LocationCell.swift */,
+				554434CA1BFB91A500BF503A /* LocationCell.xib */,
+			);
+			name = "Info Screen";
+			sourceTree = "<group>";
+		};
 		6F1BA9CE955EA931940A6009 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +611,7 @@
 				2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */,
 				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
 				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
+				554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */,
 				2C40145F1BF9A8560067F693 /* Clock_Icon_Red.png in Resources */,
 				2C7783231BFA87AD00D56A88 /* All Things BEO.docx in Resources */,
 				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
@@ -740,6 +755,7 @@
 				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
 				2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */,
 				2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */,
+				554434C61BFB911A00BF503A /* LocationCell.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
 				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
