@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Registering subclasses
         BEO.registerSubclass()
+        Task.registerSubclass()
+        EstimatedCharges.registerSubclass()
         
         
         if let _ = PFUser.currentUser() {

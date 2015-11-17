@@ -15,7 +15,6 @@
 		2C11A2511BC0DE7200838E07 /* BEO_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2501BC0DE7200838E07 /* BEO_AppTests.swift */; };
 		2C11A25C1BC0DE7200838E07 /* BEO_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */; };
 		2C11A26A1BC0DF1000838E07 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2691BC0DF1000838E07 /* Podfile */; };
-		2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A26C1BC0F08000838E07 /* marriot_logo.png */; };
 		2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A26E1BC10C0C00838E07 /* LoginController.swift */; };
 		2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2711BC10C4F00838E07 /* NewAccountController.swift */; };
 		2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */; };
@@ -34,6 +33,34 @@
 		2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */; };
 		2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */; };
 		2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */; };
+		2C4014551BF9A8560067F693 /* Add_Button_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40143C1BF9A8560067F693 /* Add_Button_White.png */; };
+		2C4014561BF9A8560067F693 /* Arrow_Down_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40143D1BF9A8560067F693 /* Arrow_Down_White.png */; };
+		2C4014571BF9A8560067F693 /* Arrow_Left_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40143E1BF9A8560067F693 /* Arrow_Left_Gold.png */; };
+		2C4014581BF9A8560067F693 /* Arrow_Right_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40143F1BF9A8560067F693 /* Arrow_Right_Gold.png */; };
+		2C4014591BF9A8560067F693 /* Arrow_Up_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014401BF9A8560067F693 /* Arrow_Up_Gold.png */; };
+		2C40145A1BF9A8560067F693 /* Arrow_Up_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014411BF9A8560067F693 /* Arrow_Up_White.png */; };
+		2C40145B1BF9A8560067F693 /* Call_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014421BF9A8560067F693 /* Call_Icon.png */; };
+		2C40145C1BF9A8560067F693 /* Checkbox_Complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014431BF9A8560067F693 /* Checkbox_Complete.png */; };
+		2C40145D1BF9A8560067F693 /* Checkbox_Incomplete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014441BF9A8560067F693 /* Checkbox_Incomplete.png */; };
+		2C40145E1BF9A8560067F693 /* Clock_Icon_Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014451BF9A8560067F693 /* Clock_Icon_Grey.png */; };
+		2C40145F1BF9A8560067F693 /* Clock_Icon_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014461BF9A8560067F693 /* Clock_Icon_Red.png */; };
+		2C4014601BF9A8560067F693 /* Dustpan_Icon_Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014471BF9A8560067F693 /* Dustpan_Icon_Grey.png */; };
+		2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014481BF9A8560067F693 /* Dustpan_Icon_Red.png */; };
+		2C4014621BF9A8560067F693 /* Edit_Icon_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014491BF9A8560067F693 /* Edit_Icon_Blue.png */; };
+		2C4014631BF9A8560067F693 /* Hotel Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144A1BF9A8560067F693 /* Hotel Picture.png */; };
+		2C4014641BF9A8560067F693 /* Info_Icon_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144B1BF9A8560067F693 /* Info_Icon_Blue.png */; };
+		2C4014651BF9A8560067F693 /* Location_Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144C1BF9A8560067F693 /* Location_Picture.png */; };
+		2C4014661BF9A8560067F693 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144D1BF9A8560067F693 /* Logo.png */; };
+		2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144E1BF9A8560067F693 /* Phone_Icon_White.png */; };
+		2C4014681BF9A8560067F693 /* Room_Setup_Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40144F1BF9A8560067F693 /* Room_Setup_Picture.png */; };
+		2C4014691BF9A8560067F693 /* Tag_Icon_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014501BF9A8560067F693 /* Tag_Icon_Blue.png */; };
+		2C40146A1BF9A8560067F693 /* Time_Icon_Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014511BF9A8560067F693 /* Time_Icon_Grey.png */; };
+		2C40146B1BF9A8560067F693 /* Time_Icon_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014521BF9A8560067F693 /* Time_Icon_Red.png */; };
+		2C40146C1BF9A8560067F693 /* WhiteBox_Employee.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014531BF9A8560067F693 /* WhiteBox_Employee.png */; };
+		2C40146D1BF9A8560067F693 /* WhiteBox_Manager.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */; };
+		2C7783231BFA87AD00D56A88 /* All Things BEO.docx in Resources */ = {isa = PBXBuildFile; fileRef = 2C7783211BFA87AD00D56A88 /* All Things BEO.docx */; };
+		2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7783221BFA87AD00D56A88 /* BEO Example.pdf */; };
+		2C7783261BFA87FD00D56A88 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7783251BFA87FD00D56A88 /* Const.swift */; };
 		2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A571BE89DCC003A6897 /* Calendar.png */; };
 		2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */; };
 		2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A591BE89DCC003A6897 /* Info.png */; };
@@ -48,6 +75,15 @@
 		2CB37A701BE90E50003A6897 /* BEO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A6F1BE90E50003A6897 /* BEO.swift */; };
 		2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A711BE90F57003A6897 /* DinnerStyle.swift */; };
 		2CB37A741BE90FCF003A6897 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB37A731BE90FCF003A6897 /* Task.swift */; };
+		2CCE9CEA1BF2F83C002B4ABD /* Arrow_Right_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE9CE61BF2F83C002B4ABD /* Arrow_Right_Gold.png */; };
+		2CCE9CEB1BF2F83C002B4ABD /* Info_Icon_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE9CE71BF2F83C002B4ABD /* Info_Icon_Blue.png */; };
+		2CCE9CEC1BF2F83C002B4ABD /* Arrow_Left_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE9CE81BF2F83C002B4ABD /* Arrow_Left_Gold.png */; };
+		2CCE9CED1BF2F83C002B4ABD /* Phone_Icon_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE9CE91BF2F83C002B4ABD /* Phone_Icon_White.png */; };
+		2CCE9CF01BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CEF1BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift */; };
+		2CCE9CF21BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF11BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib */; };
+		2CCE9CF41BF3AADE002B4ABD /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF31BF3AADE002B4ABD /* Beverage.swift */; };
+		2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF51BF3AB52002B4ABD /* Food.swift */; };
+		2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
 		8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */; };
@@ -93,7 +129,6 @@
 		2C11A25B1BC0DE7200838E07 /* BEO_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEO_AppUITests.swift; sourceTree = "<group>"; };
 		2C11A25D1BC0DE7300838E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C11A2691BC0DF1000838E07 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2C11A26C1BC0F08000838E07 /* marriot_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marriot_logo.png; sourceTree = "<group>"; };
 		2C11A26E1BC10C0C00838E07 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2C11A2711BC10C4F00838E07 /* NewAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccountController.swift; sourceTree = "<group>"; };
 		2C11A2731BC10C6500838E07 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
@@ -112,6 +147,34 @@
 		2C11A28E1BC1AB1F00838E07 /* IMG_1526.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1526.JPG; sourceTree = "<group>"; };
 		2C11A28F1BC1AB1F00838E07 /* IMG_1527.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1527.JPG; sourceTree = "<group>"; };
 		2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1525.JPG; sourceTree = "<group>"; };
+		2C40143C1BF9A8560067F693 /* Add_Button_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add_Button_White.png; sourceTree = "<group>"; };
+		2C40143D1BF9A8560067F693 /* Arrow_Down_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Down_White.png; sourceTree = "<group>"; };
+		2C40143E1BF9A8560067F693 /* Arrow_Left_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Left_Gold.png; sourceTree = "<group>"; };
+		2C40143F1BF9A8560067F693 /* Arrow_Right_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Right_Gold.png; sourceTree = "<group>"; };
+		2C4014401BF9A8560067F693 /* Arrow_Up_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Up_Gold.png; sourceTree = "<group>"; };
+		2C4014411BF9A8560067F693 /* Arrow_Up_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Up_White.png; sourceTree = "<group>"; };
+		2C4014421BF9A8560067F693 /* Call_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call_Icon.png; sourceTree = "<group>"; };
+		2C4014431BF9A8560067F693 /* Checkbox_Complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkbox_Complete.png; sourceTree = "<group>"; };
+		2C4014441BF9A8560067F693 /* Checkbox_Incomplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkbox_Incomplete.png; sourceTree = "<group>"; };
+		2C4014451BF9A8560067F693 /* Clock_Icon_Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock_Icon_Grey.png; sourceTree = "<group>"; };
+		2C4014461BF9A8560067F693 /* Clock_Icon_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock_Icon_Red.png; sourceTree = "<group>"; };
+		2C4014471BF9A8560067F693 /* Dustpan_Icon_Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dustpan_Icon_Grey.png; sourceTree = "<group>"; };
+		2C4014481BF9A8560067F693 /* Dustpan_Icon_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dustpan_Icon_Red.png; sourceTree = "<group>"; };
+		2C4014491BF9A8560067F693 /* Edit_Icon_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edit_Icon_Blue.png; sourceTree = "<group>"; };
+		2C40144A1BF9A8560067F693 /* Hotel Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hotel Picture.png"; sourceTree = "<group>"; };
+		2C40144B1BF9A8560067F693 /* Info_Icon_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Icon_Blue.png; sourceTree = "<group>"; };
+		2C40144C1BF9A8560067F693 /* Location_Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location_Picture.png; sourceTree = "<group>"; };
+		2C40144D1BF9A8560067F693 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		2C40144E1BF9A8560067F693 /* Phone_Icon_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone_Icon_White.png; sourceTree = "<group>"; };
+		2C40144F1BF9A8560067F693 /* Room_Setup_Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Room_Setup_Picture.png; sourceTree = "<group>"; };
+		2C4014501BF9A8560067F693 /* Tag_Icon_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tag_Icon_Blue.png; sourceTree = "<group>"; };
+		2C4014511BF9A8560067F693 /* Time_Icon_Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time_Icon_Grey.png; sourceTree = "<group>"; };
+		2C4014521BF9A8560067F693 /* Time_Icon_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Time_Icon_Red.png; sourceTree = "<group>"; };
+		2C4014531BF9A8560067F693 /* WhiteBox_Employee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBox_Employee.png; sourceTree = "<group>"; };
+		2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBox_Manager.png; sourceTree = "<group>"; };
+		2C7783211BFA87AD00D56A88 /* All Things BEO.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "All Things BEO.docx"; sourceTree = "<group>"; };
+		2C7783221BFA87AD00D56A88 /* BEO Example.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BEO Example.pdf"; sourceTree = "<group>"; };
+		2C7783251BFA87FD00D56A88 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		2CB37A571BE89DCC003A6897 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmployeeEventTaskList.png; sourceTree = "<group>"; };
 		2CB37A591BE89DCC003A6897 /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
@@ -126,6 +189,15 @@
 		2CB37A6F1BE90E50003A6897 /* BEO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEO.swift; sourceTree = "<group>"; };
 		2CB37A711BE90F57003A6897 /* DinnerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerStyle.swift; sourceTree = "<group>"; };
 		2CB37A731BE90FCF003A6897 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2CCE9CE61BF2F83C002B4ABD /* Arrow_Right_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Right_Gold.png; sourceTree = "<group>"; };
+		2CCE9CE71BF2F83C002B4ABD /* Info_Icon_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Icon_Blue.png; sourceTree = "<group>"; };
+		2CCE9CE81BF2F83C002B4ABD /* Arrow_Left_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_Left_Gold.png; sourceTree = "<group>"; };
+		2CCE9CE91BF2F83C002B4ABD /* Phone_Icon_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone_Icon_White.png; sourceTree = "<group>"; };
+		2CCE9CEF1BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsCalendarTableCell.swift; sourceTree = "<group>"; };
+		2CCE9CF11BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyEventsCalendarTableCell.xib; sourceTree = "<group>"; };
+		2CCE9CF31BF3AADE002B4ABD /* Beverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		2CCE9CF51BF3AB52002B4ABD /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedCharges.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8556F48E1BD942E2006CA928 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +272,8 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				2C40143B1BF9A8560067F693 /* GD Assets */,
+				2CCE9CEE1BF3A415002B4ABD /* ui */,
 				2CB37A6E1BE90E40003A6897 /* models */,
 				2CB37A561BE89DCC003A6897 /* GD Screenshots */,
 				85ECCCA71BEBBFFB00A98F88 /* Employee Events/Tasks List */,
@@ -240,7 +314,10 @@
 		2C11A26B1BC0F06F00838E07 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2C11A26C1BC0F08000838E07 /* marriot_logo.png */,
+				2CCE9CE61BF2F83C002B4ABD /* Arrow_Right_Gold.png */,
+				2CCE9CE71BF2F83C002B4ABD /* Info_Icon_Blue.png */,
+				2CCE9CE81BF2F83C002B4ABD /* Arrow_Left_Gold.png */,
+				2CCE9CE91BF2F83C002B4ABD /* Phone_Icon_White.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -279,6 +356,7 @@
 			children = (
 				2C11A27A1BC19CEE00838E07 /* Segues.swift */,
 				2CB37A6B1BE8A916003A6897 /* Colors.swift */,
+				2C7783251BFA87FD00D56A88 /* Const.swift */,
 			);
 			name = constants;
 			sourceTree = "<group>";
@@ -286,6 +364,8 @@
 		2C11A2851BC1AB1200838E07 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				2C7783211BFA87AD00D56A88 /* All Things BEO.docx */,
+				2C7783221BFA87AD00D56A88 /* BEO Example.pdf */,
 				2C11A2861BC1AB1F00838E07 /* IMG_1535.JPG */,
 				2C11A2871BC1AB1F00838E07 /* IMG_1534.JPG */,
 				2C11A2881BC1AB1F00838E07 /* IMG_1533.JPG */,
@@ -299,6 +379,38 @@
 				2C11A2901BC1AB1F00838E07 /* IMG_1525.JPG */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		2C40143B1BF9A8560067F693 /* GD Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2C40143C1BF9A8560067F693 /* Add_Button_White.png */,
+				2C40143D1BF9A8560067F693 /* Arrow_Down_White.png */,
+				2C40143E1BF9A8560067F693 /* Arrow_Left_Gold.png */,
+				2C40143F1BF9A8560067F693 /* Arrow_Right_Gold.png */,
+				2C4014401BF9A8560067F693 /* Arrow_Up_Gold.png */,
+				2C4014411BF9A8560067F693 /* Arrow_Up_White.png */,
+				2C4014421BF9A8560067F693 /* Call_Icon.png */,
+				2C4014431BF9A8560067F693 /* Checkbox_Complete.png */,
+				2C4014441BF9A8560067F693 /* Checkbox_Incomplete.png */,
+				2C4014451BF9A8560067F693 /* Clock_Icon_Grey.png */,
+				2C4014461BF9A8560067F693 /* Clock_Icon_Red.png */,
+				2C4014471BF9A8560067F693 /* Dustpan_Icon_Grey.png */,
+				2C4014481BF9A8560067F693 /* Dustpan_Icon_Red.png */,
+				2C4014491BF9A8560067F693 /* Edit_Icon_Blue.png */,
+				2C40144A1BF9A8560067F693 /* Hotel Picture.png */,
+				2C40144B1BF9A8560067F693 /* Info_Icon_Blue.png */,
+				2C40144C1BF9A8560067F693 /* Location_Picture.png */,
+				2C40144D1BF9A8560067F693 /* Logo.png */,
+				2C40144E1BF9A8560067F693 /* Phone_Icon_White.png */,
+				2C40144F1BF9A8560067F693 /* Room_Setup_Picture.png */,
+				2C4014501BF9A8560067F693 /* Tag_Icon_Blue.png */,
+				2C4014511BF9A8560067F693 /* Time_Icon_Grey.png */,
+				2C4014521BF9A8560067F693 /* Time_Icon_Red.png */,
+				2C4014531BF9A8560067F693 /* WhiteBox_Employee.png */,
+				2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */,
+			);
+			path = "GD Assets";
 			sourceTree = "<group>";
 		};
 		2CB37A561BE89DCC003A6897 /* GD Screenshots */ = {
@@ -320,8 +432,20 @@
 				2CB37A6F1BE90E50003A6897 /* BEO.swift */,
 				2CB37A711BE90F57003A6897 /* DinnerStyle.swift */,
 				2CB37A731BE90FCF003A6897 /* Task.swift */,
+				2CCE9CF31BF3AADE002B4ABD /* Beverage.swift */,
+				2CCE9CF51BF3AB52002B4ABD /* Food.swift */,
+				2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		2CCE9CEE1BF3A415002B4ABD /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE9CEF1BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift */,
+				2CCE9CF11BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		6F1BA9CE955EA931940A6009 /* Frameworks */ = {
@@ -470,28 +594,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */,
+				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
+				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
+				2C40145F1BF9A8560067F693 /* Clock_Icon_Red.png in Resources */,
+				2C7783231BFA87AD00D56A88 /* All Things BEO.docx in Resources */,
 				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
+				2C4014631BF9A8560067F693 /* Hotel Picture.png in Resources */,
+				2C4014661BF9A8560067F693 /* Logo.png in Resources */,
 				2C11A2981BC1AB1F00838E07 /* IMG_1528.JPG in Resources */,
 				2C11A2941BC1AB1F00838E07 /* IMG_1532.JPG in Resources */,
+				2C4014591BF9A8560067F693 /* Arrow_Up_Gold.png in Resources */,
 				2CB37A611BE89DCC003A6897 /* ManagerEventList.png in Resources */,
 				2C11A29A1BC1AB1F00838E07 /* IMG_1527.JPG in Resources */,
 				2C11A29B1BC1AB1F00838E07 /* IMG_1525.JPG in Resources */,
 				2CB37A621BE89DCC003A6897 /* ManagerTasks.png in Resources */,
+				2C4014601BF9A8560067F693 /* Dustpan_Icon_Grey.png in Resources */,
 				2C11A2461BC0DE7200838E07 /* LaunchScreen.storyboard in Resources */,
 				85ECCCB51BEBC63300A98F88 /* EmployeeTaskCell.xib in Resources */,
+				2C40145C1BF9A8560067F693 /* Checkbox_Complete.png in Resources */,
+				2C4014691BF9A8560067F693 /* Tag_Icon_Blue.png in Resources */,
+				2C4014581BF9A8560067F693 /* Arrow_Right_Gold.png in Resources */,
+				2C40146A1BF9A8560067F693 /* Time_Icon_Grey.png in Resources */,
+				2CCE9CEB1BF2F83C002B4ABD /* Info_Icon_Blue.png in Resources */,
+				2C4014561BF9A8560067F693 /* Arrow_Down_White.png in Resources */,
+				2CCE9CED1BF2F83C002B4ABD /* Phone_Icon_White.png in Resources */,
+				2C4014571BF9A8560067F693 /* Arrow_Left_Gold.png in Resources */,
 				2C11A2431BC0DE7200838E07 /* Assets.xcassets in Resources */,
+				2C40145E1BF9A8560067F693 /* Clock_Icon_Grey.png in Resources */,
+				2C40146C1BF9A8560067F693 /* WhiteBox_Employee.png in Resources */,
+				2C40146B1BF9A8560067F693 /* Time_Icon_Red.png in Resources */,
+				2CCE9CEA1BF2F83C002B4ABD /* Arrow_Right_Gold.png in Resources */,
+				2C4014551BF9A8560067F693 /* Add_Button_White.png in Resources */,
 				2CB37A5E1BE89DCC003A6897 /* EmployeeEventTaskList.png in Resources */,
+				2C40145D1BF9A8560067F693 /* Checkbox_Incomplete.png in Resources */,
+				2C40146D1BF9A8560067F693 /* WhiteBox_Manager.png in Resources */,
+				2C40145B1BF9A8560067F693 /* Call_Icon.png in Resources */,
+				2C4014641BF9A8560067F693 /* Info_Icon_Blue.png in Resources */,
 				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
 				85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */,
 				85FFC2E61BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib in Resources */,
+				2C4014621BF9A8560067F693 /* Edit_Icon_Blue.png in Resources */,
 				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
+				2C40145A1BF9A8560067F693 /* Arrow_Up_White.png in Resources */,
 				2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */,
+				2CCE9CF21BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib in Resources */,
 				2C11A26A1BC0DF1000838E07 /* Podfile in Resources */,
 				2C11A2931BC1AB1F00838E07 /* IMG_1533.JPG in Resources */,
 				2CB37A601BE89DCC003A6897 /* Login.png in Resources */,
+				2C4014651BF9A8560067F693 /* Location_Picture.png in Resources */,
 				2C11A2911BC1AB1F00838E07 /* IMG_1535.JPG in Resources */,
 				2C11A2961BC1AB1F00838E07 /* IMG_1530.JPG in Resources */,
-				2C11A26D1BC0F08000838E07 /* marriot_logo.png in Resources */,
+				2C4014681BF9A8560067F693 /* Room_Setup_Picture.png in Resources */,
+				2CCE9CEC1BF2F83C002B4ABD /* Arrow_Left_Gold.png in Resources */,
 				2C11A2991BC1AB1F00838E07 /* IMG_1526.JPG in Resources */,
 				2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */,
 				2C11A2921BC1AB1F00838E07 /* IMG_1534.JPG in Resources */,
@@ -573,13 +728,17 @@
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
 				8556F48F1BD942E2006CA928 /* MyEventsTableViewController.swift in Sources */,
 				85ECCCB41BEBC63300A98F88 /* EmployeeTaskCell.swift in Sources */,
+				2C7783261BFA87FD00D56A88 /* Const.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
+				2CCE9CF41BF3AADE002B4ABD /* Beverage.swift in Sources */,
+				2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */,
 				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
 				2CB37A741BE90FCF003A6897 /* Task.swift in Sources */,
 				85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
 				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
+				2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */,
 				2CB37A661BE8A2C8003A6897 /* CalendarController.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
 				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,
@@ -587,6 +746,7 @@
 				2CB37A681BE8A465003A6897 /* README.md in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
+				2CCE9CF01BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift in Sources */,
 				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
 				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
 			);

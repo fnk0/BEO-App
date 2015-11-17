@@ -62,10 +62,11 @@ class EmployeeEventCell: UITableViewCell {
     let defaultCellHeight = 60
     
     // Color constants
-    let redColor = UIColor(red: 227/255, green: 102/255, blue: 102/255, alpha: 1.0)
-    let lightGrayColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0)
-    let goldColor = UIColor(red: 163/255, green: 141/255, blue: 103/255, alpha: 1.0)
-    let blueColor = UIColor(red: 46/255, green: 49/255, blue: 133/255, alpha: 1.0)
+    let redColor = UIColor(red: 177/255, green: 40/255, blue: 40/255, alpha: 1.0)
+    let lightGrayColor = UIColor(red: 203/255, green: 203/255, blue: 203/255, alpha: 1.0)
+    let darkGrayColor = UIColor(red: 165/255, green: 167/255, blue: 170/255, alpha: 1.0)
+    let goldColor = UIColor(red: 163/255, green: 145/255, blue: 101/255, alpha: 1.0)
+    let blueColor = UIColor(red: 0/255, green: 53/255, blue: 110/255, alpha: 1.0)
     
     
     override func awakeFromNib() {
