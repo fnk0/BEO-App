@@ -11,27 +11,17 @@ import UIKit
 import Parse
 import PKHUD
 
-class LoginController : UIViewController, UITextFieldDelegate {
+class LoginController : UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
-        email.delegate = self
-        password.delegate = self
+        
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == email {
-            password.becomeFirstResponder()
-        } else {
-            password.resignFirstResponder()
-            self.login()
-        }
-        return true
-    }
-    
-    func login() {
+    @IBAction func login(sender: UIButton) {
+        
         if let e = email.text {
             if e.isValidEmail() {
                 if let p = password.text {
@@ -56,5 +46,9 @@ class LoginController : UIViewController, UITextFieldDelegate {
                 // Email not valid
             }
         }
+    }
+    
+    @IBAction func callFrontDesk(sender: UIBarButtonItem) {
+        
     }
 }
