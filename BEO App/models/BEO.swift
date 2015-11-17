@@ -17,19 +17,18 @@ class BEO : PFObject, PFSubclassing {
     @NSManaged var accountName: String
     @NSManaged var postAs: String
     @NSManaged var methodOfPayment: String
+    @NSManaged var estimatedCharges: EstimatedCharges
     
     // This is mainly the part we care about
     @NSManaged var manager: PFUser
     @NSManaged var expecting: Int
     @NSManaged var rsvp: Int
     @NSManaged var date: NSDate
+    @NSManaged var due: NSDate
     
     // Format 6-8am 5:30-8:30pm
     @NSManaged var timePeriod: String
     @NSManaged var title: String
-    
-    @NSManaged var estimatedCharges: EstimatedCharges
-    
     // Once HR gives us more info we can set up a location enum also
     @NSManaged var location: String
     
