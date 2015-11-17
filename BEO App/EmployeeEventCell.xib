@@ -81,10 +81,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="broomIconImage" destination="fDe-dD-NIb" id="yK1-Be-8qD"/>
                 <outlet property="cleanTimeLabel" destination="kb6-Vf-tb7" id="Fhh-2N-Z3g"/>
                 <outlet property="clockIconImage" destination="SLk-jJ-Hwe" id="s8a-FX-AAv"/>
                 <outlet property="completionTimeLabel" destination="gcw-EZ-vpY" id="Mul-Y4-mcO"/>
+                <outlet property="dustpanIconImage" destination="fDe-dD-NIb" id="fcx-Hb-rdT"/>
                 <outlet property="eventNameLabel" destination="LLM-8a-vke" id="uh2-yP-2bq"/>
                 <outlet property="eventTimeLabel" destination="brd-kP-B3c" id="u2B-XQ-g8k"/>
                 <outlet property="infoButton" destination="rX8-Cs-jMA" id="RLc-jy-pDE"/>

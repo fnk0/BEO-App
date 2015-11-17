@@ -18,7 +18,7 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var cleanTimeLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var clockIconImage: UIImageView!
-    @IBOutlet weak var broomIconImage: UIImageView!
+    @IBOutlet weak var dustpanIconImage: UIImageView!
     
     // Data arrays
     /*
@@ -68,6 +68,16 @@ class EmployeeEventCell: UITableViewCell {
     let goldColor = UIColor(red: 163/255, green: 145/255, blue: 101/255, alpha: 1.0)
     let blueColor = UIColor(red: 0/255, green: 53/255, blue: 110/255, alpha: 1.0)
     
+    // Images from GD team
+    let grayClockImage = UIImage(named: "Clock_Icon_Grey.png")
+    let redClockImage = UIImage(named: "Clock_Icon_Red.png")
+    let grayDustpanImage = UIImage(named: "Dustpan_Icon_Grey.png")
+    let redDustpanImage = UIImage(named: "Dustpan_Icon_Red.png")
+    let grayTimeImage = UIImage(named: "Time_Icon_Grey.png")
+    let redTimeImage = UIImage(named: "Time_Icon_Red.png")
+    let infoImage = UIImage(named: "Info_Icon_Blue.png")
+    let checkboxIncompleteImage = UIImage(named: "Checkbox_Incomplete.png")
+    let checkboxCompleteImage = UIImage(named: "Checkbox_Complete.png")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -90,7 +100,7 @@ class EmployeeEventCell: UITableViewCell {
             let button = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
             button.center.x = CGFloat(taskButtonCenterX)
             button.center.y = CGFloat(taskButtonCenterY + (taskLabel1Height * index) + taskButtonSpacing)
-            button.backgroundColor = lightGrayColor
+            button.setImage(checkboxIncompleteImage, forState: .Normal)
             button.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
             self.addSubview(button)
             taskButtons.append(button)
@@ -113,11 +123,11 @@ class EmployeeEventCell: UITableViewCell {
             self.addSubview(label1)
             taskLabels.append(label1)
             
-            // Create image for clock icon
+            // Create image for time icon
             let image = UIImageView(frame: CGRectMake(0, 0, CGFloat(taskImageWidth), CGFloat(taskImageHeight)))
             image.center.x = CGFloat(taskImageCenterX)
             image.center.y = CGFloat(taskImageCenterY + (taskLabel1Height * index) + taskImageSpacing)
-            image.backgroundColor = redColor
+            image.image = redTimeImage
             self.addSubview(image)
             taskImages.append(image)
             
@@ -137,8 +147,8 @@ class EmployeeEventCell: UITableViewCell {
         eventTimeLabel.textColor = goldColor
         completionTimeLabel.textColor = redColor
         cleanTimeLabel.textColor = redColor
-        clockIconImage.backgroundColor = redColor
-        broomIconImage.backgroundColor = redColor
+        clockIconImage.image = redClockImage
+        dustpanIconImage.image = redDustpanImage
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -248,19 +258,43 @@ class EmployeeEventCell: UITableViewCell {
         
         if !(buttonIndex == -1)
         {
-            if sender.backgroundColor == lightGrayColor
+            if sender.imageView!.image == checkboxIncompleteImage
             {
-                sender.backgroundColor = UIColor.blackColor()
-                taskCompletionLabels[buttonIndex].textColor = lightGrayColor
-                taskImages[buttonIndex].backgroundColor = lightGrayColor
+                sender.setImage(checkboxCompleteImage, forState: .Normal)
+                taskCompletionLabels[buttonIndex].textColor = darkGrayColor
+                taskImages[buttonIndex].image = grayTimeImage
                 
             }
             else
             {
-                sender.backgroundColor = lightGrayColor
+                sender.setImage(checkboxIncompleteImage, forState: .Normal)
                 taskCompletionLabels[buttonIndex].textColor = redColor
-                taskImages[buttonIndex].backgroundColor = redColor
+                taskImages[buttonIndex].image = redTimeImage
             }
+        }
+        
+        var allTasksCompleted = true
+        for button in taskButtons
+        {
+            if button.imageView!.image == checkboxIncompleteImage
+            {
+                allTasksCompleted = false
+            }
+        }
+        
+        if allTasksCompleted
+        {
+            completionTimeLabel.textColor = darkGrayColor
+            cleanTimeLabel.textColor = darkGrayColor
+            clockIconImage.image = grayClockImage
+            dustpanIconImage.image = grayDustpanImage
+        }
+        else
+        {
+            completionTimeLabel.textColor = redColor
+            cleanTimeLabel.textColor = redColor
+            clockIconImage.image = redClockImage
+            dustpanIconImage.image = redDustpanImage
         }
     }
     
