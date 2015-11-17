@@ -11,7 +11,7 @@ import Parse
 
 class LocationCell : UITableViewCell {
     
-    
+    let locationImage = UIImage(named: "Location_")
     
     
 }
