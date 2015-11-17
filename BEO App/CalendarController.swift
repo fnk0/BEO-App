@@ -12,7 +12,7 @@ import CVCalendar
 import Parse
 
 class CalendarController : UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDelegate, CVCalendarViewAppearanceDelegate,
-        UITableViewDataSource, UITableViewDelegate {
+UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var calendarView: CVCalendarView!
@@ -50,7 +50,7 @@ class CalendarController : UIViewController, CVCalendarViewDelegate, CVCalendarM
             if error == nil {
                 // The find succeeded.
                 print("Successfully retrieved \(objects!.count) beos.")
-
+                
                 if let objects = objects as? [BEO] {
                     self.beos = objects
                     self.beosTableView.reloadData()
@@ -68,7 +68,7 @@ class CalendarController : UIViewController, CVCalendarViewDelegate, CVCalendarM
     }
     
     override func viewDidAppear(animated: Bool) {
-
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

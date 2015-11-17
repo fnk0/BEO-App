@@ -29,7 +29,6 @@ class BEO : PFObject, PFSubclassing {
     // Format 6-8am 5:30-8:30pm
     @NSManaged var timePeriod: String
     @NSManaged var title: String
-    @NSManaged var estimatedCharges: EstimatedCharges
 
     // Once HR gives us more info we can set up a location enum also
     @NSManaged var location: String
