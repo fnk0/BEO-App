@@ -55,8 +55,13 @@
                             <constraint firstAttribute="width" constant="21" id="yDK-No-DgL"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
-                        <rect key="frame" x="290" y="5" width="22" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
+                        <rect key="frame" x="291" y="5" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BU9-kc-VJd"/>
+                            <constraint firstAttribute="width" constant="21" id="cZl-A1-mMS"/>
+                        </constraints>
+                        <state key="normal" image="Info_Icon_Blue.png"/>
                         <connections>
                             <action selector="infoButtonTap:" destination="cJG-2D-Y5O" eventType="touchUpInside" id="TtE-3V-ZUB"/>
                         </connections>
@@ -92,4 +97,7 @@
             <point key="canvasLocation" x="785" y="918.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Info_Icon_Blue.png" width="38" height="38"/>
+    </resources>
 </document>

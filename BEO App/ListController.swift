@@ -15,8 +15,10 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var tableView: UITableView!
     
     var sections = [String]()
-    var events = [ [PFObject] ]()
-    var eventsRaw = [PFObject]()
+    var events = [ [BEO] ]()
+    var eventsRaw = [BEO]()
+    var tasks = [Task]()
+    var employee = PFUser()
     
     // Boolean to indicate whether parse retrieval failed
     var readFailed = false
@@ -30,6 +32,9 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         nib = UINib(nibName: "EmployeeEventSectionHeader", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "employeeEventSectionHeader")
+        
+        // Retrieve the events corresponding to the current employee from the database
+        getEventsFromDatabase()
         
         /*
         // ========== START - FOR TESTING ONLY - REMOVE BEFORE PRESENTATION ==========
@@ -85,7 +90,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         // ========== END - FOR TESTING ONLY - REMOVE BEFORE PRESENTATION ============
         */
-        
+        /*
         // Create a Parse query for EmployeeEvents
         let query = PFQuery(className: "EmployeeEvent")
         
@@ -98,6 +103,42 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         {
             readFailed = true
             print("Database read failed")
+        }
+        */
+
+    }
+    
+    
+    func getEventsFromDatabase()
+    {
+        // Create a Parse query to retrieve all tasks corresponding to the current employee
+        let query = Task.query()
+        query?.whereKey("employee", equalTo: employee)
+        
+        // Execute the query
+        query!.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) events.")
+                
+                if let objects = objects as? [Task] {
+                    self.tasks = objects
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+        
+        // Remove duplicates from the task list
+        tasks = Array(Set(tasks))
+        
+        // Get all the events corresponding to the tasks retrieved
+        for task in tasks
+        {
+            eventsRaw.append(task.beo)
         }
         
         // Sort the events into sections by date
@@ -116,6 +157,49 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
                 ++eventIndex
             }
             ++sectionIndex
+        }
+    }
+    
+    
+    func getTasksFromDatabase(forEvent forEvent: BEO) -> [Task]
+    {
+        var tasksToReturn = [Task]()
+        let query = Task.query()
+        query?.whereKey("beo", equalTo: forEvent)
+        
+        // Execute the query
+        query!.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) events.")
+                
+                if let objects = objects as? [Task] {
+                    tasksToReturn = objects
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+        
+        return tasksToReturn
+    }
+    
+    
+    func saveEventsToDatabase()
+    {
+        for event in eventsRaw
+        {
+            do
+            {
+                try event.save()
+            }
+            catch
+            {
+                print("Error: Failed to save event to the database.")
+            }
         }
     }
     
@@ -141,7 +225,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.eventTimeLabel.text = "\(startTime)-\(endTime)"
         
         // Update the cell so the tasks will be drawn
-        cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
+        //cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
+        cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         cell.updateAppearance(printDebug: true)
         
         return cell
@@ -153,7 +238,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // Set tasks array in the cell. Even though this has nothing to do with height, it needs to be done
         // before the cell is drawn, so this function is a good place to do it.
-        cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
+        //cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
+        cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         
         return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing )
         //return UITableViewAutomaticDimension

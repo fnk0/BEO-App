@@ -28,7 +28,7 @@ class EmployeeEventCell: UITableViewCell {
                   "Task 4",
                   "Task 5" ]
     */
-    var tasks = [PFObject]()
+    var tasks = [Task]()
     var taskLabels = [UILabel]()
     var taskCompletionLabels = [UILabel]()
     var taskButtons = [UIButton]()
@@ -119,7 +119,8 @@ class EmployeeEventCell: UITableViewCell {
             {
                 print("Database read failed.");
             }
-            label1.text = String(tasks[index].valueForKey("desc")!)
+            label1.text = String(tasks[index].desc)
+            //label1.text = String(tasks[index].valueForKey("desc")!)
             self.addSubview(label1)
             taskLabels.append(label1)
             
@@ -258,7 +259,8 @@ class EmployeeEventCell: UITableViewCell {
         
         if !(buttonIndex == -1)
         {
-            if sender.imageView!.image == checkboxIncompleteImage
+            //if sender.imageView!.image == checkboxIncompleteImage
+            if !tasks[buttonIndex].completed
             {
                 sender.setImage(checkboxCompleteImage, forState: .Normal)
                 taskCompletionLabels[buttonIndex].textColor = darkGrayColor
@@ -273,6 +275,7 @@ class EmployeeEventCell: UITableViewCell {
             }
         }
         
+        /*
         var allTasksCompleted = true
         for button in taskButtons
         {
@@ -281,8 +284,9 @@ class EmployeeEventCell: UITableViewCell {
                 allTasksCompleted = false
             }
         }
+        */
         
-        if allTasksCompleted
+        if allTasksCompleted()
         {
             completionTimeLabel.textColor = darkGrayColor
             cleanTimeLabel.textColor = darkGrayColor
@@ -296,6 +300,19 @@ class EmployeeEventCell: UITableViewCell {
             clockIconImage.image = redClockImage
             dustpanIconImage.image = redDustpanImage
         }
+    }
+    
+    
+    func allTasksCompleted() -> Bool
+    {
+        for task in tasks
+        {
+            if task.completed == false
+            {
+                return false
+            }
+        }
+        return true
     }
     
     
