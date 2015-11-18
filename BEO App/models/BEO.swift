@@ -41,6 +41,8 @@ class BEO : PFObject, PFSubclassing {
         
     // The value for this is retrieved from the enum Beverage
     @NSManaged var beverage: String
+    
+    @NSManaged var notes: String
 
     //TODO: move this to a class constants file
     static func parseClassName() -> String {
