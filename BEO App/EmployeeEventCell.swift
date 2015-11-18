@@ -265,6 +265,7 @@ class EmployeeEventCell: UITableViewCell {
                 sender.setImage(checkboxCompleteImage, forState: .Normal)
                 taskCompletionLabels[buttonIndex].textColor = darkGrayColor
                 taskImages[buttonIndex].image = grayTimeImage
+                tasks[buttonIndex].completed = true
                 
             }
             else
@@ -272,6 +273,7 @@ class EmployeeEventCell: UITableViewCell {
                 sender.setImage(checkboxIncompleteImage, forState: .Normal)
                 taskCompletionLabels[buttonIndex].textColor = redColor
                 taskImages[buttonIndex].image = redTimeImage
+                tasks[buttonIndex].completed = false
             }
         }
         

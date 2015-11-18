@@ -18,6 +18,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     var events = [ [BEO] ]()
     var eventsRaw = [BEO]()
     var tasks = [Task]()
+    var cellTasks = [Task]()
     var employee = PFUser()
     
     // Boolean to indicate whether parse retrieval failed
@@ -113,51 +114,44 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     {
         // Create a Parse query to retrieve all tasks corresponding to the current employee
         let query = Task.query()
-        query?.whereKey("employee", equalTo: employee)
+        //query?.whereKey("employee", equalTo: employee)
         
+        do
+        {
+            tasks = try query!.findObjects() as! [Task]
+        }
+        catch
+        {
+            print("Unable to retrieve events")
+        }
+        
+        organizeEvents()
+        
+        /*
         // Execute the query
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
-            if error == nil {
+            if error == nil
+            {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) events.")
+                print("Successfully retrieved \(objects!.count) tasks.")
                 
-                if let objects = objects as? [Task] {
+                if let objects = objects as? [Task]
+                {
                     self.tasks = objects
                 }
-            } else {
+                
+                self.organizeEvents()
+            }
+            else
+            {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+        */
         
-        // Remove duplicates from the task list
-        tasks = Array(Set(tasks))
-        
-        // Get all the events corresponding to the tasks retrieved
-        for task in tasks
-        {
-            eventsRaw.append(task.beo)
-        }
-        
-        // Sort the events into sections by date
-        var eventIndex = 0
-        var sectionIndex = 0
-        while eventIndex < eventsRaw.count
-        {
-            let sectionName = String(eventsRaw[eventIndex].valueForKey("date")!)
-            sections.append(sectionName)
-            events.append([eventsRaw[eventIndex]])
-            ++eventIndex
-            
-            while (eventIndex < eventsRaw.count) && (String(eventsRaw[eventIndex].valueForKey("date")!) == sectionName)
-            {
-                events[sectionIndex].append(eventsRaw[eventIndex])
-                ++eventIndex
-            }
-            ++sectionIndex
-        }
     }
     
     
@@ -167,13 +161,14 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         let query = Task.query()
         query?.whereKey("beo", equalTo: forEvent)
         
+        /*
         // Execute the query
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) events.")
+                print("Successfully retrieved \(objects!.count) tasks.")
                 
                 if let objects = objects as? [Task] {
                     tasksToReturn = objects
@@ -183,8 +178,81 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+        */
+        
+        do
+        {
+            try tasksToReturn = query?.findObjects() as! [Task]
+        }
+        catch
+        {
+            print("Error: could not fetch tasks corresponding to this BEO")
+        }
         
         return tasksToReturn
+    }
+    
+    
+    func organizeEvents()
+    {
+        // Remove duplicates from the task list
+        tasks = Array(Set(tasks))
+        
+        // Get all the events corresponding to the tasks retrieved
+        for task in tasks
+        {
+            let event = task.beo
+            do
+            {
+                try event.fetchIfNeeded()
+            }
+            catch
+            {
+                print("Error: could not fetch BEO corresponding to the current task")
+            }
+            
+            eventsRaw.append(event)
+        }
+        
+        // Remove duplicates
+        eventsRaw = Array(Set(eventsRaw))
+        
+        // Sort by date
+        eventsRaw.sortInPlace { $0.date.compare($1.date) == .OrderedAscending }
+        
+        let toPrint = eventsRaw
+        print("eventsRaw = \(toPrint)")
+        
+        // Sort the events into sections by date
+        var eventIndex = 0
+        var sectionIndex = 0
+        while eventIndex < eventsRaw.count
+        {
+            let dateString = String(eventsRaw[eventIndex].date)
+            let stringIndex = advance(dateString.startIndex, 10)
+            let sectionName = dateString.substringToIndex(stringIndex)
+            sections.append(sectionName)
+            events.append([eventsRaw[eventIndex]])
+            ++eventIndex
+            
+            var nextDateString = String(eventsRaw[eventIndex].date)
+            var nextStringIndex = advance(nextDateString.startIndex, 10)
+            var nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+            
+            while (eventIndex < eventsRaw.count) && (nextSectionName == sectionName)
+            {
+                events[sectionIndex].append(eventsRaw[eventIndex])
+                ++eventIndex
+                
+                if eventIndex < eventsRaw.count
+                {
+                    nextDateString = String(eventsRaw[eventIndex].date)
+                    nextStringIndex = advance(nextDateString.startIndex, 10)
+                    nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+                }
+            }
+            ++sectionIndex
+        }
     }
     
     
@@ -219,13 +287,10 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         let cell = tableView.dequeueReusableCellWithIdentifier("employeeEventCell", forIndexPath: indexPath) as! EmployeeEventCell
         
-        cell.eventNameLabel.text = String(events[indexPath.section][indexPath.row].valueForKey("name")!)
-        let startTime = String(events[indexPath.section][indexPath.row].valueForKey("startTime")!)
-        let endTime = String(events[indexPath.section][indexPath.row].valueForKey("endTime")!)
-        cell.eventTimeLabel.text = "\(startTime)-\(endTime)"
+        cell.eventNameLabel.text = events[indexPath.section][indexPath.row].title
+        cell.eventTimeLabel.text = events[indexPath.section][indexPath.row].timePeriod
         
         // Update the cell so the tasks will be drawn
-        //cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
         cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         cell.updateAppearance(printDebug: true)
         
@@ -238,7 +303,6 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // Set tasks array in the cell. Even though this has nothing to do with height, it needs to be done
         // before the cell is drawn, so this function is a good place to do it.
-        //cell.tasks = [events[indexPath.section][indexPath.row].valueForKey("tasks") as! PFObject]
         cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         
         return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing )
