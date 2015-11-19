@@ -33,7 +33,12 @@ UITableViewDataSource, UITableViewDelegate {
         appearance.dayLabelWeekdaySelectedBackgroundColor = Colors.Red
         appearance.dayLabelPresentWeekdayTextColor = Colors.DarkBlue
         
+        let nib = UINib(nibName: Const.MyEventsCalendarTableCell, bundle: nil)
+        self.beosTableView.registerNib(nib, forCellReuseIdentifier: Const.MyEventsCalendarTableCell)
+        
         calendarView.appearance = appearance
+        
+        self.beosTableView.contentInset = UIEdgeInsetsMake(-50, 0, 0, 0);
         
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
@@ -41,9 +46,17 @@ UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    func updateBEOList(date: CVDate) -> Void {
+    func updateBEOList(cvDate: CVDate) -> Void {
         let query = BEO.query()
-        query?.whereKey(Const.DATE, equalTo: date.convertedDate()!)
+        
+        let date = cvDate.convertedDate()!
+        
+        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let start = cal.startOfDayForDate(date)
+        let end: NSDate = cal.dateBySettingHour(23, minute: 59, second: 59, ofDate: date, options: NSCalendarOptions())!
+        query?.whereKey(Const.DATE, greaterThan: start)
+        query?.whereKey(Const.DATE, lessThan: end)
+        
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
