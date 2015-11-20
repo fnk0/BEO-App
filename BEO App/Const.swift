@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Const {
     
@@ -15,5 +16,10 @@ class Const {
     
     // TableViewCells reuse identifiers
     static let MyEventsCalendarTableCell = "MyEventsCalendarTableCell"
+    
+    static let GrayClockImage = UIImage(named: "Clock_Icon_Grey.png")
+    static let RedClockImage = UIImage(named: "Clock_Icon_Red.png")
+    static let GrayDustpanImage = UIImage(named: "Dustpan_Icon_Grey.png")
+    static let RedDustpanImage = UIImage(named: "Dustpan_Icon_Red.png")
     
 }

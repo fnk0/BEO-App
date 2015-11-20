@@ -69,6 +69,10 @@ UITableViewDataSource, UITableViewDelegate {
                 if let objects = objects as? [BEO] {
                     self.beos = objects
                     self.beosTableView.reloadData()
+                    
+                    if self.beos.count > 0 {
+                        self.performSegueWithIdentifier(Segue.TaskSegue, sender: nil)
+                    }
                 }
             } else {
                 // Log details of the failure
@@ -147,6 +151,14 @@ UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func calendarRight(sender: UIButton) {
         self.calendarView.loadNextView()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.TaskSegue {
+            if let vc = segue.destinationViewController as? ManagerTasksController {
+                vc.beo = self.beos[0]
+            }
+        }
     }
     
 }
