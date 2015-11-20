@@ -27,52 +27,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hotel Picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="qNJ-wF-WxB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                <animations/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-0e-ko8" userLabel="bottom_view">
-                                <rect key="frame" x="0.0" y="566" width="375" height="101"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7m-WT-eSv" userLabel="OuterView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-Un-McI" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextField">
-                                        <rect key="frame" x="20" y="7" width="340" height="40"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hotel Picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="qNJ-wF-WxB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="549"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
-                                                <color key="value" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
-                                                <color key="value" red="0.63921568627450975" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DQ4-rD-oiv" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextField">
-                                        <rect key="frame" x="20" y="52" width="340" height="40"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-0e-ko8" userLabel="bottom_view">
+                                        <rect key="frame" x="0.0" y="544" width="375" height="123"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteBox_Employee.png" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-Gl-7IZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                                                <animations/>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-Un-McI" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextField">
+                                                <rect key="frame" x="20" y="15" width="340" height="40"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
+                                                        <color key="value" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
+                                                        <color key="value" red="0.63921568627450975" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DQ4-rD-oiv" customClass="B68UIFloatLabelTextField" customModule="B68UIFloatLabelTextField">
+                                                <rect key="frame" x="20" y="74" width="340" height="40"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
+                                                        <color key="value" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
+                                                        <color key="value" red="0.63921568627450975" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-hO-R6c">
+                                                <rect key="frame" x="295" y="78" width="53" height="30"/>
+                                                <animations/>
+                                                <color key="tintColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Forgot?"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Hh-a6-jlx" userLabel="divider_line">
+                                                <rect key="frame" x="20" y="60" width="340" height="1"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="activeTextColorfloatingLabel">
-                                                <color key="value" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveTextColorfloatingLabel">
-                                                <color key="value" red="0.63921568627450975" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Hh-a6-jlx" userLabel="divider_line">
-                                        <rect key="frame" x="20" y="46" width="340" height="1"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-hO-R6c">
-                                        <rect key="frame" x="295" y="56" width="53" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTY-13-e9i">
+                                        <rect key="frame" x="223" y="501" width="108" height="40"/>
                                         <animations/>
-                                        <color key="tintColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Forgot?"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="EMPLOYEE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeToEmployee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B06-0Q-au6"/>
+                                        </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bs-c3-lTj">
+                                        <rect key="frame" x="40" y="501" width="104" height="40"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="MANAGER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeToManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMN-l2-Wmc"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-cV-wwu">
+                                        <rect key="frame" x="61" y="61" width="253" height="94"/>
+                                        <animations/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,7 +121,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="email" destination="zsk-Un-McI" id="dJU-Ew-zMf"/>
+                        <outlet property="employeeBtn" destination="nTY-13-e9i" id="49p-Ep-pxb"/>
+                        <outlet property="forgotBtn" destination="5lO-hO-R6c" id="vJv-Gb-Unf"/>
+                        <outlet property="managerBtn" destination="7Bs-c3-lTj" id="AOo-1g-cxD"/>
+                        <outlet property="outerView" destination="I7m-WT-eSv" id="70g-x3-HRZ"/>
                         <outlet property="password" destination="DQ4-rD-oiv" id="NqG-H6-YRO"/>
+                        <outlet property="whiteBox" destination="IW5-Gl-7IZ" id="xdm-qR-LDV"/>
                         <segue destination="nfd-4R-5FO" kind="modal" identifier="loginSegue" modalTransitionStyle="flipHorizontal" id="ebw-aZ-Md2"/>
                     </connections>
                 </viewController>
@@ -713,7 +754,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tableView" destination="3w2-tK-QFl" id="8eL-yc-8f4"/>
+                        <outlet property="tableView" destination="3w2-tK-QFl" id="SEq-xf-c1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRK-x3-8hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -732,17 +773,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-mp-lPf">
-                                <rect key="frame" x="-4" y="307" width="383" height="360"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="FQ4-Na-igb" id="cFk-bW-aHa"/>
-                                    <outlet property="delegate" destination="FQ4-Na-igb" id="tfA-7l-T6f"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7K-G4-fsy" userLabel="Calendar">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="304"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="296"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fo-Fz-30p">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -783,7 +815,7 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUQ-ai-G8H" customClass="CVCalendarView" customModule="CVCalendar">
-                                        <rect key="frame" x="0.0" y="80" width="375" height="224"/>
+                                        <rect key="frame" x="0.0" y="80" width="375" height="216"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -794,6 +826,22 @@
                                 </subviews>
                                 <animations/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There is no events scheduled for today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTc-sW-fog">
+                                <rect key="frame" x="0.0" y="400" width="375" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-mp-lPf">
+                                <rect key="frame" x="0.0" y="320" width="375" height="360"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FQ4-Na-igb" id="cFk-bW-aHa"/>
+                                    <outlet property="delegate" destination="FQ4-Na-igb" id="tfA-7l-T6f"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
@@ -804,6 +852,7 @@
                         <outlet property="calendarLabel" destination="bou-zR-RD6" id="wwe-wl-FVG"/>
                         <outlet property="calendarMenuView" destination="g9d-vR-biB" id="mqh-m4-eOb"/>
                         <outlet property="calendarView" destination="HUQ-ai-G8H" id="UhV-TP-hdX"/>
+                        <outlet property="emptyLabel" destination="TTc-sW-fog" id="X9i-Kt-qOp"/>
                         <outlet property="eventsTableView" destination="HdP-mp-lPf" id="sWg-9g-QOp"/>
                     </connections>
                 </viewController>
@@ -814,6 +863,8 @@
     </scenes>
     <resources>
         <image name="Hotel Picture.png" width="750" height="1068"/>
+        <image name="Logo.png" width="536" height="202"/>
+        <image name="WhiteBox_Employee.png" width="750" height="279"/>
         <image name="ic_arrow_left" width="18" height="31"/>
         <image name="ic_arrow_right" width="18" height="31"/>
         <image name="ic_phone" width="20" height="25"/>

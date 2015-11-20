@@ -85,6 +85,7 @@
 		2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF51BF3AB52002B4ABD /* Food.swift */; };
 		2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */; };
 		2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D2A1BFBAC3E0099C708 /* CalendarController.swift */; };
+		2CF62D321BFE3B000099C708 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D311BFE3B000099C708 /* NSDateExtensions.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; settings = {ASSET_TAGS = (); }; };
 		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -207,6 +208,7 @@
 		2CCE9CF51BF3AB52002B4ABD /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedCharges.swift; sourceTree = "<group>"; };
 		2CF62D2A1BFBAC3E0099C708 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		2CF62D311BFE3B000099C708 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5514DA561BFD15B10084EED3 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		5514DA581BFE31FF0084EED3 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 			children = (
 				2C11A2761BC11A8F00838E07 /* StringExtensions.swift */,
 				2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */,
+				2CF62D311BFE3B000099C708 /* NSDateExtensions.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				85ECCCB41BEBC63300A98F88 /* EmployeeTaskCell.swift in Sources */,
 				2C7783261BFA87FD00D56A88 /* Const.swift in Sources */,
 				2C11A2721BC10C4F00838E07 /* NewAccountController.swift in Sources */,
+				2CF62D321BFE3B000099C708 /* NSDateExtensions.swift in Sources */,
 				2CCE9CF41BF3AADE002B4ABD /* Beverage.swift in Sources */,
 				2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */,
 				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
