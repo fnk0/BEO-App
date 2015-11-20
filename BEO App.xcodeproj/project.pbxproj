@@ -86,6 +86,11 @@
 		2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */; };
 		2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D2A1BFBAC3E0099C708 /* CalendarController.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
+		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5514DA5B1BFE325B0084EED3 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA5A1BFE325B0084EED3 /* InfoCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5514DA5D1BFE360D0084EED3 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5C1BFE360D0084EED3 /* InfoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5514DA5F1BFE37760084EED3 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		554434C61BFB911A00BF503A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554434C51BFB911A00BF503A /* LocationCell.swift */; };
 		554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554434CA1BFB91A500BF503A /* LocationCell.xib */; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
@@ -203,6 +208,11 @@
 		2CCE9CF71BF3ACEC002B4ABD /* EstimatedCharges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedCharges.swift; sourceTree = "<group>"; };
 		2CF62D2A1BFBAC3E0099C708 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5514DA561BFD15B10084EED3 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		5514DA581BFE31FF0084EED3 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		5514DA5A1BFE325B0084EED3 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		5514DA5C1BFE360D0084EED3 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		554434C51BFB911A00BF503A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		554434CA1BFB91A500BF503A /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -461,6 +471,11 @@
 			children = (
 				554434C51BFB911A00BF503A /* LocationCell.swift */,
 				554434CA1BFB91A500BF503A /* LocationCell.xib */,
+				5514DA581BFE31FF0084EED3 /* MenuCell.swift */,
+				5514DA561BFD15B10084EED3 /* MenuCell.xib */,
+				5514DA5A1BFE325B0084EED3 /* InfoCell.xib */,
+				5514DA5C1BFE360D0084EED3 /* InfoCell.swift */,
+				5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */,
 			);
 			name = "Info Screen";
 			sourceTree = "<group>";
@@ -612,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */,
+				5514DA5B1BFE325B0084EED3 /* InfoCell.xib in Resources */,
 				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
 				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
 				554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */,
@@ -652,6 +668,7 @@
 				2C4014641BF9A8560067F693 /* Info_Icon_Blue.png in Resources */,
 				2C11A2951BC1AB1F00838E07 /* IMG_1531.JPG in Resources */,
 				85ECCCB11BEBC16500A98F88 /* EmployeeEventCell.xib in Resources */,
+				5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */,
 				85FFC2E61BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib in Resources */,
 				2C4014621BF9A8560067F693 /* Edit_Icon_Blue.png in Resources */,
 				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
@@ -742,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */,
+				5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */,
 				2C11A27F1BC1A99500838E07 /* MyEventsController.swift in Sources */,
 				2C11A2771BC11A8F00838E07 /* StringExtensions.swift in Sources */,
 				2C11A2741BC10C6500838E07 /* ForgotPasswordController.swift in Sources */,
@@ -765,10 +783,12 @@
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
 				2CB37A681BE8A465003A6897 /* README.md in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
+				5514DA5F1BFE37760084EED3 /* InfoTableViewController.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
 				2CCE9CF01BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift in Sources */,
 				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
 				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
+				5514DA5D1BFE360D0084EED3 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
