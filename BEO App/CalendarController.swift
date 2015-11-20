@@ -45,7 +45,7 @@ UITableViewDataSource, UITableViewDelegate {
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
         calendarLabel.text = dateStr.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        
+        updateBEOList(date)
     }
     
     func updateBEOList(cvDate: CVDate) -> Void {

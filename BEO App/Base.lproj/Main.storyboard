@@ -6,6 +6,12 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Book</string>
+            <string>Avenir-Book</string>
+        </mutableArray>
         <mutableArray key="TFArrow-Light.ttf">
             <string>TFArrow-Light</string>
         </mutableArray>
@@ -149,6 +155,13 @@
                                     <segue destination="FQ4-Na-igb" kind="embed" identifier="segueCalendar" id="SQi-3y-gBB"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mx7-j8-whE" userLabel="ManagerEvents">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="oEO-1i-tvY" kind="embed" id="gXi-Ol-tKP"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zk8-TG-rP0" userLabel="ListContainer">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <animations/>
@@ -204,6 +217,7 @@
                         <outlet property="calendarContainer" destination="p51-u7-vRp" id="DFy-Xn-gR4"/>
                         <outlet property="listButton" destination="Zmi-K7-TlB" id="aZ9-Xm-BJh"/>
                         <outlet property="listContainer" destination="Zk8-TG-rP0" id="wWy-iz-zIO"/>
+                        <outlet property="managerListContainer" destination="mx7-j8-whE" id="cMB-kX-vaC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZA-Yi-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -841,7 +855,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaS-SG-8fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112.5" y="2060.5"/>
+            <point key="canvasLocation" x="1168.5" y="1944.5"/>
+        </scene>
+        <!--MANAGER EVENT LIST-->
+        <scene sceneID="qMs-CD-I8O">
+            <objects>
+                <viewController title="MANAGER EVENT LIST" id="oEO-1i-tvY" userLabel="MANAGER EVENT LIST" customClass="ManagerEventListController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUS-tv-Shb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2lp-lR-dcF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5RF-Jy-DDy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SRU-CO-3bx">
+                                <rect key="frame" x="-4" y="10" width="418" height="726"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oEO-1i-tvY" id="dcN-Xi-g4M"/>
+                                    <outlet property="delegate" destination="oEO-1i-tvY" id="GYQ-AG-tZg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LMz-07-jpN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="beosTableView" destination="SRU-CO-3bx" id="fhu-xJ-9qg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1M6-WP-vNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="1992"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uwp-mf-gmE">
+            <objects>
+                <viewController id="Gpd-M3-ccJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDl-9K-hUE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZz-cD-iYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

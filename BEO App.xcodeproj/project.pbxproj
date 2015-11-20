@@ -79,6 +79,9 @@
 		2CF62D381BFEAEE40099C708 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D371BFEAEE40099C708 /* ProgressBarView.swift */; };
 		2CF62D3A1BFEB8E00099C708 /* TimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D391BFEB8E00099C708 /* TimePeriod.swift */; };
 		2CF62D3D1BFEC0E70099C708 /* ManagerTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D3C1BFEC0E70099C708 /* ManagerTasksController.swift */; };
+		2CF62D421BFF6D4A0099C708 /* ManagerEventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */; };
+		2CF62D431BFF6D4A0099C708 /* ManagerEventListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */; };
+		2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		554434C61BFB911A00BF503A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554434C51BFB911A00BF503A /* LocationCell.swift */; };
 		554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554434CA1BFB91A500BF503A /* LocationCell.xib */; };
@@ -202,6 +205,9 @@
 		2CF62D371BFEAEE40099C708 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		2CF62D391BFEB8E00099C708 /* TimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePeriod.swift; sourceTree = "<group>"; };
 		2CF62D3C1BFEC0E70099C708 /* ManagerTasksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTasksController.swift; sourceTree = "<group>"; };
+		2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventListController.swift; sourceTree = "<group>"; };
+		2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerEventListTableCell.xib; sourceTree = "<group>"; };
+		2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventListTableCell.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		554434C51BFB911A00BF503A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		554434CA1BFB91A500BF503A /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
@@ -278,6 +284,7 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				2CF62D3E1BFF6D180099C708 /* ManagerEventList */,
 				2CF62D3B1BFEC0D20099C708 /* Manager */,
 				2C40143B1BF9A8560067F693 /* GD Assets */,
 				2CCE9CEE1BF3A415002B4ABD /* ui */,
@@ -468,6 +475,16 @@
 				2CF62D3C1BFEC0E70099C708 /* ManagerTasksController.swift */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		2CF62D3E1BFF6D180099C708 /* ManagerEventList */ = {
+			isa = PBXGroup;
+			children = (
+				2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */,
+				2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */,
+				2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */,
+			);
+			name = ManagerEventList;
 			sourceTree = "<group>";
 		};
 		554434C41BFB90BF00BF503A /* Info Screen */ = {
@@ -672,6 +689,7 @@
 				2C4014681BF9A8560067F693 /* Room_Setup_Picture.png in Resources */,
 				2CCE9CEC1BF2F83C002B4ABD /* Arrow_Left_Gold.png in Resources */,
 				2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */,
+				2CF62D431BFF6D4A0099C708 /* ManagerEventListTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,10 +776,12 @@
 				2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */,
 				2CF62D3D1BFEC0E70099C708 /* ManagerTasksController.swift in Sources */,
 				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
+				2CF62D421BFF6D4A0099C708 /* ManagerEventListController.swift in Sources */,
 				2CB37A741BE90FCF003A6897 /* Task.swift in Sources */,
 				85ECCCB01BEBC16500A98F88 /* EmployeeEventCell.swift in Sources */,
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
+				2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */,
 				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
 				2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */,
 				2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */,
