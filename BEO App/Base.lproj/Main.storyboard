@@ -155,6 +155,13 @@
                                     <segue destination="FQ4-Na-igb" kind="embed" identifier="segueCalendar" id="SQi-3y-gBB"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mx7-j8-whE" userLabel="ManagerEvents">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="oEO-1i-tvY" kind="embed" id="gXi-Ol-tKP"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zk8-TG-rP0" userLabel="ListContainer">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <animations/>
@@ -210,6 +217,7 @@
                         <outlet property="calendarContainer" destination="p51-u7-vRp" id="DFy-Xn-gR4"/>
                         <outlet property="listButton" destination="Zmi-K7-TlB" id="aZ9-Xm-BJh"/>
                         <outlet property="listContainer" destination="Zk8-TG-rP0" id="wWy-iz-zIO"/>
+                        <outlet property="managerListContainer" destination="mx7-j8-whE" id="cMB-kX-vaC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZA-Yi-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -685,9 +693,6 @@
                     <navigationItem key="navigationItem" title="TASKS" id="zha-7J-4T2">
                         <barButtonItem key="rightBarButtonItem" image="ic_phone" id="4j5-8l-mdI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="oEO-1i-tvY" kind="push" id="gyt-mv-RJE"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -850,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaS-SG-8fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112.5" y="2060.5"/>
+            <point key="canvasLocation" x="1168.5" y="1944.5"/>
         </scene>
         <!--MANAGER EVENT LIST-->
         <scene sceneID="qMs-CD-I8O">
@@ -887,7 +892,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1M6-WP-vNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="2095"/>
+            <point key="canvasLocation" x="207" y="1992"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uwp-mf-gmE">
+            <objects>
+                <viewController id="Gpd-M3-ccJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDl-9K-hUE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZz-cD-iYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

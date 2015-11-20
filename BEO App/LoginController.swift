@@ -38,7 +38,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == email {
             password.becomeFirstResponder()
-//            self.view.frame = CGRectMake(0,-215 , self.view.frame.width, self.view.frame.height)
+            //            self.view.frame = CGRectMake(0,-215 , self.view.frame.width, self.view.frame.height)
         } else {
             password.resignFirstResponder()
             self.login()
@@ -56,7 +56,7 @@ class LoginController : UIViewController, UITextFieldDelegate {
         }
     }
     
-    // The changing stuff is just UI asthetics... 
+    // The changing stuff is just UI asthetics...
     // We don't really need to reflect anything else
     // We know when a user signs in if he is a manager or not..
     @IBAction func changeToManager(sender: AnyObject) {
@@ -71,22 +71,25 @@ class LoginController : UIViewController, UITextFieldDelegate {
         if let e = email.text {
             if e.isValidEmail() {
                 if let p = password.text {
-                    if p.isValidPassword() {
-                        PKHUD.sharedHUD.contentView = PKHUDProgressView()
-                        PKHUD.sharedHUD.show()
-                        
-                        PFUser.logInWithUsernameInBackground(e, password: p, block: { (user: PFUser?, error: NSError?) in
-                            PKHUD.sharedHUD.hide()
-                            if let _ = user {
-                                self.performSegueWithIdentifier(Segue.LoginSegue, sender: nil)
-                            } else {
-                                // Wrong password probably
-                                print("Wrong password")
+                    PKHUD.sharedHUD.contentView = PKHUDProgressView()
+                    PKHUD.sharedHUD.show()
+                    
+                    PFUser.logInWithUsernameInBackground(e, password: p, block: { (user: PFUser?, error: NSError?) in
+                        PKHUD.sharedHUD.hide()
+                        if let u = user {
+                            let defaults = NSUserDefaults.standardUserDefaults()
+                            
+                            if let isManager = u["manager"] as? Bool {
+                                defaults.setBool(isManager, forKey: Const.IS_MANAGER)
                             }
-                        })
-                    } else {
-                        // Password not valid
-                    }
+                            
+                            self.performSegueWithIdentifier(Segue.LoginSegue, sender: nil)
+                        } else {
+                            // Wrong password probably
+                            print("Wrong password")
+                        }
+                    })
+                    
                 }
             } else {
                 // Email not valid
@@ -112,5 +115,5 @@ class LoginController : UIViewController, UITextFieldDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
-
+    
 }

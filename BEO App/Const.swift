@@ -13,6 +13,7 @@ class Const {
     
     // Common constants
     static let DATE = "date"
+    static let IS_MANAGER = "isManager"
     
     // TableViewCells reuse identifiers
     static let MyEventsCalendarTableCell = "MyEventsCalendarTableCell"
