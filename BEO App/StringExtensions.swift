@@ -37,5 +37,5 @@ extension String {
         }
         return false
     }
-    
 }
+

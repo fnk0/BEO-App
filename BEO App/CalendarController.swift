@@ -20,6 +20,7 @@ UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTableView: UITableView!
     
     @IBOutlet weak var beosTableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     
     var beos: [BEO] = []
     
@@ -38,7 +39,8 @@ UITableViewDataSource, UITableViewDelegate {
         
         calendarView.appearance = appearance
         
-        self.beosTableView.contentInset = UIEdgeInsetsMake(-50, 0, 0, 0);
+//        self.beosTableView.contentInset = UIEdgeInsetsMake(-70, 0, 0, 0)
+        self.beosTableView.tableFooterView = UIView(frame: CGRect.zero)
         
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
@@ -89,7 +91,16 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return beos.count
+        
+        let count = beos.count
+        
+        if count > 0 {
+            emptyLabel.hidden = true
+        } else {
+            emptyLabel.hidden = false
+        }
+        
+        return count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
