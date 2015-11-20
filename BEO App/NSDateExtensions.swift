@@ -8,8 +8,16 @@
 
 import Foundation
 
+let uFormatter =  NSDateFormatter()
 
 extension NSDate {
+    
+    func formatDate() -> String {
+        uFormatter.dateFormat = "EEEE, MMM dd, yyyy"
+        var stringDate: String = uFormatter.stringFromDate(self)
+        stringDate = stringDate.uppercaseString
+        return stringDate
+    }
     
     func isGreaterThanDate(dateToCompare : NSDate) -> Bool {
         //Declare Variables
