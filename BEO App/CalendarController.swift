@@ -40,7 +40,7 @@ UITableViewDataSource, UITableViewDelegate {
         calendarView.appearance = appearance
         
 //        self.beosTableView.contentInset = UIEdgeInsetsMake(-70, 0, 0, 0)
-        self.beosTableView.tableFooterView = UIView(frame: CGRectZero)
+        self.beosTableView.tableFooterView = UIView(frame: CGRect.zero)
         
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
