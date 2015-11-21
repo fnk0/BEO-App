@@ -42,19 +42,8 @@
                         <rect key="frame" x="8" y="39" width="15" height="15"/>
                         <animations/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dustpan_Icon_Grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-SW-9oX">
-                        <rect key="frame" x="262" y="39" width="15" height="15"/>
-                        <animations/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete by 5:45pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfQ-cU-vyZ">
                         <rect key="frame" x="31" y="37" width="120" height="17"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
-                        <color key="textColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clean by 8:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfR-CK-0Fy">
-                        <rect key="frame" x="280" y="39" width="98" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                         <color key="textColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,7 +62,7 @@
                         <animations/>
                         <state key="normal" image="Info_Icon_Blue.png"/>
                         <connections>
-                            <action selector="info:" destination="zbb-eZ-yBT" eventType="touchUpInside" id="TfT-yS-z18"/>
+                            <action selector="openInfo:" destination="zbb-eZ-yBT" eventType="touchUpInside" id="t5q-Ul-a3m"/>
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaK-DV-voN">
@@ -81,6 +70,17 @@
                         <animations/>
                         <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dustpan_Icon_Grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-SW-9oX">
+                        <rect key="frame" x="251" y="39" width="15" height="15"/>
+                        <animations/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clean by 8:30pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfR-CK-0Fy">
+                        <rect key="frame" x="269" y="39" width="98" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                        <color key="textColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
             </tableViewCellContentView>

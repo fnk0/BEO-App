@@ -15,6 +15,7 @@ import Parse
 class ManagerTasksController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var headerView: ManagerTasksHeader = ManagerTasksHeader(frame: CGRect(x: 0, y: 0, width: 375, height: 130))
+    
     @IBOutlet weak var tableView: UITableView!
     
     var groupedTasks = [PFUser : [Task]]()
@@ -31,30 +32,47 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    var tasks : [Task]? {
-        didSet {
-           // print("TASKS: \(self.tasks)\n\n")
-            headerView.tasks = self.tasks
+    func fetchTasks(beo: BEO?) {
+        let query = Task.query()
         
-            for t in tasks! {
-               // print(t)
-                let employee = t["employee"] as! PFUser
-                //print(employee)
-                if users.contains(employee) {
-                    //Do nothing
-                } else {
-                    users.append(employee)
+        if let b = beo {
+            query?.whereKey("beo", equalTo: b)
+        }
+        
+        query!.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) beos.")
+                if let objects = objects as? [Task] {
+                    self.tasks = objects
                 }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+    }
+    
+    var tasks: [Task] = [Task]() {
+        didSet {
+            headerView.tasks = tasks
+            
+            for t in tasks {
+                let employee = t["employee"] as! PFUser
                 if var tu = groupedTasks[employee] {
                     tu.append(t)
                     groupedTasks[employee] = tu
                 } else {
                     var ts = [Task]()
+                    users.append(employee)
                     ts.append(t)
                     groupedTasks[employee] = ts
                 }
             }
-             //print("GTasks: \(groupedTasks)")
+            //print("GTasks: \(groupedTasks)")
+            self.tableView.reloadData()
         }
     }
     
@@ -79,10 +97,9 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
             print("Database read failed")
         }
         
-        self.tasks = self.tasksRaw as? [Task]
+        self.tasks = (self.tasksRaw as? [Task])!
         
-
-
+        fetchTasks(nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -103,36 +120,40 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ManagerTasksTableCell", forIndexPath: indexPath) as! ManagerTasksTableCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ManagerTasksTableCell", forIndexPath: indexPath) as! ManagerTasksTableCell
         
         let u = self.users[indexPath.row]
         print("USER: \(u)")
         if let task = self.groupedTasks[u] {
             if task.count > 0 {
-                let emp = task[indexPath.section].employee
-                emp.fetchIfNeededInBackgroundWithBlock {
-                    (user: PFObject?, error: NSError?) -> Void in
-                    if let name = user!["name"] as? String {
-                        if let ln = user!["lastName"] as? String {
-                            print("\(name) \(ln.char(0)).")
-                            UITableViewCell.nameLabel.text = "\(name) \(ln.char(0))."
+                let u = self.users[indexPath.row]
+                if let t = self.groupedTasks[u] {
+                    if t.count > 0 {
+                        let emp = t[0].employee
+                        emp.fetchIfNeededInBackgroundWithBlock {
+                            (user: PFObject?, error: NSError?) -> Void in
+                            if let name = user!["name"] as? String {
+                                if let ln = user!["lastName"] as? String {
+                                    print("\(name) \(ln.char(0)).")
+                                    cell.nameLabel.text = "\(name) \(ln.char(0))."
+                                }
+                            }
+                            for t in self.tasks {
+                                print(t.desc)
+                            }
+                            //print(emp["desc"] as? String)
+                            //UITableViewCell.taskLabel.text = task[indexPath.section]["desc"] as? String
                         }
+                        print("TASK: \(task)")
+                        print(task[0]["desc"])
+                        //UITableViewCell.taskLabel.text = task[indexPath.row]["desc"] as? String
                     }
-                    for t in self.tasks! {
-                        print(t.desc)
-                    }
-                    //print(emp["desc"] as? String)
-                //UITableViewCell.taskLabel.text = task[indexPath.section]["desc"] as? String
                 }
-                print("TASK: \(task)")
-                print(task[0]["desc"])
-                //UITableViewCell.taskLabel.text = task[indexPath.row]["desc"] as? String
+                
+                return cell
             }
         }
-    
-
-        
-        return UITableViewCell
+        return UITableViewCell()
     }
 }
+

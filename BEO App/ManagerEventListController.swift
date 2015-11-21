@@ -86,16 +86,19 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let b = self.beos[self.sections[section]] {
             if b.count > 0 {
-                let sv = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 45))
-                sv.backgroundColor = Colors.Gold
-                let titleLabel = UILabel()
-                titleLabel.textColor = UIColor.whiteColor()
-                titleLabel.text = sections[section].formatDate()
-                titleLabel.sizeToFit()
-                titleLabel.bounds = CGRectInset(titleLabel.frame, 5, 5)
-                titleLabel.sizeToFit()
-                sv.addSubview(titleLabel)
-                return sv
+//                let sv = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 45))
+//                sv.backgroundColor = Colors.Gold
+//                let titleLabel = UILabel()
+//                titleLabel.textColor = UIColor.whiteColor()
+//                titleLabel.text = sections[section].formatDate()
+//                titleLabel.sizeToFit()
+//                titleLabel.bounds = CGRectInset(titleLabel.frame, 5, 5)
+//                titleLabel.sizeToFit()
+//                sv.addSubview(titleLabel)
+                let headerView = ManagerEventHeader(frame: CGRect(x: 0, y: 0, width: 375, height: 30))
+                headerView.dateLabel.text = sections[section].formatDate()
+                headerView.dateLabel.sizeToFit()
+                return headerView
             }
         }
         return UIView(frame: CGRect.zero)
@@ -110,15 +113,8 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
         let cell : ManagerEventListTableCell = tableView.dequeueReusableCellWithIdentifier(Const.ManagerEventListTableCell) as! ManagerEventListTableCell
         let date = self.sections[indexPath.section]
         let beo = self.beos[date]![indexPath.row]
-        
-        cell.titleLabel.text = beo.title
-        cell.timeLabel.text = beo.timePeriod
-        
-        let completeTime = beo.timePeriod.getTimePeriod()
-        
-        cell.completeLabel.text = setCompleteTime(completeTime.start, amOrPm: completeTime.period)
-        cell.cleanLabel.text = setCleanTime(completeTime.end, amOrPm: completeTime.period)
-        
+        cell.beo = beo
+        cell.vc = self
         return cell
     }
     

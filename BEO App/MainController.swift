@@ -16,6 +16,7 @@ class MainController: UIViewController {
     @IBOutlet weak var calendarContainer: UIView!
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var managerListContainer: UIView!
+    @IBOutlet weak var pageTitle: UINavigationItem!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     var isManager : Bool = false
@@ -25,6 +26,10 @@ class MainController: UIViewController {
         
         if let isManager = defaults.valueForKey(Const.IS_MANAGER) as? Bool {
             self.isManager = isManager
+            
+            if self.isManager {
+                self.pageTitle.title = "EVENTS"
+            }
         }
         
         showHideListController(false)
