@@ -18,6 +18,7 @@ class Const {
     // TableViewCells reuse identifiers
     static let MyEventsCalendarTableCell = "MyEventsCalendarTableCell"
     static let ManagerEventListTableCell = "ManagerEventListTableCell"
+    static let ManagerTasksTableCell = "ManagerTasksTableCell"
     
     static let GrayClockImage = UIImage(named: "Clock_Icon_Grey.png")
     static let RedClockImage = UIImage(named: "Clock_Icon_Red.png")
