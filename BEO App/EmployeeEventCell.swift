@@ -21,45 +21,41 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var dustpanIconImage: UIImageView!
     
     // Data arrays
-    /*
-    var tasks = [ "Task 1",
-                  "Task 2",
-                  "Task 3",
-                  "Task 4",
-                  "Task 5" ]
-    */
     var tasks = [Task]()
     var taskLabels = [UILabel]()
     var taskCompletionLabels = [UILabel]()
     var taskButtons = [UIButton]()
-    var taskImages = [UIImageView]()
+    var taskClockImages = [UIImageView]()
+    var taskCheckboxImages = [UIImageView]()
     
     // Positioning constants for UI elements
     let taskLabel1Height = 20
     let taskLabel1Width = 250
     let taskLabel1CenterX = 170
-    let taskLabel1CenterY = 60
-    let taskLabel1Spacing = 4
+    let taskLabel1CenterY = 72
     
     let taskLabel2Height = 20
     let taskLabel2Width = 50
-    let taskLabel2CenterX = 325
-    let taskLabel2CenterY = 60
-    let taskLabel2Spacing = 4
+    let taskLabel2CenterX = 322
+    let taskLabel2CenterY = 72
     
-    let taskButtonHeight = 20
-    let taskButtonWidth = 20
-    let taskButtonCenterX = 25
-    let taskButtonCenterY = 60
-    let taskButtonSpacing = 4
+    let checkboxImageHeight = 20
+    let checkboxImageWidth = 20
+    let checkboxImageCenterX = 25
+    let checkboxImageCenterY = 68
     
     let taskImageHeight = 15
     let taskImageWidth = 15
-    let taskImageCenterX = 362
-    let taskImageCenterY = 60
-    let taskImageSpacing = 4
+    let taskImageCenterX = 359
+    let taskImageCenterY = 72
+    
+    var taskButtonHeight = 200
+    var taskButtonWidth = 200
+    var taskButtonCenterX = 200
+    var taskButtonCenterY = 200
     
     let defaultCellHeight = 60
+    let yPadding = 4
     
     // Color constants
     let redColor = UIColor(red: 177/255, green: 40/255, blue: 40/255, alpha: 1.0)
@@ -88,27 +84,68 @@ class EmployeeEventCell: UITableViewCell {
     
     func updateAppearance(printDebug printDebug: Bool)
     {
+        taskButtonHeight = taskLabel1Height + yPadding
+        taskButtonWidth = Int(bounds.size.width)
+        taskButtonCenterX = Int(center.x)
+        taskButtonCenterY = taskLabel1CenterY
+        
         if printDebug
         {
             let countToPrint = tasks.count
             print("Length of tasks array = \(countToPrint)")
         }
         
+        // Sort tasks by due date/time
+        tasks.sortInPlace { $0.due.compare($1.due) == .OrderedAscending }
+        
+        // If the UI elements within this cell already exist, delete them. They will be reloaded.
+        for index in 0..<taskLabels.count
+        {
+            taskLabels[index].removeFromSuperview()
+            taskCompletionLabels[index].removeFromSuperview()
+            taskClockImages[index].removeFromSuperview()
+            taskButtons[index].removeFromSuperview()
+        }
+        taskLabels = [UILabel]()
+        taskCompletionLabels = [UILabel]()
+        taskButtons = [UIButton]()
+        taskClockImages = [UIImageView]()
+        
+        // Set up a formatter to use for displaying the time a task is due
+        let dueTimeFormatter = NSDateFormatter()
+        dueTimeFormatter.dateFormat = "h:mma"
+        
         for index in 0..<tasks.count
         {
-            // Create button for checkbox
-            let button = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
-            button.center.x = CGFloat(taskButtonCenterX)
-            button.center.y = CGFloat(taskButtonCenterY + (taskLabel1Height * index) + taskButtonSpacing)
-            button.setImage(checkboxIncompleteImage, forState: .Normal)
-            button.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
-            self.addSubview(button)
-            taskButtons.append(button)
+            // Create checkbox image
+            let checkboxImage = UIImageView(frame: CGRectMake(0, 0, CGFloat(checkboxImageWidth), CGFloat(checkboxImageHeight)))
+            checkboxImage.center.x = CGFloat(checkboxImageCenterX)
+            checkboxImage.center.y = CGFloat( checkboxImageCenterY + ((taskLabel1Height + yPadding) * index) )
+            if tasks[index].completed
+            {
+                checkboxImage.image = checkboxCompleteImage
+            }
+            else
+            {
+                checkboxImage.image = checkboxIncompleteImage
+                checkboxImage.transform = CGAffineTransformTranslate(checkboxImage.transform, -2.9, 4)
+                checkboxImage.transform = CGAffineTransformScale(checkboxImage.transform, 0.58, 0.58)
+            }
+            self.addSubview(checkboxImage)
+            taskCheckboxImages.append(checkboxImage)
+            
+            // Create button for task
+            let button2 = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
+            button2.center.x = CGFloat(taskButtonCenterX)
+            button2.center.y = CGFloat( taskButtonCenterY + ((taskButtonHeight + yPadding) * index) )
+            button2.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
+            self.addSubview(button2)
+            taskButtons.append(button2)
             
             // Create label for task description
             let label1 = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabel1Width), CGFloat(taskLabel1Height)))
             label1.center.x = CGFloat(taskLabel1CenterX)
-            label1.center.y = CGFloat(taskLabel1CenterY + (taskLabel1Height * index) + taskLabel1Spacing)
+            label1.center.y = CGFloat( taskLabel1CenterY + ((taskLabel1Height + yPadding) * index) )
             label1.textAlignment = NSTextAlignment.Left
             label1.font = UIFont.systemFontOfSize(12)
             do
@@ -119,37 +156,72 @@ class EmployeeEventCell: UITableViewCell {
             {
                 print("Database read failed.");
             }
-            label1.text = String(tasks[index].desc)
-            //label1.text = String(tasks[index].valueForKey("desc")!)
+            if tasks[index].completed
+            {
+                let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
+                    NSStrikethroughColorAttributeName: blueColor ]
+                let labelText = NSAttributedString(string: String(tasks[index].desc), attributes: stringAttributes)
+                label1.attributedText = labelText
+            }
+            else
+            {
+                label1.text = String(tasks[index].desc)
+            }
             self.addSubview(label1)
             taskLabels.append(label1)
             
             // Create image for time icon
             let image = UIImageView(frame: CGRectMake(0, 0, CGFloat(taskImageWidth), CGFloat(taskImageHeight)))
             image.center.x = CGFloat(taskImageCenterX)
-            image.center.y = CGFloat(taskImageCenterY + (taskLabel1Height * index) + taskImageSpacing)
-            image.image = redTimeImage
+            image.center.y = CGFloat( taskLabel1CenterY + ((taskLabel1Height + yPadding) * index) )
+            if tasks[index].completed
+            {
+                image.image = grayTimeImage
+            }
+            else
+            {
+                image.image = redTimeImage
+            }
             self.addSubview(image)
-            taskImages.append(image)
+            taskClockImages.append(image)
             
             // Create label for time remaining
             let label2 = UILabel(frame: CGRectMake(0, 0, CGFloat(taskLabel2Width), CGFloat(taskLabel2Height)))
             label2.center.x = CGFloat(taskLabel2CenterX)
-            label2.center.y = CGFloat(taskLabel2CenterY + (taskLabel2Height * index) + taskLabel2Spacing)
+            label2.center.y = CGFloat( taskLabel2CenterY + ((taskLabel2Height + yPadding) * index) )
             label2.textAlignment = NSTextAlignment.Right
             label2.font = UIFont.systemFontOfSize(8)
-            label2.text = "12h 30m"
-            label2.textColor = redColor
+            label2.text = dueTimeFormatter.stringFromDate(tasks[index].due).lowercaseString
+            if tasks[index].completed
+            {
+                label2.textColor = darkGrayColor
+            }
+            else
+            {
+                label2.textColor = redColor
+            }
             self.addSubview(label2)
             taskCompletionLabels.append(label2)
         }
         
+        // Set colors for non-repetetive UI elements
         eventNameLabel.textColor = blueColor
         eventTimeLabel.textColor = goldColor
-        completionTimeLabel.textColor = redColor
-        cleanTimeLabel.textColor = redColor
-        clockIconImage.image = redClockImage
-        dustpanIconImage.image = redDustpanImage
+        if allTasksCompleted()
+        {
+            completionTimeLabel.textColor = lightGrayColor
+            cleanTimeLabel.textColor = lightGrayColor
+            clockIconImage.image = grayClockImage
+            dustpanIconImage.image = grayDustpanImage
+        }
+        else
+        {
+            completionTimeLabel.textColor = redColor
+            cleanTimeLabel.textColor = redColor
+            clockIconImage.image = redClockImage
+            dustpanIconImage.image = redDustpanImage
+        }
+        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -174,10 +246,10 @@ class EmployeeEventCell: UITableViewCell {
         
         // Create an array of points representing the first divider
         let divider1Points = [
-            CGPoint(x:0, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2),
-            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2),
-            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 1),
-            CGPoint(x:0, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 1)
+            CGPoint(x:0, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 2),
+            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 2),
+            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 3),
+            CGPoint(x:0, y:self.clockIconImage.center.y + self.clockIconImage.bounds.height / 2 + 3)
         ]
         
         // Create an empty path for divider 1
@@ -207,10 +279,10 @@ class EmployeeEventCell: UITableViewCell {
         
         // Create an array of points representing the second divider
         let divider2Points = [
-            CGPoint(x:0, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2),
-            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2),
-            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 1),
-            CGPoint(x:0, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 1)
+            CGPoint(x:0, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 2),
+            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 2),
+            CGPoint(x:self.bounds.size.width, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 3),
+            CGPoint(x:0, y:self.clockIconImage.center.y - self.clockIconImage.bounds.height / 2 - 3)
         ]
         
         // Create an empty path for divider 2
@@ -246,6 +318,8 @@ class EmployeeEventCell: UITableViewCell {
     
     func checkBoxTap(sender:UIButton!)
     {
+        print("BUTTON TAPPED")
+        
         var buttonIndex = -1
         
         for index in 0..<taskButtons.count
@@ -262,31 +336,41 @@ class EmployeeEventCell: UITableViewCell {
             //if sender.imageView!.image == checkboxIncompleteImage
             if !tasks[buttonIndex].completed
             {
-                sender.setImage(checkboxCompleteImage, forState: .Normal)
+                taskCheckboxImages[buttonIndex].image = checkboxCompleteImage
                 taskCompletionLabels[buttonIndex].textColor = darkGrayColor
-                taskImages[buttonIndex].image = grayTimeImage
+                taskClockImages[buttonIndex].image = grayTimeImage
                 tasks[buttonIndex].completed = true
+                taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 1/0.58, 1/0.58)
+                taskCheckboxImages[buttonIndex].transform = CGAffineTransformTranslate(taskCheckboxImages[buttonIndex].transform, 2.9, -4)
                 
+                let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
+                                         NSStrikethroughColorAttributeName: blueColor ]
+                let labelText = NSAttributedString(string: String(tasks[buttonIndex].desc), attributes: stringAttributes)
+                taskLabels[buttonIndex].attributedText = labelText
             }
             else
             {
-                sender.setImage(checkboxIncompleteImage, forState: .Normal)
+                taskCheckboxImages[buttonIndex].image = checkboxIncompleteImage
                 taskCompletionLabels[buttonIndex].textColor = redColor
-                taskImages[buttonIndex].image = redTimeImage
+                taskClockImages[buttonIndex].image = redTimeImage
                 tasks[buttonIndex].completed = false
+                taskCheckboxImages[buttonIndex].transform = CGAffineTransformTranslate(taskCheckboxImages[buttonIndex].transform, -2.9, 4)
+                taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 0.58, 0.58)
+                
+                let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleNone.rawValue ]
+                let labelText = NSAttributedString(string: String(tasks[buttonIndex].desc), attributes: stringAttributes)
+                taskLabels[buttonIndex].attributedText = labelText
             }
-        }
-        
-        /*
-        var allTasksCompleted = true
-        for button in taskButtons
-        {
-            if button.imageView!.image == checkboxIncompleteImage
+            
+            do
             {
-                allTasksCompleted = false
+                try tasks[buttonIndex].save()
+            }
+            catch
+            {
+                print("Error: could not save task completion status")
             }
         }
-        */
         
         if allTasksCompleted()
         {

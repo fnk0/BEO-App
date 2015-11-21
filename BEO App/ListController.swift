@@ -154,18 +154,33 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         // Sort the events into sections by date
         var eventIndex = 0
         var sectionIndex = 0
+        
+        // Create a formatter for displaying the date header
+        let eventDateFormatter = NSDateFormatter()
+        eventDateFormatter.dateFormat = "EEEE,  MMMM  d,  y"
+        
         while eventIndex < eventsRaw.count
         {
-            let dateString = String(eventsRaw[eventIndex].date)
-            let stringIndex = advance(dateString.startIndex, 10)
-            let sectionName = dateString.substringToIndex(stringIndex)
+            //let dateString = String(eventsRaw[eventIndex].date)
+            //let stringIndex = advance(dateString.startIndex, 10)
+            //let sectionName = dateString.substringToIndex(stringIndex)
+            let sectionName = eventDateFormatter.stringFromDate(eventsRaw[eventIndex].date).uppercaseString
+            
             sections.append(sectionName)
             events.append([eventsRaw[eventIndex]])
             ++eventIndex
             
-            var nextDateString = String(eventsRaw[eventIndex].date)
-            var nextStringIndex = advance(nextDateString.startIndex, 10)
-            var nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+            //var nextDateString: String
+            //var nextStringIndex: String.Index
+            var nextSectionName = ""
+            
+            if eventIndex < eventsRaw.count
+            {
+                //nextDateString = String(eventsRaw[eventIndex].date)
+                //nextStringIndex = advance(nextDateString.startIndex, 10)
+                //nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+                nextSectionName = eventDateFormatter.stringFromDate(eventsRaw[eventIndex].date).uppercaseString
+            }
             
             while (eventIndex < eventsRaw.count) && (nextSectionName == sectionName)
             {
@@ -174,9 +189,10 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
                 
                 if eventIndex < eventsRaw.count
                 {
-                    nextDateString = String(eventsRaw[eventIndex].date)
-                    nextStringIndex = advance(nextDateString.startIndex, 10)
-                    nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+                    //nextDateString = String(eventsRaw[eventIndex].date)
+                    //nextStringIndex = advance(nextDateString.startIndex, 10)
+                    //nextSectionName = nextDateString.substringToIndex(nextStringIndex)
+                    nextSectionName = eventDateFormatter.stringFromDate(eventsRaw[eventIndex].date).uppercaseString
                 }
             }
             ++sectionIndex
@@ -222,6 +238,12 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         cell.updateAppearance(printDebug: true)
         
+        // Set up a formatter to use for displaying the time the event is due
+        let dueTimeFormatter = NSDateFormatter()
+        dueTimeFormatter.dateFormat = "h:mma"
+        let formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].due).lowercaseString
+        cell.completionTimeLabel.text = "Complete by \(formattedTime)"
+        
         return cell
     }
     
@@ -233,8 +255,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         // before the cell is drawn, so this function is a good place to do it.
         cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         
-        return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing )
-        //return UITableViewAutomaticDimension
+        //return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing + 6)
+        return CGFloat( cell.defaultCellHeight + ((cell.taskLabel1Height + cell.yPadding) * cell.tasks.count) )
     }
     
     
