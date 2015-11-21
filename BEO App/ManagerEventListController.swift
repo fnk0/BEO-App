@@ -23,7 +23,7 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
         
         let nib = UINib(nibName: Const.ManagerEventListTableCell, bundle: nil)
         self.beosTableView.registerNib(nib, forCellReuseIdentifier: Const.ManagerEventListTableCell)
-        self.beosTableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.beosTableView.tableFooterView = UIView(frame: CGRectZero)
         
         let date = NSDate()
         sections.append(date)
@@ -98,7 +98,7 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
                 return sv
             }
         }
-        return UIView(frame: CGRect.zero)
+        return UIView(frame: CGRectZero)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

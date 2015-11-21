@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -25,61 +25,31 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete by 5:45am/6am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-EZ-vpY">
-<<<<<<< HEAD
                         <rect key="frame" x="34" y="37" width="126" height="12"/>
-=======
-                        <rect key="frame" x="37" y="33" width="126" height="12"/>
-                        <animations/>
->>>>>>> master
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-<<<<<<< HEAD
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean by -:--am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb6-Vf-tb7">
                         <rect key="frame" x="255" y="37" width="77" height="12"/>
-=======
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean by 8:30am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb6-Vf-tb7">
-                        <rect key="frame" x="230" y="34" width="82" height="12"/>
-                        <animations/>
->>>>>>> master
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-<<<<<<< HEAD
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-jJ-Hwe">
                         <rect key="frame" x="8" y="34" width="18" height="18"/>
-=======
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6-8am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brd-kP-B3c">
-                        <rect key="frame" x="186" y="8" width="39" height="15"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-jJ-Hwe">
-                        <rect key="frame" x="8" y="30" width="21" height="21"/>
-                        <animations/>
->>>>>>> master
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="R0z-Kf-abN"/>
                             <constraint firstAttribute="width" constant="18" id="mTL-KC-6IO"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-dD-NIb">
-<<<<<<< HEAD
                         <rect key="frame" x="229" y="34" width="18" height="18"/>
-=======
-                        <rect key="frame" x="196" y="30" width="21" height="21"/>
-                        <animations/>
->>>>>>> master
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="EsM-St-eeP"/>
                             <constraint firstAttribute="width" constant="18" id="yDK-No-DgL"/>
                         </constraints>
                     </imageView>
-<<<<<<< HEAD
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
                         <rect key="frame" x="311" y="5" width="21" height="21"/>
                         <constraints>
@@ -87,11 +57,6 @@
                             <constraint firstAttribute="width" constant="21" id="cZl-A1-mMS"/>
                         </constraints>
                         <state key="normal" image="Info_Icon_Blue.png"/>
-=======
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
-                        <rect key="frame" x="290" y="5" width="22" height="22"/>
-                        <animations/>
->>>>>>> master
                         <connections>
                             <action selector="infoButtonTap:" destination="cJG-2D-Y5O" eventType="touchUpInside" id="TtE-3V-ZUB"/>
                         </connections>
