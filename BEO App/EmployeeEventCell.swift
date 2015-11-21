@@ -19,6 +19,7 @@ class EmployeeEventCell: UITableViewCell {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var clockIconImage: UIImageView!
     @IBOutlet weak var dustpanIconImage: UIImageView!
+    @IBOutlet weak var separatorView: UIView!
     
     // Data arrays
     var tasks = [Task]()
@@ -95,6 +96,9 @@ class EmployeeEventCell: UITableViewCell {
             print("Length of tasks array = \(countToPrint)")
         }
         
+        // Set the separator color
+        separatorView.backgroundColor = lightGrayColor
+        
         // Sort tasks by due date/time
         tasks.sortInPlace { $0.due.compare($1.due) == .OrderedAscending }
         
@@ -105,11 +109,13 @@ class EmployeeEventCell: UITableViewCell {
             taskCompletionLabels[index].removeFromSuperview()
             taskClockImages[index].removeFromSuperview()
             taskButtons[index].removeFromSuperview()
+            taskCheckboxImages[index].removeFromSuperview()
         }
         taskLabels = [UILabel]()
         taskCompletionLabels = [UILabel]()
         taskButtons = [UIButton]()
         taskClockImages = [UIImageView]()
+        taskCheckboxImages = [UIImageView]()
         
         // Set up a formatter to use for displaying the time a task is due
         let dueTimeFormatter = NSDateFormatter()

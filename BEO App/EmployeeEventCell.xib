@@ -66,11 +66,19 @@
                         <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bK-xs-lWn">
+                        <rect key="frame" x="0.0" y="119" width="340" height="10"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="gwO-ap-600"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="rX8-Cs-jMA" secondAttribute="trailing" id="4HX-GP-8Dk"/>
                     <constraint firstAttribute="topMargin" secondItem="LLM-8a-vke" secondAttribute="top" id="4ve-lf-QCG"/>
                     <constraint firstItem="SLk-jJ-Hwe" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="11" id="72d-RY-4af"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1bK-xs-lWn" secondAttribute="trailing" constant="-8" id="9qV-Cd-A4Q"/>
                     <constraint firstItem="rX8-Cs-jMA" firstAttribute="leading" secondItem="brd-kP-B3c" secondAttribute="trailing" constant="109" id="AkJ-cF-IQc"/>
                     <constraint firstAttribute="trailingMargin" secondItem="kb6-Vf-tb7" secondAttribute="trailing" id="OoD-RW-1VS"/>
                     <constraint firstAttribute="leadingMargin" secondItem="SLk-jJ-Hwe" secondAttribute="leading" id="Osg-0R-izY"/>
@@ -81,10 +89,15 @@
                     <constraint firstItem="fDe-dD-NIb" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="11" id="jCl-UU-41e"/>
                     <constraint firstItem="gcw-EZ-vpY" firstAttribute="leading" secondItem="SLk-jJ-Hwe" secondAttribute="trailing" constant="8" id="jIh-jo-A9J"/>
                     <constraint firstAttribute="bottomMargin" secondItem="SLk-jJ-Hwe" secondAttribute="bottom" priority="750" constant="68" id="jws-S4-fDQ"/>
+                    <constraint firstItem="1bK-xs-lWn" firstAttribute="leading" secondItem="tHK-fI-BxE" secondAttribute="leadingMargin" constant="-8" id="pcg-Bc-iXg"/>
                     <constraint firstAttribute="leadingMargin" secondItem="LLM-8a-vke" secondAttribute="leading" id="rIH-fw-lMH"/>
                     <constraint firstItem="gcw-EZ-vpY" firstAttribute="top" secondItem="LLM-8a-vke" secondAttribute="bottom" constant="14" id="wZd-8e-uI3"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1bK-xs-lWn" secondAttribute="bottom" id="lOA-Oy-Pvh"/>
+            </constraints>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="cleanTimeLabel" destination="kb6-Vf-tb7" id="Fhh-2N-Z3g"/>
                 <outlet property="clockIconImage" destination="SLk-jJ-Hwe" id="s8a-FX-AAv"/>
@@ -93,6 +106,7 @@
                 <outlet property="eventNameLabel" destination="LLM-8a-vke" id="uh2-yP-2bq"/>
                 <outlet property="eventTimeLabel" destination="brd-kP-B3c" id="u2B-XQ-g8k"/>
                 <outlet property="infoButton" destination="rX8-Cs-jMA" id="RLc-jy-pDE"/>
+                <outlet property="separatorView" destination="1bK-xs-lWn" id="5Va-8o-Zac"/>
             </connections>
             <point key="canvasLocation" x="795" y="918.5"/>
         </tableViewCell>

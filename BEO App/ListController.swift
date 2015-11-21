@@ -32,6 +32,9 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         nib = UINib(nibName: "EmployeeEventSectionHeader", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "employeeEventSectionHeader")
         
+        // Remove default cell separator from the tableView
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         // Retrieve the events corresponding to the current employee from the database
         getEventsFromDatabase()
 
@@ -255,8 +258,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         // before the cell is drawn, so this function is a good place to do it.
         cell.tasks = getTasksFromDatabase(forEvent: events[indexPath.section][indexPath.row])
         
-        //return CGFloat( cell.defaultCellHeight + ( cell.taskLabel1Height * cell.tasks.count ) - cell.taskLabel1Spacing + 6)
-        return CGFloat( cell.defaultCellHeight + ((cell.taskLabel1Height + cell.yPadding) * cell.tasks.count) )
+        return CGFloat( cell.defaultCellHeight + ((cell.taskLabel1Height + cell.yPadding) * cell.tasks.count) + 10 )
     }
     
     
