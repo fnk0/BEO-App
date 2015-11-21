@@ -26,21 +26,24 @@ class BEO : PFObject, PFSubclassing {
     @NSManaged var date: NSDate
     @NSManaged var due: NSDate
     
+    // We forgot about the menu...
+    @NSManaged var menu: Menu
+    
     // Format 6-8am 5:30-8:30pm
     @NSManaged var timePeriod: String
     @NSManaged var title: String
+    
     // Once HR gives us more info we can set up a location enum also
     @NSManaged var location: String
     
     // The value for this is retrieved from the enum DinnerStyle
     @NSManaged var dinnerStyle: String
-    
-    // The value for this is retrieved from the enum Food
-    @NSManaged var typeOfFood: String
-    
+        
     // The value for this is retrieved from the enum Beverage
     @NSManaged var beverage: String
     
+    @NSManaged var notes: String
+
     //TODO: move this to a class constants file
     static func parseClassName() -> String {
         return "BEO"
