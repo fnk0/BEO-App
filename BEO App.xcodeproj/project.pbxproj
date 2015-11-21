@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A3D9501BFFBEF700DE5A19 /* ManagerTasksTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A3D94F1BFFBEF700DE5A19 /* ManagerTasksTableCell.xib */; };
+		04A3D9521BFFBFE200DE5A19 /* ManagerTasksTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3D9511BFFBFE200DE5A19 /* ManagerTasksTableCell.swift */; };
 		2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */; };
 		2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C11A23D1BC0DE7200838E07 /* MainController.swift */; };
 		2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11A23F1BC0DE7200838E07 /* Main.storyboard */; };
@@ -113,6 +115,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A3D94F1BFFBEF700DE5A19 /* ManagerTasksTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerTasksTableCell.xib; sourceTree = "<group>"; };
+		04A3D9511BFFBFE200DE5A19 /* ManagerTasksTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTasksTableCell.swift; sourceTree = "<group>"; };
 		0BF743B10CC334A6F325756D /* Pods-BEO App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.debug.xcconfig"; sourceTree = "<group>"; };
 		1D031ADA42BAC4F845EF70B0 /* Pods-BEO App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.release.xcconfig"; sourceTree = "<group>"; };
 		2C11A2381BC0DE7200838E07 /* BEO App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEO App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,6 +477,8 @@
 			isa = PBXGroup;
 			children = (
 				2CF62D3C1BFEC0E70099C708 /* ManagerTasksController.swift */,
+				04A3D94F1BFFBEF700DE5A19 /* ManagerTasksTableCell.xib */,
+				04A3D9511BFFBFE200DE5A19 /* ManagerTasksTableCell.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
 				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
 				554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */,
+				04A3D9501BFFBEF700DE5A19 /* ManagerTasksTableCell.xib in Resources */,
 				2C40145F1BF9A8560067F693 /* Clock_Icon_Red.png in Resources */,
 				2C11A2971BC1AB1F00838E07 /* IMG_1529.JPG in Resources */,
 				2C4014631BF9A8560067F693 /* Hotel Picture.png in Resources */,
@@ -785,6 +792,7 @@
 				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
 				2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */,
 				2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */,
+				04A3D9521BFFBFE200DE5A19 /* ManagerTasksTableCell.swift in Sources */,
 				554434C61BFB911A00BF503A /* LocationCell.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
 				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,

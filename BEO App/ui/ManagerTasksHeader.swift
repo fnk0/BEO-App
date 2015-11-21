@@ -53,15 +53,17 @@ class ManagerTasksHeader : UIView {
     var tasks : [Task]? {
         didSet {
             if let tasks = tasks {
-                self.progressBar.max = tasks.count
-                var completed : Int = 0
-                for t in tasks {
-                    if t.completed {
-                        completed++
+                    progressBar.max = tasks.count
+
+                    var completed : Int = 0
+                    for t in tasks {
+                        if t.completed {
+                            completed++
+                        }
                     }
+                    self.progressBar.current = completed
                 }
-                self.progressBar.current = completed
-            }
+            
         }
     }
     

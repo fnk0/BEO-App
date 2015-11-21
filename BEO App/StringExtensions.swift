@@ -29,6 +29,10 @@ extension String {
         return numberTest.evaluateWithObject(self)
     }
     
+    func char(index: Int) -> Character {
+        return self[self.startIndex.advancedBy(index)]
+    }
+    
     func isValidPassword() -> Bool {
         if self.length() >= 6 {
             if self.containsNumber() {
