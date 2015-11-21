@@ -12,7 +12,7 @@ import CVCalendar
 import Parse
 
 class CalendarController : UIViewController, CVCalendarViewDelegate, CVCalendarMenuViewDelegate, CVCalendarViewAppearanceDelegate,
-UITableViewDataSource, UITableViewDelegate {
+        UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var calendarView: CVCalendarView!
@@ -20,7 +20,6 @@ UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var eventsTableView: UITableView!
     
     @IBOutlet weak var beosTableView: UITableView!
-    @IBOutlet weak var emptyLabel: UILabel!
     
     var beos: [BEO] = []
     
@@ -34,45 +33,27 @@ UITableViewDataSource, UITableViewDelegate {
         appearance.dayLabelWeekdaySelectedBackgroundColor = Colors.Red
         appearance.dayLabelPresentWeekdayTextColor = Colors.DarkBlue
         
-        let nib = UINib(nibName: Const.MyEventsCalendarTableCell, bundle: nil)
-        self.beosTableView.registerNib(nib, forCellReuseIdentifier: Const.MyEventsCalendarTableCell)
-        
         calendarView.appearance = appearance
-        
-//        self.beosTableView.contentInset = UIEdgeInsetsMake(-70, 0, 0, 0)
-        self.beosTableView.tableFooterView = UIView(frame: CGRect.zero)
         
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
         calendarLabel.text = dateStr.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        updateBEOList(date)
+        
     }
     
-    func updateBEOList(cvDate: CVDate) -> Void {
+    func updateBEOList(date: CVDate) -> Void {
         let query = BEO.query()
-        
-        let date = cvDate.convertedDate()!
-        
-        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        let start = cal.startOfDayForDate(date)
-        let end: NSDate = cal.dateBySettingHour(23, minute: 59, second: 59, ofDate: date, options: NSCalendarOptions())!
-        query?.whereKey(Const.DATE, greaterThan: start)
-        query?.whereKey(Const.DATE, lessThan: end)
-        
+        query?.whereKey(Const.DATE, equalTo: date.convertedDate()!)
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 // The find succeeded.
                 print("Successfully retrieved \(objects!.count) beos.")
-                
+
                 if let objects = objects as? [BEO] {
                     self.beos = objects
                     self.beosTableView.reloadData()
-                    
-                    if self.beos.count > 0 {
-                        self.performSegueWithIdentifier(Segue.TaskSegue, sender: nil)
-                    }
                 }
             } else {
                 // Log details of the failure
@@ -87,7 +68,7 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -95,16 +76,7 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let count = beos.count
-        
-        if count > 0 {
-            emptyLabel.hidden = true
-        } else {
-            emptyLabel.hidden = false
-        }
-        
-        return count
+        return beos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -151,14 +123,6 @@ UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func calendarRight(sender: UIButton) {
         self.calendarView.loadNextView()
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == Segue.TaskSegue {
-            if let vc = segue.destinationViewController as? ManagerTasksController {
-                vc.beo = self.beos[0]
-            }
-        }
     }
     
 }

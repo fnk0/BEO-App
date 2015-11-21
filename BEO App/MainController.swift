@@ -15,24 +15,9 @@ class MainController: UIViewController {
     @IBOutlet weak var listContainer: UIView!
     @IBOutlet weak var calendarContainer: UIView!
     @IBOutlet weak var calendarButton: UIButton!
-    @IBOutlet weak var managerListContainer: UIView!
-    
-    let defaults = NSUserDefaults.standardUserDefaults()
-    var isManager : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let isManager = defaults.valueForKey(Const.IS_MANAGER) as? Bool {
-            self.isManager = isManager
-        }
-        
-        showHideListController(false)
-    }
-    
-    func showHideListController(isCalendar: Bool) {
-        managerListContainer.hidden = !isManager || isCalendar
-        listContainer.hidden = isManager || isCalendar
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,13 +26,13 @@ class MainController: UIViewController {
     
     //TODO => Refactor this
     @IBAction func showListController(sender: UIButton) {
-        showHideListController(false)
+        listContainer.hidden = false
         sender.tintColor = Colors.DarkBlue
         calendarButton.tintColor = Colors.LightGrey
 
     }
     @IBAction func showCalendarController(sender: UIButton) {
-        showHideListController(true)
+        listContainer.hidden = true
         sender.tintColor = Colors.DarkBlue
         listButton.tintColor = Colors.LightGrey
     }

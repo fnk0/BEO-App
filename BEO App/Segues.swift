@@ -12,6 +12,5 @@ class Segue {
     
     static let RegisterSegue = "registerSegue"
     static let LoginSegue = "loginSegue"
-    static let TaskSegue = "TaskSegue"
     
 }
