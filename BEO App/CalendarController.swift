@@ -69,10 +69,6 @@ UITableViewDataSource, UITableViewDelegate {
                 if let objects = objects as? [BEO] {
                     self.beos = objects
                     self.beosTableView.reloadData()
-                    
-                    if self.beos.count > 0 {
-                        self.performSegueWithIdentifier(Segue.TaskSegue, sender: nil)
-                    }
                 }
             } else {
                 // Log details of the failure

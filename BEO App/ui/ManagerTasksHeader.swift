@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ManagerTasksHeader : UIView {
+@IBDesignable class ManagerTasksHeader : UIView {
     
     var view: UIView!
     
@@ -53,42 +53,32 @@ class ManagerTasksHeader : UIView {
     var tasks : [Task]? {
         didSet {
             if let tasks = tasks {
-                    progressBar.max = tasks.count
-
-                    var completed : Int = 0
-                    for t in tasks {
-                        if t.completed {
-                            completed++
-                        }
+                progressBar.max = tasks.count
+                
+                var completed : Int = 0
+                for t in tasks {
+                    if t.completed {
+                        completed++
                     }
-                    self.progressBar.current = completed
                 }
-            
+                self.progressBar.current = completed
+                self.progressLabel.text = "\(completed)/\(tasks.count)"
+                self.progressBar.current = completed
+            }
         }
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        xibSetup()
+        self.view = xibSetup("ManagerTasksHeader")
+        self.addSubview(self.view)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        xibSetup()
-    }
-    
-    func loadViewFromNib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "ManagerTasksHeader", bundle: bundle)
-        let v = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        return v
-    }
-    
-    func xibSetup() {
-        self.view = self.loadViewFromNib()
-        self.view.frame = bounds
-        self.view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-        addSubview(self.view)
+        self.view = xibSetup("ManagerTasksHeader")
+        self.addSubview(self.view)
     }
     
     @IBAction func edit(sender: AnyObject) {

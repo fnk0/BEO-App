@@ -84,6 +84,9 @@
 		2CF62D421BFF6D4A0099C708 /* ManagerEventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */; };
 		2CF62D431BFF6D4A0099C708 /* ManagerEventListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */; };
 		2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */; };
+		2CF62D461BFFBCF60099C708 /* ManagerEventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */; };
+		2CF62D481BFFBD080099C708 /* ManagerEventHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */; };
+		2CF62D4A1BFFC0F60099C708 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		554434C61BFB911A00BF503A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554434C51BFB911A00BF503A /* LocationCell.swift */; };
 		554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554434CA1BFB91A500BF503A /* LocationCell.xib */; };
@@ -212,6 +215,9 @@
 		2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventListController.swift; sourceTree = "<group>"; };
 		2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerEventListTableCell.xib; sourceTree = "<group>"; };
 		2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventListTableCell.swift; sourceTree = "<group>"; };
+		2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventHeader.swift; sourceTree = "<group>"; };
+		2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerEventHeader.xib; sourceTree = "<group>"; };
+		2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		554434C51BFB911A00BF503A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		554434CA1BFB91A500BF503A /* LocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 				2C11A2761BC11A8F00838E07 /* StringExtensions.swift */,
 				2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */,
 				2CF62D311BFE3B000099C708 /* NSDateExtensions.swift */,
+				2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -489,6 +496,8 @@
 				2CF62D3F1BFF6D4A0099C708 /* ManagerEventListController.swift */,
 				2CF62D401BFF6D4A0099C708 /* ManagerEventListTableCell.xib */,
 				2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */,
+				2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */,
+				2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */,
 			);
 			name = ManagerEventList;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				85FFC2E61BF07BD000B86BF2 /* EmployeeEventSectionHeader.xib in Resources */,
 				2C4014621BF9A8560067F693 /* Edit_Icon_Blue.png in Resources */,
 				2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */,
+				2CF62D481BFFBD080099C708 /* ManagerEventHeader.xib in Resources */,
 				2C40145A1BF9A8560067F693 /* Arrow_Up_White.png in Resources */,
 				2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */,
 				2CCE9CF21BF3A4D7002B4ABD /* MyEventsCalendarTableCell.xib in Resources */,
@@ -799,12 +809,14 @@
 				2C11A23E1BC0DE7200838E07 /* MainController.swift in Sources */,
 				2CF62D341BFEADEF0099C708 /* ManagerTasksHeader.swift in Sources */,
 				2CB37A681BE8A465003A6897 /* README.md in Sources */,
+				2CF62D461BFFBCF60099C708 /* ManagerEventHeader.swift in Sources */,
 				2C11A26F1BC10C0C00838E07 /* LoginController.swift in Sources */,
 				2C11A23C1BC0DE7200838E07 /* AppDelegate.swift in Sources */,
 				2CCE9CF01BF3A4BE002B4ABD /* MyEventsCalendarTableCell.swift in Sources */,
 				2CF62D3A1BFEB8E00099C708 /* TimePeriod.swift in Sources */,
 				2CB37A641BE8A2A8003A6897 /* ListController.swift in Sources */,
 				2CB37A721BE90F57003A6897 /* DinnerStyle.swift in Sources */,
+				2CF62D4A1BFFC0F60099C708 /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
