@@ -18,8 +18,6 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     var events = [ [BEO] ]()
     var eventsRaw = [BEO]()
     var tasks = [Task]()
-    var cellTasks = [Task]()
-    var employee = PFUser()
     
     // Boolean to indicate whether parse retrieval failed
     var readFailed = false
@@ -36,76 +34,6 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // Retrieve the events corresponding to the current employee from the database
         getEventsFromDatabase()
-        
-        /*
-        // ========== START - FOR TESTING ONLY - REMOVE BEFORE PRESENTATION ==========
-        // Initialize parse database
-        
-        var initEvents = [PFObject]()
-        var initTasks = [PFObject]()
-        
-        for _ in 0..<3
-        {
-            initEvents.append(PFObject(className: "EmployeeEvent"))
-        }
-        for _ in 0..<9
-        {
-            initTasks.append(PFObject(className: "EmployeeTask"))
-        }
-        
-        initEvents[0].setObject("Swanson Breakfast", forKey: "name")
-        initEvents[1].setObject("Swanson Lunch", forKey: "name")
-        initEvents[2].setObject("Swanson Dinner", forKey: "name")
-        
-        initTasks[0].setObject("Buffet food put out", forKey: "desc")
-        initTasks[1].setObject("Table cloth/silverware placement", forKey: "desc")
-        initTasks[2].setObject("Greet people at the doors", forKey: "desc")
-        initTasks[3].setObject("Chair and table set-up", forKey: "desc")
-        initTasks[4].setObject("Table cloth/silverware placement", forKey: "desc")
-        initTasks[5].setObject("Buffet food take-down", forKey: "desc")
-        initTasks[6].setObject("Make sure lights are correct", forKey: "desc")
-        initTasks[7].setObject("Table cloth/silverware placement", forKey: "desc")
-        initTasks[8].setObject("Buffet food take-down", forKey: "desc")
-        
-        let task0 = PFObject(className: "EmployeeTask")
-        let task1 = PFObject(className: "EmployeeTask")
-        let task2 = PFObject(className: "EmployeeTask")
-        task0.setObject("Buffet food put out", forKey: "desc")
-        task1.setObject("Table cloth/silverware placement", forKey: "desc")
-        task2.setObject("Greet people at the doors", forKey: "desc")
-        
-        initEvents[1].setObject([task0, task1, task2], forKey: "tasks")
-        //initEvents[1].setObject([initTasks[3], initTasks[4], initTasks[5]], forKey: "tasks")
-        //initEvents[2].setObject([initTasks[6], initTasks[7], initTasks[8]], forKey: "tasks")
-        
-        for event in initEvents
-        {
-            do
-            {
-                try event.save()
-            }
-            catch
-            {
-                print("Database initialization failed")
-            }
-        }
-        // ========== END - FOR TESTING ONLY - REMOVE BEFORE PRESENTATION ============
-        */
-        /*
-        // Create a Parse query for EmployeeEvents
-        let query = PFQuery(className: "EmployeeEvent")
-        
-        // Retrieve the list of EmployeeEvents from the database
-        do
-        {
-            try self.eventsRaw = query.findObjects()
-        }
-        catch
-        {
-            readFailed = true
-            print("Database read failed")
-        }
-        */
 
     }
     
@@ -114,7 +42,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     {
         // Create a Parse query to retrieve all tasks corresponding to the current employee
         let query = Task.query()
-        //query?.whereKey("employee", equalTo: employee)
+        //query?.whereKey("employee", equalTo: PFUser.currentUser()!)
         
         do
         {
