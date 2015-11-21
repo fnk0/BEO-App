@@ -244,8 +244,10 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         // Set up a formatter to use for displaying the time the event is due
         let dueTimeFormatter = NSDateFormatter()
         dueTimeFormatter.dateFormat = "h:mma"
-        let formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].due).lowercaseString
+        var formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].due).lowercaseString
         cell.completionTimeLabel.text = "Complete by \(formattedTime)"
+        formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].clean).lowercaseString
+        cell.cleanTimeLabel.text = "Clean by \(formattedTime)"
         
         return cell
     }

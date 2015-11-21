@@ -29,8 +29,11 @@
                         <color key="textColor" red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean by -:--am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb6-Vf-tb7">
-                        <rect key="frame" x="255" y="37" width="77" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean by 12:30am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb6-Vf-tb7">
+                        <rect key="frame" x="245" y="37" width="87" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="87" id="D6g-d8-FS4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -40,13 +43,6 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="R0z-Kf-abN"/>
                             <constraint firstAttribute="width" constant="18" id="mTL-KC-6IO"/>
-                        </constraints>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-dD-NIb">
-                        <rect key="frame" x="229" y="34" width="18" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="EsM-St-eeP"/>
-                            <constraint firstAttribute="width" constant="18" id="yDK-No-DgL"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX8-Cs-jMA">
@@ -73,6 +69,13 @@
                             <constraint firstAttribute="height" constant="10" id="gwO-ap-600"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-dD-NIb">
+                        <rect key="frame" x="219" y="34" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="EsM-St-eeP"/>
+                            <constraint firstAttribute="width" constant="18" id="yDK-No-DgL"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="rX8-Cs-jMA" secondAttribute="trailing" id="4HX-GP-8Dk"/>

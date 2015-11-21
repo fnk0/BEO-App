@@ -25,6 +25,7 @@ class BEO : PFObject, PFSubclassing {
     @NSManaged var rsvp: Int
     @NSManaged var date: NSDate
     @NSManaged var due: NSDate
+    @NSManaged var clean: NSDate
     
     // Format 6-8am 5:30-8:30pm
     @NSManaged var timePeriod: String
