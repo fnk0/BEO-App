@@ -154,14 +154,6 @@ class EmployeeEventCell: UITableViewCell {
             label1.center.y = CGFloat( taskLabel1CenterY + ((taskLabel1Height + yPadding) * index) )
             label1.textAlignment = NSTextAlignment.Left
             label1.font = UIFont.systemFontOfSize(12)
-            do
-            {
-                try tasks[0].fetchIfNeeded()
-            }
-            catch
-            {
-                print("Database read failed.");
-            }
             if tasks[index].completed
             {
                 let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
