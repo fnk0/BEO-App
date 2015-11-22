@@ -143,7 +143,7 @@ class EmployeeEventCell: UITableViewCell {
             // Create button for task
             let button2 = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
             button2.center.x = CGFloat(taskButtonCenterX)
-            button2.center.y = CGFloat( taskButtonCenterY + ((taskButtonHeight + yPadding) * index) )
+            button2.center.y = CGFloat( taskButtonCenterY + ((taskLabel1Height + yPadding) * index) )
             button2.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
             self.addSubview(button2)
             taskButtons.append(button2)
