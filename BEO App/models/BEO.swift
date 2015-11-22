@@ -25,6 +25,7 @@ class BEO : PFObject, PFSubclassing {
     @NSManaged var rsvp: Int
     @NSManaged var date: NSDate
     @NSManaged var due: NSDate
+    @NSManaged var clean: NSDate
     
     // We forgot about the menu...
     @NSManaged var menu: Menu
