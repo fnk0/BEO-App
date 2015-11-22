@@ -118,10 +118,6 @@ class EmployeeEventCell: UITableViewCell {
         taskClockImages = [UIImageView]()
         taskCheckboxImages = [UIImageView]()
         
-        // Set up a formatter to use for displaying the time a task is due
-        let dueTimeFormatter = NSDateFormatter()
-        dueTimeFormatter.dateFormat = "h:mma"
-        
         for index in 0..<tasks.count
         {
             // Create checkbox image
@@ -190,7 +186,7 @@ class EmployeeEventCell: UITableViewCell {
             label2.center.y = CGFloat( taskLabel2CenterY + ((taskLabel2Height + yPadding) * index) )
             label2.textAlignment = NSTextAlignment.Right
             label2.font = UIFont.systemFontOfSize(8)
-            label2.text = dueTimeFormatter.stringFromDate(tasks[index].due).lowercaseString
+            label2.text = getTimeRemaining(tasks[index].due).lowercaseString
             if tasks[index].completed
             {
                 label2.textColor = darkGrayColor
@@ -227,6 +223,51 @@ class EmployeeEventCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func getTimeRemaining(due: NSDate) -> String
+    {
+        // Set up formatters for extracting hours and minutes from the due date
+        let hourFormatter = NSDateFormatter()
+        hourFormatter.dateFormat = "h"
+        let minuteFormatter = NSDateFormatter()
+        minuteFormatter.dateFormat = "m"
+        
+        let dueHourStr = hourFormatter.stringFromDate(due)
+        let dueMinuteStr = minuteFormatter.stringFromDate(due)
+        let currentHourStr = hourFormatter.stringFromDate(NSDate())
+        let currentMinuteStr = minuteFormatter.stringFromDate(NSDate())
+        
+        let dueHour = Int(dueHourStr)!
+        let currentHour = Int(currentHourStr)!
+        
+        let dueMinute = Int(dueMinuteStr)! + dueHour * 60
+        let currentMinute = Int(currentMinuteStr)! + currentHour * 60
+        
+        var remainingMinutes = dueMinute - currentMinute
+        var remainingHours = 0
+        
+        while remainingMinutes >= 60
+        {
+            remainingHours += 1
+            remainingMinutes -= 60
+        }
+        
+        if remainingHours <= 0
+        {
+            if remainingMinutes > 0
+            {
+                return "\(remainingMinutes)m"
+            }
+        }
+        
+        if remainingMinutes <= 0
+        {
+            return "0m"
+        }
+        
+        return "\(remainingHours)h \(remainingMinutes)m"
     }
     
     
