@@ -78,6 +78,23 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         let nib = UINib(nibName: Const.ManagerTasksTableCell, bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: Const.ManagerTasksTableCell)
+<<<<<<< HEAD
+=======
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Create a Parse query for EmployeeEvents
+        let query = Task.query()
+        
+        // Retrieve the list of BEO Tasks from the database
+        do
+        {
+            try self.tasksRaw = query!.findObjects()
+        }
+        catch
+        {
+            print("Database read failed")
+        }
+>>>>>>> master
         
         self.tableView.delegate = self
         
