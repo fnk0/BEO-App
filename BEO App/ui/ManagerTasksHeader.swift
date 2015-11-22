@@ -46,6 +46,8 @@ import UIKit
                         dustpanIcon.image = Const.RedDustpanImage
                     }
                 }
+                completeLabel.sizeToFit()
+                cleanByLabel.sizeToFit()
             }
         }
     }

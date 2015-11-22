@@ -57,6 +57,15 @@ class MainController: UIViewController {
         listButton.tintColor = Colors.LightGrey
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.TaskSegue {
+            if let vc = segue.destinationViewController as? ManagerTasksController {
+                if let beo = sender as? BEO {
+                    vc.beo = beo
+                }
+            }
+        }
+    }
     
 }
 

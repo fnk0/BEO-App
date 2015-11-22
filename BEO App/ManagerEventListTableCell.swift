@@ -83,7 +83,7 @@ class ManagerEventListTableCell : UITableViewCell {
     
     @IBAction func openInfo(sender: UIButton) {
         if let v = vc {
-            v.parentViewController!.performSegueWithIdentifier(Segue.TaskSegue, sender: nil)
+            v.parentViewController!.performSegueWithIdentifier(Segue.TaskSegue, sender: beo)
         }
     }
     

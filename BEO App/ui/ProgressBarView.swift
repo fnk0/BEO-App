@@ -48,7 +48,7 @@ import UIKit
     
     func initialize() {
         self.backgroundColor = bgColor
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = 3
         self.layer.masksToBounds = true
     }
 

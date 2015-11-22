@@ -24,6 +24,5 @@ import UIKit
         super.init(frame: frame)
         self.view = xibSetup("ManagerEventHeader")
         self.addSubview(self.view)
-        self.addSubview(self.view)
     }
 }

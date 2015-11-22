@@ -54,6 +54,8 @@
 		2C40146D1BF9A8560067F693 /* WhiteBox_Manager.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4014541BF9A8560067F693 /* WhiteBox_Manager.png */; };
 		2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C7783221BFA87AD00D56A88 /* BEO Example.pdf */; };
 		2C7783261BFA87FD00D56A88 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7783251BFA87FD00D56A88 /* Const.swift */; };
+		2C9D77BA1C0113850015BB79 /* SingleTask.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9D77B91C0113850015BB79 /* SingleTask.xib */; };
+		2C9D77BC1C01148E0015BB79 /* SingleTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9D77BB1C01148E0015BB79 /* SingleTask.swift */; };
 		2C9FF2AF1BFB936B001BBA8C /* TFArrow-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FF2AE1BFB936B001BBA8C /* TFArrow-Light.ttf */; };
 		2CB37A5D1BE89DCC003A6897 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A571BE89DCC003A6897 /* Calendar.png */; };
 		2CB37A5F1BE89DCC003A6897 /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB37A591BE89DCC003A6897 /* Info.png */; };
@@ -182,6 +184,8 @@
 		2C7783211BFA87AD00D56A88 /* All Things BEO.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "All Things BEO.docx"; sourceTree = "<group>"; };
 		2C7783221BFA87AD00D56A88 /* BEO Example.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "BEO Example.pdf"; sourceTree = "<group>"; };
 		2C7783251BFA87FD00D56A88 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		2C9D77B91C0113850015BB79 /* SingleTask.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleTask.xib; sourceTree = "<group>"; };
+		2C9D77BB1C01148E0015BB79 /* SingleTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTask.swift; sourceTree = "<group>"; };
 		2C9FF2AE1BFB936B001BBA8C /* TFArrow-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TFArrow-Light.ttf"; sourceTree = "<group>"; };
 		2CB37A571BE89DCC003A6897 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		2CB37A581BE89DCC003A6897 /* EmployeeEventTaskList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmployeeEventTaskList.png; sourceTree = "<group>"; };
@@ -486,6 +490,8 @@
 				2CF62D3C1BFEC0E70099C708 /* ManagerTasksController.swift */,
 				04A3D94F1BFFBEF700DE5A19 /* ManagerTasksTableCell.xib */,
 				04A3D9511BFFBFE200DE5A19 /* ManagerTasksTableCell.swift */,
+				2C9D77B91C0113850015BB79 /* SingleTask.xib */,
+				2C9D77BB1C01148E0015BB79 /* SingleTask.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9D77BA1C0113850015BB79 /* SingleTask.xib in Resources */,
 				2C7783241BFA87AD00D56A88 /* BEO Example.pdf in Resources */,
 				2C4014671BF9A8560067F693 /* Phone_Icon_White.png in Resources */,
 				2C4014611BF9A8560067F693 /* Dustpan_Icon_Red.png in Resources */,
@@ -790,6 +797,7 @@
 				2CF62D321BFE3B000099C708 /* NSDateExtensions.swift in Sources */,
 				2CCE9CF41BF3AADE002B4ABD /* Beverage.swift in Sources */,
 				2CF62D381BFEAEE40099C708 /* ProgressBarView.swift in Sources */,
+				2C9D77BC1C01148E0015BB79 /* SingleTask.swift in Sources */,
 				2CCE9CF81BF3ACEC002B4ABD /* EstimatedCharges.swift in Sources */,
 				2CF62D3D1BFEC0E70099C708 /* ManagerTasksController.swift in Sources */,
 				2CB37A701BE90E50003A6897 /* BEO.swift in Sources */,
