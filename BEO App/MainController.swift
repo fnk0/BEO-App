@@ -15,9 +15,29 @@ class MainController: UIViewController {
     @IBOutlet weak var listContainer: UIView!
     @IBOutlet weak var calendarContainer: UIView!
     @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet weak var managerListContainer: UIView!
+    @IBOutlet weak var pageTitle: UINavigationItem!
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var isManager : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let isManager = defaults.valueForKey(Const.IS_MANAGER) as? Bool {
+            self.isManager = isManager
+            
+            if self.isManager {
+                self.pageTitle.title = "EVENTS"
+            }
+        }
+        
+        showHideListController(false)
+    }
+    
+    func showHideListController(isCalendar: Bool) {
+        managerListContainer.hidden = !isManager || isCalendar
+        listContainer.hidden = isManager || isCalendar
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,17 +46,26 @@ class MainController: UIViewController {
     
     //TODO => Refactor this
     @IBAction func showListController(sender: UIButton) {
-        listContainer.hidden = false
+        showHideListController(false)
         sender.tintColor = Colors.DarkBlue
         calendarButton.tintColor = Colors.LightGrey
 
     }
     @IBAction func showCalendarController(sender: UIButton) {
-        listContainer.hidden = true
+        showHideListController(true)
         sender.tintColor = Colors.DarkBlue
         listButton.tintColor = Colors.LightGrey
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.TaskSegue {
+            if let vc = segue.destinationViewController as? ManagerTasksController {
+                if let beo = sender as? BEO {
+                    vc.beo = beo
+                }
+            }
+        }
+    }
     
 }
 

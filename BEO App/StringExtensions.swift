@@ -29,6 +29,10 @@ extension String {
         return numberTest.evaluateWithObject(self)
     }
     
+    func char(index: Int) -> Character {
+        return self[self.startIndex.advancedBy(index)]
+    }
+    
     func isValidPassword() -> Bool {
         if self.length() >= 6 {
             if self.containsNumber() {
@@ -37,5 +41,26 @@ extension String {
         }
         return false
     }
+    
+    func getTimePeriod() -> TimePeriod {
+        var x = self.stringByReplacingOccurrencesOfString("\\D", withString: " ", options: .RegularExpressionSearch, range: self.startIndex..<self.endIndex)
+        x = x.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        var final = x.componentsSeparatedByString(" ")
+        final = final.filter({ $0 != "" })
+        
+        var stringWithoutDigit = (self.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet()) as NSArray).componentsJoinedByString("")
+        
+        stringWithoutDigit = stringWithoutDigit.stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        if stringWithoutDigit.characters.count == 4 {
+            stringWithoutDigit = stringWithoutDigit.substringFromIndex(self.startIndex.advancedBy(2))
+        }
+        
+        let y = Int(final[0])!
+        let z = Int(final[1])!
+        return TimePeriod(s: y, e: z, p: stringWithoutDigit)
+    }
+
 }
 

@@ -153,11 +153,18 @@
                                     <segue destination="FQ4-Na-igb" kind="embed" identifier="segueCalendar" id="SQi-3y-gBB"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mx7-j8-whE" userLabel="ManagerEvents">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="oEO-1i-tvY" kind="embed" id="gXi-Ol-tKP"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zk8-TG-rP0" userLabel="ListContainer">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="Oiv-D0-CXz" kind="embed" identifier="segueList" id="Cv9-js-MKU"/>
+                                    <segue destination="Oiv-D0-CXz" kind="embed" id="2Th-76-95i"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVF-0J-KZE" userLabel="Button Group">
@@ -198,6 +205,9 @@
                     <navigationItem key="navigationItem" title="MY EVENTS" id="uv4-L1-KTw">
                         <barButtonItem key="rightBarButtonItem" image="ic_phone" id="0Ss-Ac-UXX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="qFL-CC-Y2Z" kind="push" identifier="TaskSegue" id="kuf-XG-d49"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -205,11 +215,13 @@
                         <outlet property="calendarContainer" destination="p51-u7-vRp" id="DFy-Xn-gR4"/>
                         <outlet property="listButton" destination="Zmi-K7-TlB" id="aZ9-Xm-BJh"/>
                         <outlet property="listContainer" destination="Zk8-TG-rP0" id="wWy-iz-zIO"/>
+                        <outlet property="managerListContainer" destination="mx7-j8-whE" id="cMB-kX-vaC"/>
+                        <outlet property="pageTitle" destination="uv4-L1-KTw" id="tzs-Pt-Khb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZA-Yi-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883.5" y="1099.5"/>
+            <point key="canvasLocation" x="895.5" y="1115.5"/>
         </scene>
         <!--FORGOT PASSWORD-->
         <scene sceneID="7Xa-3s-VaX">
@@ -649,7 +661,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCH-Nc-yXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.5" y="440.5"/>
+            <point key="canvasLocation" x="1537.5" y="122.5"/>
+        </scene>
+        <!--Manager TASKS-->
+        <scene sceneID="mDH-bU-dLR">
+            <objects>
+                <viewController id="qFL-CC-Y2Z" userLabel="Manager TASKS" customClass="ManagerTasksController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UMi-3O-ZeV"/>
+                        <viewControllerLayoutGuide type="bottom" id="qxd-ug-8ax"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vVU-zb-348">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j7W-YK-8Nk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qFL-CC-Y2Z" id="4Pa-1m-Lkc"/>
+                                    <outlet property="delegate" destination="qFL-CC-Y2Z" id="Hbh-n4-5K7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="TASKS" id="zha-7J-4T2">
+                        <barButtonItem key="rightBarButtonItem" image="ic_phone" id="4j5-8l-mdI">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="j7W-YK-8Nk" id="iPW-cn-osz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEX-WY-UkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451.5" y="1115.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qMh-nJ-6Cz">
@@ -673,7 +726,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAg-jR-EZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351.5" y="1099.5"/>
+            <point key="canvasLocation" x="351.5" y="1115.5"/>
         </scene>
         <!--Info Screen-->
         <scene sceneID="kfT-Lb-61e">
@@ -744,9 +797,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3w2-tK-QFl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="659"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="employeeEventCell" id="mlL-ly-X64" customClass="EmployeeEventCell" customModule="BEO_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mlL-ly-X64" id="R3d-Vb-7sm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="employeeEventSectionHeader" id="kx4-Ke-wlo" customClass="EmployeeEventCell" customModule="BEO_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kx4-Ke-wlo" id="cN5-Yg-8JH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Oiv-D0-CXz" id="UUh-qQ-2Lz"/>
+                                    <outlet property="delegate" destination="Oiv-D0-CXz" id="A8c-IA-Kni"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -858,7 +937,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaS-SG-8fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118.5" y="1944.5"/>
+            <point key="canvasLocation" x="1119.5" y="1944.5"/>
+        </scene>
+        <!--MANAGER EVENT LIST-->
+        <scene sceneID="qMs-CD-I8O">
+            <objects>
+                <viewController title="MANAGER EVENT LIST" id="oEO-1i-tvY" userLabel="MANAGER EVENT LIST" customClass="ManagerEventListController" customModule="BEO_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUS-tv-Shb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2lp-lR-dcF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5RF-Jy-DDy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SRU-CO-3bx">
+                                <rect key="frame" x="0.0" y="8" width="375" height="728"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oEO-1i-tvY" id="dcN-Xi-g4M"/>
+                                    <outlet property="delegate" destination="oEO-1i-tvY" id="GYQ-AG-tZg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="beosTableView" destination="SRU-CO-3bx" id="fhu-xJ-9qg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1M6-WP-vNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209.5" y="1944.5"/>
         </scene>
     </scenes>
     <resources>

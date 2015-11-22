@@ -40,12 +40,12 @@ UITableViewDataSource, UITableViewDelegate {
         calendarView.appearance = appearance
         
 //        self.beosTableView.contentInset = UIEdgeInsetsMake(-70, 0, 0, 0)
-        self.beosTableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.beosTableView.tableFooterView = UIView(frame: CGRectZero)
         
         let date = CVDate(date: NSDate())
         let dateStr = date.globalDescription.uppercaseString
         calendarLabel.text = dateStr.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        
+        updateBEOList(date)
     }
     
     func updateBEOList(cvDate: CVDate) -> Void {
@@ -64,7 +64,7 @@ UITableViewDataSource, UITableViewDelegate {
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) beos.")
+//                print("Successfully retrieved \(objects!.count) beos.")
                 
                 if let objects = objects as? [BEO] {
                     self.beos = objects
@@ -147,6 +147,14 @@ UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func calendarRight(sender: UIButton) {
         self.calendarView.loadNextView()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.TaskSegue {
+            if let vc = segue.destinationViewController as? ManagerTasksController {
+                vc.beo = self.beos[0]
+            }
+        }
     }
     
 }
