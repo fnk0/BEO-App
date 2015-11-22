@@ -64,7 +64,7 @@ UITableViewDataSource, UITableViewDelegate {
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) beos.")
+//                print("Successfully retrieved \(objects!.count) beos.")
                 
                 if let objects = objects as? [BEO] {
                     self.beos = objects

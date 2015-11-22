@@ -26,5 +26,7 @@ class Const {
     static let RedDustpanImage = UIImage(named: "Dustpan_Icon_Red.png")
     static let CheckboxIncompleteImage = UIImage(named: "Checkbox_Incomplete.png")
     static let CheckboxCompleteImage = UIImage(named: "Checkbox_Complete.png")
-    
+    static let InfoImage = UIImage(named: "Info_Icon_Blue.png")
+    static let GrayTimeImage = UIImage(named: "Time_Icon_Grey.png")
+    static let RedTimeImage = UIImage(named: "Time_Icon_Red.png")
 }

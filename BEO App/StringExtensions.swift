@@ -30,7 +30,7 @@ extension String {
     }
     
     func char(index: Int) -> Character {
-        return self[advance(self.startIndex, index)]
+        return self[self.startIndex.advancedBy(index)]
     }
     
     func isValidPassword() -> Bool {
@@ -54,7 +54,7 @@ extension String {
         stringWithoutDigit = stringWithoutDigit.stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
         
         if stringWithoutDigit.characters.count == 4 {
-            stringWithoutDigit = stringWithoutDigit.substringFromIndex(advance(self.startIndex, 2))
+            stringWithoutDigit = stringWithoutDigit.substringFromIndex(self.startIndex.advancedBy(2))
         }
         
         let y = Int(final[0])!

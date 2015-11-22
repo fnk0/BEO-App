@@ -32,17 +32,19 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         nib = UINib(nibName: "EmployeeEventSectionHeader", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "employeeEventSectionHeader")
         
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        
         // Remove default cell separator from the tableView
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         // Retrieve the events corresponding to the current employee from the database
         getDataFromDatabase()
-        
     }
     
     
-    func getDataFromDatabase()
-    {
+    func getDataFromDatabase() {
         // Create a Parse query to retrieve all tasks corresponding to the current employee
         let query = Task.query()
         query?.whereKey("employee", equalTo: PFUser.currentUser()!)
@@ -53,7 +55,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
             if error == nil
             {
                 // The find succeeded
-                print("Successfully retrieved \(objects!.count) tasks")
+//                print("Successfully retrieved \(objects!.count) tasks")
                 
                 if let objects = objects as? [Task]
                 {
@@ -106,8 +108,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         // Sort events by date
         eventsRaw.sortInPlace { $0.date.compare($1.date) == .OrderedAscending }
         
-        let toPrint = eventsRaw
-        print("eventsRaw = \(toPrint)")
+//        let toPrint = eventsRaw
+//        print("eventsRaw = \(toPrint)")
         
         var eventIndex = 0
         var sectionIndex = 0
@@ -173,7 +175,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
             cell.tasks.append(task)
         }
         
-        cell.updateAppearance(printDebug: true)
+        cell.updateAppearance(printDebug: false)
         
         // Set up a formatter to use for displaying the time the event is due
         let dueTimeFormatter = NSDateFormatter()
@@ -206,18 +208,14 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         return 50
     }
     
-    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("employeeEventSectionHeader") as! EmployeeEventSectionHeader
-        
-        // Set the text of the section header
-        if let dateLabel = cell.dateLabel
-        {
-            dateLabel.text = sections[section]
-        }
-        
-        return cell
+        let headerView = ManagerEventHeader(frame: CGRect(x: 0, y: 0, width: 375, height: 30))
+        headerView.arrowImage.hidden = true
+        headerView.dateLabel.text = sections[section]
+        headerView.dateLabel.sizeToFit()
+        return headerView
     }
+
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
