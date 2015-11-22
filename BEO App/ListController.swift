@@ -116,7 +116,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         let eventDateFormatter = NSDateFormatter()
         eventDateFormatter.dateFormat = "EEEE,  MMMM  d,  y"
         
-        // Organize the events into the two-dimensional array so that they are grouped by date
+        // Organize the events into the two-dimensional array so that they are grouped into sections by date
         while eventIndex < eventsRaw.count
         {
             let sectionName = eventDateFormatter.stringFromDate(eventsRaw[eventIndex].date).uppercaseString
@@ -206,9 +206,11 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         return 50
     }
     
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("employeeEventSectionHeader") as! EmployeeEventSectionHeader
         
+        // Set the text of the section header
         if let dateLabel = cell.dateLabel
         {
             dateLabel.text = sections[section]

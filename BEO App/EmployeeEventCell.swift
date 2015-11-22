@@ -85,6 +85,7 @@ class EmployeeEventCell: UITableViewCell {
     
     func updateAppearance(printDebug printDebug: Bool)
     {
+        // Set button size details that depend on other variables (cannot be initialized above before cell is fully instantiated)
         taskButtonHeight = taskLabel1Height + yPadding
         taskButtonWidth = Int(bounds.size.width)
         taskButtonCenterX = Int(center.x)
@@ -316,10 +317,10 @@ class EmployeeEventCell: UITableViewCell {
     
     func checkBoxTap(sender:UIButton!)
     {
-        print("BUTTON TAPPED")
         
         var buttonIndex = -1
         
+        // Find the data array index corresponding to the tapped button
         for index in 0..<taskButtons.count
         {
             if taskButtons[index] == sender
@@ -329,9 +330,10 @@ class EmployeeEventCell: UITableViewCell {
             }
         }
         
+        // Make sure index was found before proceeding
         if !(buttonIndex == -1)
         {
-            //if sender.imageView!.image == checkboxIncompleteImage
+            // Update the appearance of the task's row to indicate it's completion status
             if !tasks[buttonIndex].completed
             {
                 taskCheckboxImages[buttonIndex].image = checkboxCompleteImage
@@ -360,18 +362,13 @@ class EmployeeEventCell: UITableViewCell {
                 taskLabels[buttonIndex].attributedText = labelText
             }
             
-            do
-            {
-                try tasks[buttonIndex].save()
-            }
-            catch
-            {
-                print("Error: could not save task completion status")
-            }
+            // Save the completion status of the task
+            tasks[buttonIndex].saveInBackground()
         }
         
         if allTasksCompleted()
         {
+            // Set color of UI elements to gray
             completionTimeLabel.textColor = darkGrayColor
             cleanTimeLabel.textColor = darkGrayColor
             clockIconImage.image = grayClockImage
@@ -379,6 +376,7 @@ class EmployeeEventCell: UITableViewCell {
         }
         else
         {
+            // Set color of UI elements to red
             completionTimeLabel.textColor = redColor
             cleanTimeLabel.textColor = redColor
             clockIconImage.image = redClockImage
@@ -400,6 +398,7 @@ class EmployeeEventCell: UITableViewCell {
     }
     
     
+    // TO-DO: SEGUE TO THE INFO PAGE HERE
     @IBAction func infoButtonTap(sender: AnyObject)
     {
         print("Info button tapped")

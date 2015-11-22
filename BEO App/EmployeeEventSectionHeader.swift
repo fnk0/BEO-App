@@ -33,7 +33,6 @@ class EmployeeEventSectionHeader: UITableViewCell {
     
     
     override func drawRect(rect: CGRect) {
-        let colorBlue = UIColor(red: 0.25, green: 0.25, blue: 0.5, alpha: 1.0)
         
         let context = UIGraphicsGetCurrentContext()
         
