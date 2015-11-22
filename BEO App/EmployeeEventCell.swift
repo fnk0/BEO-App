@@ -58,24 +58,6 @@ class EmployeeEventCell: UITableViewCell {
     let defaultCellHeight = 60
     let yPadding = 4
     
-    // Color constants
-    let redColor = UIColor(red: 177/255, green: 40/255, blue: 40/255, alpha: 1.0)
-    let lightGrayColor = UIColor(red: 203/255, green: 203/255, blue: 203/255, alpha: 1.0)
-    let darkGrayColor = UIColor(red: 165/255, green: 167/255, blue: 170/255, alpha: 1.0)
-    let goldColor = UIColor(red: 163/255, green: 145/255, blue: 101/255, alpha: 1.0)
-    let blueColor = UIColor(red: 0/255, green: 53/255, blue: 110/255, alpha: 1.0)
-    
-    // Images from GD team
-    let grayClockImage = UIImage(named: "Clock_Icon_Grey.png")
-    let redClockImage = UIImage(named: "Clock_Icon_Red.png")
-    let grayDustpanImage = UIImage(named: "Dustpan_Icon_Grey.png")
-    let redDustpanImage = UIImage(named: "Dustpan_Icon_Red.png")
-    let grayTimeImage = UIImage(named: "Time_Icon_Grey.png")
-    let redTimeImage = UIImage(named: "Time_Icon_Red.png")
-    let infoImage = UIImage(named: "Info_Icon_Blue.png")
-    let checkboxIncompleteImage = UIImage(named: "Checkbox_Incomplete.png")
-    let checkboxCompleteImage = UIImage(named: "Checkbox_Complete.png")
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -98,7 +80,7 @@ class EmployeeEventCell: UITableViewCell {
         }
         
         // Set the separator color
-        separatorView.backgroundColor = lightGrayColor
+        separatorView.backgroundColor = Colors.LightGrey
         
         // Sort tasks by due date/time
         tasks.sortInPlace { $0.due.compare($1.due) == .OrderedAscending }
@@ -126,11 +108,11 @@ class EmployeeEventCell: UITableViewCell {
             checkboxImage.center.y = CGFloat( checkboxImageCenterY + ((taskLabel1Height + yPadding) * index) )
             if tasks[index].completed
             {
-                checkboxImage.image = checkboxCompleteImage
+                checkboxImage.image = Const.CheckboxCompleteImage
             }
             else
             {
-                checkboxImage.image = checkboxIncompleteImage
+                checkboxImage.image = Const.CheckboxIncompleteImage
                 checkboxImage.transform = CGAffineTransformTranslate(checkboxImage.transform, -2.9, 4)
                 checkboxImage.transform = CGAffineTransformScale(checkboxImage.transform, 0.58, 0.58)
             }
@@ -154,7 +136,7 @@ class EmployeeEventCell: UITableViewCell {
             if tasks[index].completed
             {
                 let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
-                    NSStrikethroughColorAttributeName: blueColor ]
+                    NSStrikethroughColorAttributeName: Colors.DarkBlue ]
                 let labelText = NSAttributedString(string: String(tasks[index].desc), attributes: stringAttributes)
                 label1.attributedText = labelText
             }
@@ -171,11 +153,11 @@ class EmployeeEventCell: UITableViewCell {
             image.center.y = CGFloat( taskLabel1CenterY + ((taskLabel1Height + yPadding) * index) )
             if tasks[index].completed
             {
-                image.image = grayTimeImage
+                image.image = Const.GrayTimeImage
             }
             else
             {
-                image.image = redTimeImage
+                image.image = Const.RedTimeImage
             }
             self.addSubview(image)
             taskClockImages.append(image)
@@ -189,39 +171,25 @@ class EmployeeEventCell: UITableViewCell {
             label2.text = getTimeRemaining(tasks[index].due).lowercaseString
             if tasks[index].completed
             {
-                label2.textColor = darkGrayColor
+                label2.textColor = Colors.DarkGrey
             }
             else
             {
-                label2.textColor = redColor
+                label2.textColor = Colors.Red
             }
             self.addSubview(label2)
             taskCompletionLabels.append(label2)
         }
         
         // Set colors for non-repetetive UI elements
-        eventNameLabel.textColor = blueColor
-        eventTimeLabel.textColor = goldColor
-        if allTasksCompleted()
-        {
-            completionTimeLabel.textColor = lightGrayColor
-            cleanTimeLabel.textColor = lightGrayColor
-            clockIconImage.image = grayClockImage
-            dustpanIconImage.image = grayDustpanImage
-        }
-        else
-        {
-            completionTimeLabel.textColor = redColor
-            cleanTimeLabel.textColor = redColor
-            clockIconImage.image = redClockImage
-            dustpanIconImage.image = redDustpanImage
-        }
-        
+        eventNameLabel.textColor = Colors.DarkBlue
+        eventTimeLabel.textColor = Colors.Gold
+        checkTasks()
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -377,23 +345,23 @@ class EmployeeEventCell: UITableViewCell {
             // Update the appearance of the task's row to indicate it's completion status
             if !tasks[buttonIndex].completed
             {
-                taskCheckboxImages[buttonIndex].image = checkboxCompleteImage
-                taskCompletionLabels[buttonIndex].textColor = darkGrayColor
-                taskClockImages[buttonIndex].image = grayTimeImage
+                taskCheckboxImages[buttonIndex].image = Const.CheckboxCompleteImage
+                taskCompletionLabels[buttonIndex].textColor = Colors.DarkGrey
+                taskClockImages[buttonIndex].image = Const.GrayTimeImage
                 tasks[buttonIndex].completed = true
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 1/0.58, 1/0.58)
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformTranslate(taskCheckboxImages[buttonIndex].transform, 2.9, -4)
                 
                 let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
-                                         NSStrikethroughColorAttributeName: blueColor ]
+                    NSStrikethroughColorAttributeName: Colors.DarkBlue ]
                 let labelText = NSAttributedString(string: String(tasks[buttonIndex].desc), attributes: stringAttributes)
                 taskLabels[buttonIndex].attributedText = labelText
             }
             else
             {
-                taskCheckboxImages[buttonIndex].image = checkboxIncompleteImage
-                taskCompletionLabels[buttonIndex].textColor = redColor
-                taskClockImages[buttonIndex].image = redTimeImage
+                taskCheckboxImages[buttonIndex].image = Const.CheckboxIncompleteImage
+                taskCompletionLabels[buttonIndex].textColor = Colors.Red
+                taskClockImages[buttonIndex].image = Const.RedTimeImage
                 tasks[buttonIndex].completed = false
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformTranslate(taskCheckboxImages[buttonIndex].transform, -2.9, 4)
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 0.58, 0.58)
@@ -407,24 +375,28 @@ class EmployeeEventCell: UITableViewCell {
             tasks[buttonIndex].saveInBackground()
         }
         
+        checkTasks()
+    }
+    
+    func checkTasks() {
         if allTasksCompleted()
         {
             // Set color of UI elements to gray
-            completionTimeLabel.textColor = darkGrayColor
-            cleanTimeLabel.textColor = darkGrayColor
-            clockIconImage.image = grayClockImage
-            dustpanIconImage.image = grayDustpanImage
+            completionTimeLabel.textColor = Colors.DarkGrey
+            cleanTimeLabel.textColor = Colors.DarkGrey
+            clockIconImage.image = Const.GrayClockImage
+            dustpanIconImage.image = Const.GrayDustpanImage
         }
         else
         {
             // Set color of UI elements to red
-            completionTimeLabel.textColor = redColor
-            cleanTimeLabel.textColor = redColor
-            clockIconImage.image = redClockImage
-            dustpanIconImage.image = redDustpanImage
+            completionTimeLabel.textColor = Colors.Red
+            cleanTimeLabel.textColor = Colors.Red
+            clockIconImage.image = Const.RedClockImage
+            dustpanIconImage.image = Const.RedDustpanImage
         }
+        
     }
-    
     
     func allTasksCompleted() -> Bool
     {

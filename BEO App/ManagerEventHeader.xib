@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerEventHeader" customModule="BEO_App" customModuleProvider="target">
             <connections>
+                <outlet property="arrowImage" destination="uAc-R0-NQ2" id="bDd-ay-9N6"/>
                 <outlet property="dateLabel" destination="mob-Pv-ZUU" id="YFo-gQ-5Mz"/>
             </connections>
         </placeholder>
@@ -26,7 +27,7 @@
                             <rect key="frame" x="0.0" y="1" width="375" height="28"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THURSDAY, MAY 19, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mob-Pv-ZUU">
-                                    <rect key="frame" x="10" y="6" width="155" height="16"/>
+                                    <rect key="frame" x="10" y="6" width="322" height="16"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" name="TFArrow-Light" family="TFArrow" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

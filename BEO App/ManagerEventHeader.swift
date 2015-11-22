@@ -11,7 +11,9 @@ import UIKit
 
 @IBDesignable class ManagerEventHeader : UIView {
     
+    @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
+    
     var view: UIView!
     
     required init?(coder aDecoder: NSCoder) {
