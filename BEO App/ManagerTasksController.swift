@@ -78,7 +78,7 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         let nib = UINib(nibName: Const.ManagerTasksTableCell, bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: Const.ManagerTasksTableCell)
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
         self.tableView.tableHeaderView = self.headerView
         self.tableView.reloadData()
     }

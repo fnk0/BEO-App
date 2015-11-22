@@ -85,6 +85,7 @@ class EmployeeEventCell: UITableViewCell {
     
     func updateAppearance(printDebug printDebug: Bool)
     {
+        // Set button size details that depend on other variables (cannot be initialized above before cell is fully instantiated)
         taskButtonHeight = taskLabel1Height + yPadding
         taskButtonWidth = Int(bounds.size.width)
         taskButtonCenterX = Int(center.x)
@@ -117,10 +118,6 @@ class EmployeeEventCell: UITableViewCell {
         taskClockImages = [UIImageView]()
         taskCheckboxImages = [UIImageView]()
         
-        // Set up a formatter to use for displaying the time a task is due
-        let dueTimeFormatter = NSDateFormatter()
-        dueTimeFormatter.dateFormat = "h:mma"
-        
         for index in 0..<tasks.count
         {
             // Create checkbox image
@@ -143,7 +140,7 @@ class EmployeeEventCell: UITableViewCell {
             // Create button for task
             let button2 = UIButton(frame: CGRectMake(0, 0, CGFloat(taskButtonWidth), CGFloat(taskButtonHeight)))
             button2.center.x = CGFloat(taskButtonCenterX)
-            button2.center.y = CGFloat( taskButtonCenterY + ((taskButtonHeight + yPadding) * index) )
+            button2.center.y = CGFloat( taskButtonCenterY + ((taskLabel1Height + yPadding) * index) )
             button2.addTarget(self, action: "checkBoxTap:", forControlEvents: UIControlEvents.TouchUpInside)
             self.addSubview(button2)
             taskButtons.append(button2)
@@ -154,14 +151,6 @@ class EmployeeEventCell: UITableViewCell {
             label1.center.y = CGFloat( taskLabel1CenterY + ((taskLabel1Height + yPadding) * index) )
             label1.textAlignment = NSTextAlignment.Left
             label1.font = UIFont.systemFontOfSize(12)
-            do
-            {
-                try tasks[0].fetchIfNeeded()
-            }
-            catch
-            {
-                print("Database read failed.");
-            }
             if tasks[index].completed
             {
                 let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
@@ -197,7 +186,7 @@ class EmployeeEventCell: UITableViewCell {
             label2.center.y = CGFloat( taskLabel2CenterY + ((taskLabel2Height + yPadding) * index) )
             label2.textAlignment = NSTextAlignment.Right
             label2.font = UIFont.systemFontOfSize(8)
-            label2.text = dueTimeFormatter.stringFromDate(tasks[index].due).lowercaseString
+            label2.text = getTimeRemaining(tasks[index].due).lowercaseString
             if tasks[index].completed
             {
                 label2.textColor = darkGrayColor
@@ -234,6 +223,51 @@ class EmployeeEventCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func getTimeRemaining(due: NSDate) -> String
+    {
+        // Set up formatters for extracting hours and minutes from the due date
+        let hourFormatter = NSDateFormatter()
+        hourFormatter.dateFormat = "h"
+        let minuteFormatter = NSDateFormatter()
+        minuteFormatter.dateFormat = "m"
+        
+        let dueHourStr = hourFormatter.stringFromDate(due)
+        let dueMinuteStr = minuteFormatter.stringFromDate(due)
+        let currentHourStr = hourFormatter.stringFromDate(NSDate())
+        let currentMinuteStr = minuteFormatter.stringFromDate(NSDate())
+        
+        let dueHour = Int(dueHourStr)!
+        let currentHour = Int(currentHourStr)!
+        
+        let dueMinute = Int(dueMinuteStr)! + dueHour * 60
+        let currentMinute = Int(currentMinuteStr)! + currentHour * 60
+        
+        var remainingMinutes = dueMinute - currentMinute
+        var remainingHours = 0
+        
+        while remainingMinutes >= 60
+        {
+            remainingHours += 1
+            remainingMinutes -= 60
+        }
+        
+        if remainingHours <= 0
+        {
+            if remainingMinutes > 0
+            {
+                return "\(remainingMinutes)m"
+            }
+        }
+        
+        if remainingMinutes <= 0
+        {
+            return "0m"
+        }
+        
+        return "\(remainingHours)h \(remainingMinutes)m"
     }
     
     
@@ -324,10 +358,10 @@ class EmployeeEventCell: UITableViewCell {
     
     func checkBoxTap(sender:UIButton!)
     {
-        print("BUTTON TAPPED")
         
         var buttonIndex = -1
         
+        // Find the data array index corresponding to the tapped button
         for index in 0..<taskButtons.count
         {
             if taskButtons[index] == sender
@@ -337,9 +371,10 @@ class EmployeeEventCell: UITableViewCell {
             }
         }
         
+        // Make sure index was found before proceeding
         if !(buttonIndex == -1)
         {
-            //if sender.imageView!.image == checkboxIncompleteImage
+            // Update the appearance of the task's row to indicate it's completion status
             if !tasks[buttonIndex].completed
             {
                 taskCheckboxImages[buttonIndex].image = checkboxCompleteImage
@@ -368,18 +403,13 @@ class EmployeeEventCell: UITableViewCell {
                 taskLabels[buttonIndex].attributedText = labelText
             }
             
-            do
-            {
-                try tasks[buttonIndex].save()
-            }
-            catch
-            {
-                print("Error: could not save task completion status")
-            }
+            // Save the completion status of the task
+            tasks[buttonIndex].saveInBackground()
         }
         
         if allTasksCompleted()
         {
+            // Set color of UI elements to gray
             completionTimeLabel.textColor = darkGrayColor
             cleanTimeLabel.textColor = darkGrayColor
             clockIconImage.image = grayClockImage
@@ -387,6 +417,7 @@ class EmployeeEventCell: UITableViewCell {
         }
         else
         {
+            // Set color of UI elements to red
             completionTimeLabel.textColor = redColor
             cleanTimeLabel.textColor = redColor
             clockIconImage.image = redClockImage
@@ -408,6 +439,7 @@ class EmployeeEventCell: UITableViewCell {
     }
     
     
+    // TO-DO: SEGUE TO THE INFO PAGE HERE
     @IBAction func infoButtonTap(sender: AnyObject)
     {
         print("Info button tapped")
