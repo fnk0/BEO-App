@@ -37,57 +37,33 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // Retrieve the events corresponding to the current employee from the database
         getEventsFromDatabase()
-
+        
     }
     
     
-    func getEventsFromDatabase()
-    {
+    func getEventsFromDatabase() {
         // Create a Parse query to retrieve all tasks corresponding to the current employee
         let query = Task.query()
-        //query?.whereKey("employee", equalTo: PFUser.currentUser()!)
-        
-        do
-        {
-            tasks = try query!.findObjects() as! [Task]
-        }
-        catch
-        {
-            print("Unable to retrieve events")
-        }
-        
-        organizeEvents()
-        
-        /*
-        // Execute the query
+        query?.whereKey("employee", equalTo: PFUser.currentUser()!)
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
-            if error == nil
-            {
+            if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) tasks.")
-                
-                if let objects = objects as? [Task]
-                {
+                //                print("Successfully retrieved \(objects!.count) beos.")
+                if let objects = objects as? [Task] {
                     self.tasks = objects
+                    self.organizeEvents()
                 }
-                
-                self.organizeEvents()
-            }
-            else
-            {
+            } else {
                 // Log details of the failure
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
-        */
-        
     }
     
     
-    func getTasksFromDatabase(forEvent forEvent: BEO) -> [Task]
-    {
+    func getTasksFromDatabase(forEvent forEvent: BEO) -> [Task] {
         var tasksToReturn = [Task]()
         let query = Task.query()
         query?.whereKey("beo", equalTo: forEvent)
@@ -95,19 +71,19 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         /*
         // Execute the query
         query!.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                // The find succeeded.
-                print("Successfully retrieved \(objects!.count) tasks.")
-                
-                if let objects = objects as? [Task] {
-                    tasksToReturn = objects
-                }
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
-            }
+        (objects: [PFObject]?, error: NSError?) -> Void in
+        
+        if error == nil {
+        // The find succeeded.
+        print("Successfully retrieved \(objects!.count) tasks.")
+        
+        if let objects = objects as? [Task] {
+        tasksToReturn = objects
+        }
+        } else {
+        // Log details of the failure
+        print("Error: \(error!) \(error!.userInfo)")
+        }
         }
         */
         

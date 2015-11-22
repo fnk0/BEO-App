@@ -12,7 +12,17 @@ import UIKit
 class ManagerTasksTableCell : UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var tasksView: UIStackView!
+    
+    var tasks : [Task] = [Task]() {
+        didSet {
+            for t in tasks {
+                let tv = SingleTask(frame: CGRect(x: 0, y: 0, width: 245, height: 30))
+                tv.task = t
+                tasksView.addArrangedSubview(tv)
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
