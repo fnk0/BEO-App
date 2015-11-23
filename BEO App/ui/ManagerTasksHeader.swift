@@ -31,8 +31,8 @@ import UIKit
                 self.timePeriod.text = beo.timePeriod
                 let p : TimePeriod = beo.timePeriod.getTimePeriod()
                 // I'll add some extra logic here later to change color and stuff
-                completeLabel.text = "Complete by \(p.end - Int(1)):45 \(p.period)"
-                cleanByLabel.text = "Clean by \(p.end + Int(1)):30 \(p.period)"
+                completeLabel.text = "Complete by \(p.start - Int(1)):45 \(p.period)"
+                cleanByLabel.text = "Clean by \(p.end):30 \(p.period)"
                 
                 let now = NSDate()
                 
