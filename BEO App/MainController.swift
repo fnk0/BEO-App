@@ -64,6 +64,12 @@ class MainController: UIViewController {
                     vc.beo = beo
                 }
             }
+        }  else if segue.identifier == "ShowInfo" {
+            if let vc = segue.destinationViewController as? InfoTableViewController {
+                if let beo = sender as? BEO {
+                    vc.event = beo
+                }
+            }
         }
     }
     

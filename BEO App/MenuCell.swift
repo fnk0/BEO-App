@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class MenuCell : UITableViewCell {
     
@@ -16,14 +17,26 @@ class MenuCell : UITableViewCell {
     @IBOutlet weak var dessertLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     
+    var tableView : UITableView?
+    
+    var loaded : Bool = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func setLabels(event: BEO) {
-        appetizerLabel.text = event.menu.appetizer
-        entreLabel.text = event.menu.entre
-        dessertLabel.text = event.menu.dessert
-        noteLabel.text = event.notes
+        if !loaded {
+            event.menu.fetchIfNeededInBackgroundWithBlock {
+                (obj: PFObject?, error: NSError?) -> Void in
+                let app = obj!["appetizer"] as? String
+                self.appetizerLabel.text = app
+                self.entreLabel.text = obj!["entre"] as? String
+                self.dessertLabel.text = obj!["dessert"] as? String
+                self.noteLabel.text = event.notes
+                self.loaded = true
+                self.tableView?.reloadData()
+            }
+        }
     }
 }

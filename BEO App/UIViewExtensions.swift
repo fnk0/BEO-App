@@ -1,8 +1,8 @@
 //
-//  UIViewExtension.swift
+//  UIViewExtensions.swift
 //  BEO App
 //
-//  Created by Marcus Gabilheri on 11/20/15.
+//  Created by Marcus Gabilheri on 11/22/15.
 //  Copyright © 2015 Team Black. All rights reserved.
 //
 

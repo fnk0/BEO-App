@@ -73,13 +73,13 @@ import UIKit
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //self.view = xibSetup("ManagerTasksHeader")
+        self.view = xibSetup("ManagerTasksHeader")
         self.addSubview(self.view)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //self.view = xibSetup("ManagerTasksHeader")
+        self.view = xibSetup("ManagerTasksHeader")
         self.addSubview(self.view)
     }
     

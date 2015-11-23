@@ -24,11 +24,11 @@ class LocationCell : UITableViewCell {
     }
     
     func setLabels(event: BEO){
-        dateLabel.text = String(event.date)
-        timeLabel.text = String(event.timePeriod)
-        placeLabel.text = event.location
-        expectingLabel.text = String(event.expecting)
-        rsvpLabel.text = String(event.rsvp)
+        dateLabel.text = event.date.formatDate()
+        timeLabel.text = event.timePeriod
+//        placeLabel.text = event.location
+        expectingLabel.text = "\(event.expecting)"
+        rsvpLabel.text = "\(event.rsvp)"
     }
     
     

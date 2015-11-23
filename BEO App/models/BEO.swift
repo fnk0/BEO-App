@@ -21,8 +21,8 @@ class BEO : PFObject, PFSubclassing {
     
     // This is mainly the part we care about
     @NSManaged var manager: PFUser
-    @NSManaged var expecting: Int
-    @NSManaged var rsvp: Int
+    @NSManaged var expecting: String
+    @NSManaged var rsvp: String
     @NSManaged var date: NSDate
     @NSManaged var due: NSDate
     @NSManaged var clean: NSDate
