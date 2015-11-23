@@ -49,14 +49,6 @@
                         <color key="textColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsY-Lu-aID">
-                        <rect key="frame" x="307" y="6" width="22" height="22"/>
-                        <animations/>
-                        <state key="normal" image="Edit_Icon_Blue.png"/>
-                        <connections>
-                            <action selector="edit:" destination="zbb-eZ-yBT" eventType="touchUpInside" id="sYO-Pk-WXa"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pha-fB-ol0">
                         <rect key="frame" x="345" y="6" width="22" height="22"/>
                         <animations/>
@@ -90,7 +82,6 @@
                 <outlet property="clockIcon" destination="H48-kC-TJL" id="PI4-8C-bMS"/>
                 <outlet property="completeLabel" destination="YfQ-cU-vyZ" id="Hbi-0j-52R"/>
                 <outlet property="dustpanIcon" destination="ecH-SW-9oX" id="M5g-es-gnE"/>
-                <outlet property="editButton" destination="GsY-Lu-aID" id="UCm-qG-yLq"/>
                 <outlet property="timeLabel" destination="sgg-3S-QJF" id="won-G4-kBR"/>
                 <outlet property="titleLabel" destination="q44-Ia-faQ" id="psZ-RO-fIF"/>
             </connections>
@@ -100,7 +91,6 @@
     <resources>
         <image name="Clock_Icon_Grey.png" width="31" height="30"/>
         <image name="Dustpan_Icon_Grey.png" width="29" height="32"/>
-        <image name="Edit_Icon_Blue.png" width="36" height="36"/>
         <image name="Info_Icon_Blue.png" width="38" height="38"/>
     </resources>
 </document>

@@ -13,7 +13,10 @@ import Parse
 class ListController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
+    // Avoids allocation of a TimeFormatter for each cell
+    let dueTimeFormatter = NSDateFormatter()
+
     var sections = [String]()
     var events = [ [BEO] ]()
     var eventsRaw = [BEO]()
@@ -24,6 +27,8 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dueTimeFormatter.dateFormat = "h:mma"
         
         // Register nibs for custom tableView cell and section header
         var nib = UINib(nibName: "EmployeeEventCell", bundle: nil)
@@ -165,24 +170,27 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         let cell = tableView.dequeueReusableCellWithIdentifier("employeeEventCell", forIndexPath: indexPath) as! EmployeeEventCell
         
-        cell.eventNameLabel.text = events[indexPath.section][indexPath.row].title
-        cell.eventTimeLabel.text = events[indexPath.section][indexPath.row].timePeriod
+        let beo = events[indexPath.section][indexPath.row]
+        
+        cell.eventNameLabel.text = beo.title
+        cell.eventTimeLabel.text = beo.timePeriod
         
         // Update the cell so the tasks will be drawn
         cell.tasks = [Task]()
-        for task in tasks where task.beo == events[indexPath.section][indexPath.row]
+        for task in tasks where task.beo == beo
         {
             cell.tasks.append(task)
         }
         
+        cell.beo = beo
+        cell.viewController = self.parentViewController
+        
         cell.updateAppearance(printDebug: false)
         
         // Set up a formatter to use for displaying the time the event is due
-        let dueTimeFormatter = NSDateFormatter()
-        dueTimeFormatter.dateFormat = "h:mma"
-        var formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].due).lowercaseString
+        var formattedTime = dueTimeFormatter.stringFromDate(beo.due).lowercaseString
         cell.completionTimeLabel.text = "Complete by \(formattedTime)"
-        formattedTime = dueTimeFormatter.stringFromDate(events[indexPath.section][indexPath.row].clean).lowercaseString
+        formattedTime = dueTimeFormatter.stringFromDate(beo.clean).lowercaseString
         cell.cleanTimeLabel.text = "Clean by \(formattedTime)"
         
         return cell

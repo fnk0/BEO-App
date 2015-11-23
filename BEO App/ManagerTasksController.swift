@@ -24,6 +24,7 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
             // Query for tasks on a BEO
             // Update the [Task] array
             // Refresh the tableView
+            headerView.viewController = self
             headerView.beo = beo
             fetchTasks(beo)
         }
@@ -160,6 +161,16 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.ShowInfo {
+            if let vc = segue.destinationViewController as? InfoTableViewController {
+                if let b = sender as? BEO {
+                    vc.event = b
+                }
+            }
+        }
     }
 }
 

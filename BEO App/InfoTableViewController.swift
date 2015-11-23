@@ -81,9 +81,9 @@ class InfoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 158
+            return 180
         case 1:
-            return 220
+            return 196
         case 2:
             return 48
         case 3:

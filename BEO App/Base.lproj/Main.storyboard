@@ -208,9 +208,6 @@
                     <navigationItem key="navigationItem" title="MY EVENTS" id="uv4-L1-KTw">
                         <barButtonItem key="rightBarButtonItem" image="ic_phone" id="0Ss-Ac-UXX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="qFL-CC-Y2Z" kind="push" identifier="TaskSegue" id="kuf-XG-d49"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -221,6 +218,7 @@
                         <outlet property="managerListContainer" destination="mx7-j8-whE" id="cMB-kX-vaC"/>
                         <outlet property="pageTitle" destination="uv4-L1-KTw" id="tzs-Pt-Khb"/>
                         <segue destination="CDX-S2-6Vg" kind="push" identifier="ShowInfo" id="ATY-VC-PbD"/>
+                        <segue destination="qFL-CC-Y2Z" kind="push" identifier="TaskSegue" id="url-Qc-epM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZA-Yi-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -702,6 +700,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="j7W-YK-8Nk" id="iPW-cn-osz"/>
+                        <segue destination="CDX-S2-6Vg" kind="push" identifier="ShowInfo" id="5jK-Z4-PWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEX-WY-UkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -718,6 +717,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" red="0.63921568630000003" green="0.56862745100000001" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -956,6 +956,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kOC-td-yos"/>
+        <segue reference="5jK-Z4-PWs"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

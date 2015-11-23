@@ -11,6 +11,9 @@ import Parse
 
 class EmployeeEventCell: UITableViewCell {
     
+    var viewController: UIViewController?
+    var beo: BEO?
+    
     // Storyboard outlets
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var eventTimeLabel: UILabel!
@@ -414,7 +417,9 @@ class EmployeeEventCell: UITableViewCell {
     // TO-DO: SEGUE TO THE INFO PAGE HERE
     @IBAction func infoButtonTap(sender: AnyObject)
     {
-        print("Info button tapped")
+        if let b = beo {
+            self.viewController?.performSegueWithIdentifier(Segue.ShowInfo, sender: b)
+        }
     }
     
 }
