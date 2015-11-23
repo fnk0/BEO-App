@@ -204,6 +204,12 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="MY EVENTS" id="uv4-L1-KTw">
+                        <barButtonItem key="leftBarButtonItem" image="ic_exit" id="wUr-Oa-BPg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signOut:" destination="Wry-Ii-zg2" id="FTE-iR-kpx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ic_phone" id="0Ss-Ac-UXX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -217,11 +223,12 @@
                         <outlet property="pageTitle" destination="uv4-L1-KTw" id="tzs-Pt-Khb"/>
                         <segue destination="CDX-S2-6Vg" kind="push" identifier="ShowInfo" id="ATY-VC-PbD"/>
                         <segue destination="qFL-CC-Y2Z" kind="push" identifier="TaskSegue" id="url-Qc-epM"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="SegueExit" modalTransitionStyle="flipHorizontal" id="9M6-v9-vGF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZA-Yi-zlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.5" y="1115.5"/>
+            <point key="canvasLocation" x="877.5" y="1115.5"/>
         </scene>
         <!--NEW ACCOUNT-->
         <scene sceneID="hzu-kM-xlC">
@@ -700,10 +707,11 @@
         <image name="WhiteBox_Employee.png" width="750" height="279"/>
         <image name="ic_arrow_left" width="18" height="31"/>
         <image name="ic_arrow_right" width="18" height="31"/>
+        <image name="ic_exit" width="32" height="32"/>
         <image name="ic_phone" width="20" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5jK-Z4-PWs"/>
+        <segue reference="ATY-VC-PbD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

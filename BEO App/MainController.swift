@@ -72,5 +72,10 @@ class MainController: UIViewController {
         }
     }
     
+    @IBAction func signOut(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("SegueExit", sender: nil)
+    }
+    
 }
 
