@@ -163,6 +163,11 @@ class ManagerTasksController : UIViewController, UITableViewDataSource, UITableV
         return true
     }
     
+    @IBAction func goBack(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Segue.ShowInfo {
             if let vc = segue.destinationViewController as? InfoTableViewController {

@@ -693,6 +693,12 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="TASKS" id="zha-7J-4T2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Hki-Oh-1EZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="goBack:" destination="qFL-CC-Y2Z" id="pjH-0b-vMJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="ic_phone" id="4j5-8l-mdI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -747,7 +753,17 @@
                             <outlet property="delegate" destination="CDX-S2-6Vg" id="g5u-ZD-sQb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zUH-Ny-zpO"/>
+                    <navigationItem key="navigationItem" title="Event Title" id="qIB-qO-Z0E">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Obb-Uv-4bH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="goBack:" destination="CDX-S2-6Vg" id="TBw-Wh-8SK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="ic_phone" id="boq-ZS-B0L">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmj-8T-5J6" userLabel="First Responder" sceneMemberID="firstResponder"/>

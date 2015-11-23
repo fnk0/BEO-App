@@ -14,6 +14,7 @@ class InfoTableViewController: UITableViewController {
     var event : BEO? {
         didSet {
             self.tableView.reloadData()
+            self.title = event?.title
         }
     }
     
@@ -92,6 +93,11 @@ class InfoTableViewController: UITableViewController {
             return 0
         }
     }
+    
+    @IBAction func goBack(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
