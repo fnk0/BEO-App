@@ -23,6 +23,7 @@ UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var emptyLabel: UILabel!
     
     var beos: [BEO] = []
+    var beoToShow = BEO()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,11 +149,21 @@ UITableViewDataSource, UITableViewDelegate {
     @IBAction func calendarRight(sender: UIButton) {
         self.calendarView.loadNextView()
     }
+    
+    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        beoToShow = beos[indexPath.row]
+        performSegueWithIdentifier("ShowInfo", sender: self)
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Segue.TaskSegue {
             if let vc = segue.destinationViewController as? ManagerTasksController {
                 vc.beo = self.beos[0]
+            }
+        }
+        else if segue.identifier == "ShowInfo" {
+            if let vc = segue.destinationViewController as? InfoTableViewController {
+                vc.event = self.beoToShow
             }
         }
     }

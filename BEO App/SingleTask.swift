@@ -38,13 +38,13 @@ class SingleTask : UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.view = xibSetup("SingleTask")
+        //self.view = xibSetup("SingleTask")
         self.addSubview(self.view)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.view = xibSetup("SingleTask")
+        //self.view = xibSetup("SingleTask")
         self.addSubview(self.view)
     }
     
