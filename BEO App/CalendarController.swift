@@ -151,21 +151,7 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        beoToShow = beos[indexPath.row]
-        performSegueWithIdentifier("ShowInfo", sender: self)
+        let b = beos[indexPath.row]
+        self.parentViewController!.performSegueWithIdentifier("ShowInfo", sender: b)
     }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == Segue.TaskSegue {
-            if let vc = segue.destinationViewController as? ManagerTasksController {
-                vc.beo = self.beos[0]
-            }
-        }
-        else if segue.identifier == "ShowInfo" {
-            if let vc = segue.destinationViewController as? InfoTableViewController {
-                vc.event = self.beoToShow
-            }
-        }
-    }
-    
 }

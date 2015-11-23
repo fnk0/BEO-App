@@ -88,12 +88,15 @@
 		2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */; };
 		2CF62D461BFFBCF60099C708 /* ManagerEventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */; };
 		2CF62D481BFFBD080099C708 /* ManagerEventHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */; };
+		2CF9A72E1C029A76008EE851 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9A72D1C029A76008EE851 /* UIViewExtensions.swift */; };
+		2CF9A7301C02A882008EE851 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9A72F1C02A882008EE851 /* ImageCell.swift */; };
+		2CF9A7321C02A88F008EE851 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF9A7311C02A88F008EE851 /* ImageCell.xib */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
-		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; settings = {ASSET_TAGS = (); }; };
-		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5514DA5B1BFE325B0084EED3 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA5A1BFE325B0084EED3 /* InfoCell.xib */; settings = {ASSET_TAGS = (); }; };
-		5514DA5D1BFE360D0084EED3 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5C1BFE360D0084EED3 /* InfoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5514DA5F1BFE37760084EED3 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; };
+		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; };
+		5514DA5B1BFE325B0084EED3 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA5A1BFE325B0084EED3 /* InfoCell.xib */; };
+		5514DA5D1BFE360D0084EED3 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5C1BFE360D0084EED3 /* InfoCell.swift */; };
+		5514DA5F1BFE37760084EED3 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */; };
 		554434C61BFB911A00BF503A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554434C51BFB911A00BF503A /* LocationCell.swift */; };
 		554434CB1BFB91A500BF503A /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554434CA1BFB91A500BF503A /* LocationCell.xib */; };
 		8556F48D1BD940C0006CA928 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8556F48C1BD940C0006CA928 /* HomeTableViewController.swift */; };
@@ -225,7 +228,9 @@
 		2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventListTableCell.swift; sourceTree = "<group>"; };
 		2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventHeader.swift; sourceTree = "<group>"; };
 		2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagerEventHeader.xib; sourceTree = "<group>"; };
-		2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		2CF9A72D1C029A76008EE851 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		2CF9A72F1C02A882008EE851 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		2CF9A7311C02A88F008EE851 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5514DA561BFD15B10084EED3 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		5514DA581BFE31FF0084EED3 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -376,7 +381,7 @@
 				2C11A2761BC11A8F00838E07 /* StringExtensions.swift */,
 				2CB37A691BE8A897003A6897 /* UIColorExtensions.swift */,
 				2CF62D311BFE3B000099C708 /* NSDateExtensions.swift */,
-				2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */,
+				2CF9A72D1C029A76008EE851 /* UIViewExtensions.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -527,6 +532,8 @@
 				5514DA5A1BFE325B0084EED3 /* InfoCell.xib */,
 				5514DA5C1BFE360D0084EED3 /* InfoCell.swift */,
 				5514DA5E1BFE37760084EED3 /* InfoTableViewController.swift */,
+				2CF9A72F1C02A882008EE851 /* ImageCell.swift */,
+				2CF9A7311C02A88F008EE851 /* ImageCell.xib */,
 			);
 			name = "Info Screen";
 			sourceTree = "<group>";
@@ -728,6 +735,7 @@
 				2C4014651BF9A8560067F693 /* Location_Picture.png in Resources */,
 				2C4014681BF9A8560067F693 /* Room_Setup_Picture.png in Resources */,
 				2CCE9CEC1BF2F83C002B4ABD /* Arrow_Left_Gold.png in Resources */,
+				2CF9A7321C02A88F008EE851 /* ImageCell.xib in Resources */,
 				2C11A2411BC0DE7200838E07 /* Main.storyboard in Resources */,
 				2CF62D431BFF6D4A0099C708 /* ManagerEventListTableCell.xib in Resources */,
 			);
@@ -824,9 +832,11 @@
 				2C11A27B1BC19CEE00838E07 /* Segues.swift in Sources */,
 				2C11A27D1BC1A95A00838E07 /* HomeController.swift in Sources */,
 				2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */,
+				2CF9A72E1C029A76008EE851 /* UIViewExtensions.swift in Sources */,
 				85FFC2E51BF07BD000B86BF2 /* EmployeeEventSectionHeader.swift in Sources */,
 				2CCE9CF61BF3AB52002B4ABD /* Food.swift in Sources */,
 				2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */,
+				2CF9A7301C02A882008EE851 /* ImageCell.swift in Sources */,
 				04A3D9521BFFBFE200DE5A19 /* ManagerTasksTableCell.swift in Sources */,
 				554434C61BFB911A00BF503A /* LocationCell.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
