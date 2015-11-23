@@ -15,10 +15,9 @@ class ManagerEventListTableCell : UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var completeLabel: UILabel!
     @IBOutlet weak var cleanLabel: UILabel!
-    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var clockIcon: UIImageView!
     @IBOutlet weak var dustpanIcon: UIImageView!
-    
+        
     var vc : UIViewController?
     
     var beo : BEO? {

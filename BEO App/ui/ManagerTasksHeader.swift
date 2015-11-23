@@ -22,6 +22,8 @@ import UIKit
     @IBOutlet weak var progressBar: ProgressBarView!
     @IBOutlet weak var progressLabel: UILabel!
     
+    var viewController: UIViewController?
+    
     var beo : BEO? {
         didSet {
             if let beo = beo {
@@ -83,10 +85,10 @@ import UIKit
         self.addSubview(self.view)
     }
     
-    @IBAction func edit(sender: AnyObject) {
-    }
-    
     @IBAction func info(sender: AnyObject) {
+        if let b = self.beo {
+            self.viewController?.performSegueWithIdentifier(Segue.ShowInfo, sender: b)
+        }
     }
     
 }

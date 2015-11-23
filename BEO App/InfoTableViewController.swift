@@ -14,6 +14,7 @@ class InfoTableViewController: UITableViewController {
     var event : BEO? {
         didSet {
             self.tableView.reloadData()
+            self.title = event?.title
         }
     }
     
@@ -81,9 +82,9 @@ class InfoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 158
+            return 180
         case 1:
-            return 220
+            return 196
         case 2:
             return 48
         case 3:
@@ -92,6 +93,11 @@ class InfoTableViewController: UITableViewController {
             return 0
         }
     }
+    
+    @IBAction func goBack(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.

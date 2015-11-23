@@ -44,7 +44,6 @@ class MainController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //TODO => Refactor this
     @IBAction func showListController(sender: UIButton) {
         showHideListController(false)
         sender.tintColor = Colors.DarkBlue
