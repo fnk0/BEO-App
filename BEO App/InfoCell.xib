@@ -6,11 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" id="3Wo-bU-Aqx">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" rowHeight="48" id="3Wo-bU-Aqx" customClass="InfoCell" customModule="BEO_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Wo-bU-Aqx" id="ufj-GF-X8Z">
-                <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="374" height="47.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBW-H7-eQh">
@@ -51,11 +51,19 @@
                         <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weU-bD-Gfq">
+                        <rect key="frame" x="-9" y="40" width="389" height="18"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
                 </subviews>
                 <animations/>
             </tableViewCellContentView>
             <animations/>
-            <point key="canvasLocation" x="237" y="274"/>
+            <connections>
+                <outlet property="setupLabel" destination="vy7-VD-QSl" id="ElI-ss-XLR"/>
+            </connections>
+            <point key="canvasLocation" x="237" y="276"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -7,10 +7,17 @@
 //
 
 import Foundation
-import Parse
+import UIKit
 
 class InfoCell: UITableViewCell {
+    
+    @IBOutlet weak var setupLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func setLabels(event: BEO) {
+        setupLabel.text = event.dinnerStyle
     }
 }

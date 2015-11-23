@@ -7,13 +7,28 @@
 //
 
 import Foundation
-import Parse
+import UIKit
 
 class LocationCell : UITableViewCell {
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var expectingLabel: UILabel!
+    @IBOutlet weak var rsvpLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    func setLabels(event: BEO){
+        dateLabel.text = String(event.date)
+        timeLabel.text = String(event.timePeriod)
+        placeLabel.text = event.location
+        expectingLabel.text = String(event.expecting)
+        rsvpLabel.text = String(event.rsvp)
     }
     
     

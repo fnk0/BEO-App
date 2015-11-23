@@ -7,11 +7,23 @@
 //
 
 import Foundation
-import Parse
+import UIKit
 
 class MenuCell : UITableViewCell {
-        
+    
+    @IBOutlet weak var appetizerLabel: UILabel!
+    @IBOutlet weak var entreLabel: UILabel!
+    @IBOutlet weak var dessertLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func setLabels(event: BEO) {
+        appetizerLabel.text = event.menu.appetizer
+        entreLabel.text = event.menu.entre
+        dessertLabel.text = event.menu.dessert
+        noteLabel.text = event.notes
     }
 }

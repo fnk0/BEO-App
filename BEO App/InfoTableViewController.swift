@@ -6,9 +6,12 @@
 //  Copyright © 2015 Team Black. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class InfoTableViewController: UITableViewController {
+    
+    var event = BEO()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class InfoTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*/ MARK: - Table view data source
+    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -38,8 +41,8 @@ class InfoTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
-    }*/
+        return 1
+    }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -47,40 +50,25 @@ class InfoTableViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
+            let cellL = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath) as! LocationCell
+            cellL.setLabels(event)
+            cell = cellL as UITableViewCell
             break;
         case 1:
-            cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath)
+            let cellM = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuCell
+            cellM.setLabels(event)
+            cell = cellM as UITableViewCell
             break;
         case 2:
-            cell = tableView.dequeueReusableCellWithIdentifier("InfoCell", forIndexPath: indexPath)
+            let cellI = tableView.dequeueReusableCellWithIdentifier("InfoCell", forIndexPath: indexPath) as! InfoCell
+            cellI.setLabels(event)
+            cell = cellI as UITableViewCell
             break;
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("InfoCell", forIndexPath: indexPath);
         }
-        //let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
-        
-        /*if let locationCell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath) {
-                let nib = UINib(nibName: "LocationCell", bundle: nil)
-                tableView.registerNib(nib, forCellReuseIdentifier: "LocationCell")
-                cell = locationCell
-        }
-        else if let menuCell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) {
-            let nib = UINib(nibName: "MenuCell", bundle: nil)
-            tableView.registerNib(nib, forCellReuseIdentifier: "MenuCell")
-            cell = menuCell
-        }
-        else if let infoCell = tableView.dequeueReusableCellWithIdentifier("InfoCell", forIndexPath: indexPath) {
-            let nib = UINib(nibName: "InfoCell", bundle: nil)
-            tableView.registerNib(nib, forCellReuseIdentifier: "InfoCell")
-            cell = infoCell
-        }*/
-        
-
         return cell
     }
-    
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

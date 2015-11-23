@@ -88,7 +88,6 @@
 		2CF62D441BFF6D4A0099C708 /* ManagerEventListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D411BFF6D4A0099C708 /* ManagerEventListTableCell.swift */; };
 		2CF62D461BFFBCF60099C708 /* ManagerEventHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D451BFFBCF60099C708 /* ManagerEventHeader.swift */; };
 		2CF62D481BFFBD080099C708 /* ManagerEventHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF62D471BFFBD080099C708 /* ManagerEventHeader.xib */; };
-		2CF62D4A1BFFC0F60099C708 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF62D491BFFC0F60099C708 /* UIViewExtension.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; settings = {ASSET_TAGS = (); }; };
 		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -308,6 +307,7 @@
 		2C11A23A1BC0DE7200838E07 /* BEO App */ = {
 			isa = PBXGroup;
 			children = (
+				2C11A2751BC11A8200838E07 /* extensions */,
 				2CF62D3E1BFF6D180099C708 /* ManagerEventList */,
 				2CF62D3B1BFEC0D20099C708 /* Manager */,
 				2C40143B1BF9A8560067F693 /* GD Assets */,
@@ -320,7 +320,6 @@
 				8556F48A1BD94028006CA928 /* Home */,
 				2C11A2791BC19CE500838E07 /* constants */,
 				2C11A2781BC19CB900838E07 /* Main */,
-				2C11A2751BC11A8200838E07 /* extensions */,
 				2C11A2701BC10C3800838E07 /* login */,
 				2C11A26B1BC0F06F00838E07 /* images */,
 				2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */,

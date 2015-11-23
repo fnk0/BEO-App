@@ -13,25 +13,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="LocationCell" rowHeight="145" id="FMC-wO-mB0" customClass="LocationCell" customModule="BEO_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="LocationCell" rowHeight="158" id="FMC-wO-mB0" customClass="LocationCell" customModule="BEO_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FMC-wO-mB0" id="9Eh-f8-3iv">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="157.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Location_Picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="giI-zD-Xwx">
                         <rect key="frame" x="-16" y="0.0" width="391" height="145"/>
                         <animations/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-Xr-ejG">
-                        <rect key="frame" x="166" y="51" width="40" height="21"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" name="TFArrow-Light" family="TFArrow" pointSize="21"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                        <color key="shadowColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-rS-GUn">
                         <rect key="frame" x="166" y="80" width="42" height="21"/>
                         <animations/>
@@ -76,6 +68,19 @@
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R0-Xr-ejG">
+                        <rect key="frame" x="166" y="51" width="40" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="TFArrow-Light" family="TFArrow" pointSize="21"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-xp-PcQ">
+                        <rect key="frame" x="-5" y="144" width="386" height="18"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -89,7 +94,14 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
-            <point key="canvasLocation" x="374.5" y="228.5"/>
+            <connections>
+                <outlet property="dateLabel" destination="I4k-av-Hfh" id="Pj3-nl-cYm"/>
+                <outlet property="expectingLabel" destination="VGp-Ht-AKX" id="CHh-b9-5b1"/>
+                <outlet property="placeLabel" destination="Dwd-rS-GUn" id="h6t-hy-qjg"/>
+                <outlet property="rsvpLabel" destination="yAx-Kh-Ubg" id="7Ol-Yz-Cho"/>
+                <outlet property="timeLabel" destination="3R0-Xr-ejG" id="mGR-ed-ZEt"/>
+            </connections>
+            <point key="canvasLocation" x="374.5" y="235"/>
         </tableViewCell>
     </objects>
     <resources>
