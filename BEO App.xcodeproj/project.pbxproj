@@ -130,7 +130,7 @@
 		04A3D9511BFFBFE200DE5A19 /* ManagerTasksTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTasksTableCell.swift; sourceTree = "<group>"; };
 		0BF743B10CC334A6F325756D /* Pods-BEO App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.debug.xcconfig"; sourceTree = "<group>"; };
 		1D031ADA42BAC4F845EF70B0 /* Pods-BEO App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEO App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEO App/Pods-BEO App.release.xcconfig"; sourceTree = "<group>"; };
-		2C11A2381BC0DE7200838E07 /* BEO App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEO App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C11A2381BC0DE7200838E07 /* Jumeirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jumeirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C11A23B1BC0DE7200838E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C11A23D1BC0DE7200838E07 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		2C11A2401BC0DE7200838E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 		2C11A2391BC0DE7200838E07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C11A2381BC0DE7200838E07 /* BEO App.app */,
+				2C11A2381BC0DE7200838E07 /* Jumeirah.app */,
 				2C11A24C1BC0DE7200838E07 /* BEO AppTests.xctest */,
 				2C11A2571BC0DE7200838E07 /* BEO AppUITests.xctest */,
 			);
@@ -586,7 +586,7 @@
 			);
 			name = "BEO App";
 			productName = "BEO App";
-			productReference = 2C11A2381BC0DE7200838E07 /* BEO App.app */;
+			productReference = 2C11A2381BC0DE7200838E07 /* Jumeirah.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2C11A24B1BC0DE7200838E07 /* BEO AppTests */ = {
@@ -988,7 +988,7 @@
 				INFOPLIST_FILE = "BEO App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jumeirah;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1004,7 +1004,7 @@
 				INFOPLIST_FILE = "BEO App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamblack.BEO-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jumeirah;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
