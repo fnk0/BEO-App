@@ -13,10 +13,7 @@ import Parse
 class ListController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
-    // Avoids allocation of a TimeFormatter for each cell
-    let dueTimeFormatter = NSDateFormatter()
-
+    
     var sections = [String]()
     var events = [ [BEO] ]()
     var eventsRaw = [BEO]()
@@ -27,8 +24,6 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dueTimeFormatter.dateFormat = "h:mma"
         
         // Register nibs for custom tableView cell and section header
         var nib = UINib(nibName: "EmployeeEventCell", bundle: nil)
@@ -188,9 +183,9 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.updateAppearance(printDebug: false)
         
         // Set up a formatter to use for displaying the time the event is due
-        var formattedTime = dueTimeFormatter.stringFromDate(beo.due).lowercaseString
+        var formattedTime = beo.due.formatTime().lowercaseString
         cell.completionTimeLabel.text = "Complete by \(formattedTime)"
-        formattedTime = dueTimeFormatter.stringFromDate(beo.clean).lowercaseString
+        formattedTime = beo.clean.formatTime().lowercaseString
         cell.cleanTimeLabel.text = "Clean by \(formattedTime)"
         
         return cell

@@ -90,6 +90,7 @@
 		2CF9A72E1C029A76008EE851 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9A72D1C029A76008EE851 /* UIViewExtensions.swift */; };
 		2CF9A7301C02A882008EE851 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9A72F1C02A882008EE851 /* ImageCell.swift */; };
 		2CF9A7321C02A88F008EE851 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF9A7311C02A88F008EE851 /* ImageCell.xib */; };
+		2CF9A7341C02E2AC008EE851 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9A7331C02E2AC008EE851 /* TimeUtil.swift */; };
 		467E7EE760F6A343062E7ECF /* Pods_BEO_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */; };
 		5514DA571BFD15B10084EED3 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5514DA561BFD15B10084EED3 /* MenuCell.xib */; };
 		5514DA591BFE31FF0084EED3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514DA581BFE31FF0084EED3 /* MenuCell.swift */; };
@@ -228,6 +229,7 @@
 		2CF9A72D1C029A76008EE851 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2CF9A72F1C02A882008EE851 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		2CF9A7311C02A88F008EE851 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		2CF9A7331C02E2AC008EE851 /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		38C63E40B23D732FFAC0AF94 /* Pods_BEO_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEO_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5514DA561BFD15B10084EED3 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		5514DA581BFE31FF0084EED3 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				2C11A27A1BC19CEE00838E07 /* Segues.swift */,
 				2CB37A6B1BE8A916003A6897 /* Colors.swift */,
 				2C7783251BFA87FD00D56A88 /* Const.swift */,
+				2CF9A7331C02E2AC008EE851 /* TimeUtil.swift */,
 			);
 			name = constants;
 			sourceTree = "<group>";
@@ -822,6 +825,7 @@
 				2CF62D2B1BFBAC3E0099C708 /* CalendarController.swift in Sources */,
 				2CF9A7301C02A882008EE851 /* ImageCell.swift in Sources */,
 				04A3D9521BFFBFE200DE5A19 /* ManagerTasksTableCell.swift in Sources */,
+				2CF9A7341C02E2AC008EE851 /* TimeUtil.swift in Sources */,
 				554434C61BFB911A00BF503A /* LocationCell.swift in Sources */,
 				2CB37A6C1BE8A916003A6897 /* Colors.swift in Sources */,
 				2CB37A6A1BE8A897003A6897 /* UIColorExtensions.swift in Sources */,

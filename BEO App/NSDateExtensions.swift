@@ -19,6 +19,11 @@ extension NSDate {
         return stringDate
     }
     
+    func formatTime() -> String {
+        uFormatter.dateFormat = "h:mma"
+        return uFormatter.stringFromDate(self)
+    }
+    
     func isGreaterThanDate(dateToCompare : NSDate) -> Bool {
         //Declare Variables
         var isGreater = false
