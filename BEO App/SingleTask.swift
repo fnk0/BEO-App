@@ -28,7 +28,7 @@ class SingleTask : UIView {
                     let myTitle = NSAttributedString(string: t.desc, attributes: attributes)
                     title.attributedText = myTitle
                 } else {
-                    title.textColor = UIColor.redColor()
+                    title.textColor = Colors.Red
                     title.text = t.desc
                 }
             }

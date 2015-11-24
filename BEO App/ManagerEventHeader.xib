@@ -9,7 +9,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerEventHeader" customModule="BEO_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerEventHeader" customModule="Jumeirah" customModuleProvider="target">
             <connections>
                 <outlet property="arrowImage" destination="uAc-R0-NQ2" id="bDd-ay-9N6"/>
                 <outlet property="dateLabel" destination="mob-Pv-ZUU" id="YFo-gQ-5Mz"/>

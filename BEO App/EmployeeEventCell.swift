@@ -237,7 +237,7 @@ class EmployeeEventCell: UITableViewCell {
         if remainingMinutes > 0 {
             returnStr += "\(remainingMinutes)m"
         }
-
+        
         
         if remainingMinutes <= 0 && remainingHours <= 0 && remainingDays <= 0 {
             return "0m"
@@ -373,10 +373,7 @@ class EmployeeEventCell: UITableViewCell {
                 tasks[buttonIndex].completed = false
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformTranslate(taskCheckboxImages[buttonIndex].transform, -2.9, 4)
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 0.58, 0.58)
-                
-                let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleNone.rawValue ]
-                let labelText = NSAttributedString(string: String(), attributes: stringAttributes)
-                taskLabels[buttonIndex].attributedText = labelText
+                taskLabels[buttonIndex].text = tasks[buttonIndex].desc
             }
             
             // Save the completion status of the task

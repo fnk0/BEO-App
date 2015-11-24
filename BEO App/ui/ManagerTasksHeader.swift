@@ -29,23 +29,18 @@ import UIKit
             if let beo = beo {
                 self.title.text = beo.title
                 self.timePeriod.text = beo.timePeriod
-                let p : TimePeriod = beo.timePeriod.getTimePeriod()
-                // I'll add some extra logic here later to change color and stuff
                 
                 completeLabel.text = "Complete by \(beo.due.formatTime().lowercaseString)"
                 cleanByLabel.text = "Clean by \(beo.clean.formatTime().lowercaseString)"
                 
                 let now = NSDate()
                 
-                if beo.due.isGreaterThanDate(now) {
-                    self.completeLabel.textColor = UIColor.redColor()
+                if beo.due.isLessThanDate(now) {
+                    self.completeLabel.textColor = Colors.Red
                     clockIcon.image = Const.RedClockImage
-                    let hours = p.end - p.start
-                    // Hours * 60 minutes * 60 seconds + (30 minutes * 60 seconds)
-                    let interval = hours * 60 * 60 + (30 * 60)
-                    let end = self.beo?.date.dateByAddingTimeInterval(Double(interval))
-                    if now.isGreaterThanDate(end!) {
-                        cleanByLabel.textColor = UIColor.redColor()
+                    let end = self.beo?.clean
+                    if now.isLessThanDate(end!) {
+                        cleanByLabel.textColor = Colors.Red
                         dustpanIcon.image = Const.RedDustpanImage
                     }
                 }
