@@ -35,11 +35,11 @@ import UIKit
                 
                 let now = NSDate()
                 
-                if beo.due.isLessThanDate(now) {
+                if beo.due.isGreaterThanDate(now) && beo.clean.isGreaterThanDate(now) {
                     self.completeLabel.textColor = Colors.Red
                     clockIcon.image = Const.RedClockImage
                     let end = self.beo?.clean
-                    if now.isLessThanDate(end!) {
+                    if now.isGreaterThanDate(end!) {
                         cleanByLabel.textColor = Colors.Red
                         dustpanIcon.image = Const.RedDustpanImage
                     }

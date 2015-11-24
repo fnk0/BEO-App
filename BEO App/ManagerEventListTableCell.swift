@@ -27,6 +27,21 @@ class ManagerEventListTableCell : UITableViewCell {
                 timeLabel.text = beo.timePeriod
                 completeLabel.text = "Complete by \(beo.due.formatTime().lowercaseString)"
                 cleanLabel.text = "Clean by \(beo.clean.formatTime().lowercaseString)"
+                
+                let now = NSDate()
+                
+                if beo.due.isGreaterThanDate(now) && beo.clean.isGreaterThanDate(now) {
+                    self.completeLabel.textColor = Colors.Red
+                    clockIcon.image = Const.RedClockImage
+                    let end = beo.clean
+                    if now.isGreaterThanDate(beo.due) && now.isLessThanDate(end) {
+                        cleanLabel.textColor = Colors.Red
+                        dustpanIcon.image = Const.RedDustpanImage
+                    }
+                }
+                completeLabel.sizeToFit()
+                cleanLabel.sizeToFit()
+                
             }
         }
     }
