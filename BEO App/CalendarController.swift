@@ -59,7 +59,6 @@ UITableViewDataSource, UITableViewDelegate {
         let end: NSDate = cal.dateBySettingHour(23, minute: 59, second: 59, ofDate: date, options: NSCalendarOptions())!
         query?.whereKey(Const.DATE, greaterThan: start)
         query?.whereKey(Const.DATE, lessThan: end)
-        
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             

@@ -197,18 +197,17 @@ class EmployeeEventCell: UITableViewCell {
     }
     
     
-    func getTimeRemaining(due: NSDate) -> String
-    {
-        // Set up formatters for extracting hours and minutes from the due date
-        let hourFormatter = NSDateFormatter()
-        hourFormatter.dateFormat = "h"
-        let minuteFormatter = NSDateFormatter()
-        minuteFormatter.dateFormat = "m"
+    func getTimeRemaining(due: NSDate) -> String {
+        let date = NSDate()
+        let dueHourStr = due.getHour()
+        let dueMinuteStr = due.getMinute()
+        let dueDayStr = due.getDay()
+        let currentHourStr = date.getHour()
+        let currentMinuteStr = date.getMinute()
+        let currentDayStr = date.getDay()
         
-        let dueHourStr = hourFormatter.stringFromDate(due)
-        let dueMinuteStr = minuteFormatter.stringFromDate(due)
-        let currentHourStr = hourFormatter.stringFromDate(NSDate())
-        let currentMinuteStr = minuteFormatter.stringFromDate(NSDate())
+        let dueDay = Int(dueDayStr)!
+        let currentDay = Int(currentDayStr)!
         
         let dueHour = Int(dueHourStr)!
         let currentHour = Int(currentHourStr)!
@@ -216,29 +215,35 @@ class EmployeeEventCell: UITableViewCell {
         let dueMinute = Int(dueMinuteStr)! + dueHour * 60
         let currentMinute = Int(currentMinuteStr)! + currentHour * 60
         
+        let remainingDays = dueDay - currentDay
         var remainingMinutes = dueMinute - currentMinute
         var remainingHours = 0
         
-        while remainingMinutes >= 60
-        {
+        while remainingMinutes >= 60 {
             remainingHours += 1
             remainingMinutes -= 60
         }
         
-        if remainingHours <= 0
-        {
-            if remainingMinutes > 0
-            {
-                return "\(remainingMinutes)m"
-            }
+        var returnStr = ""
+        
+        if remainingDays > 0 {
+            returnStr += "\(remainingDays)d "
         }
         
-        if remainingMinutes <= 0
-        {
+        if remainingHours > 0 {
+            returnStr += "\(remainingHours)h "
+        }
+        
+        if remainingMinutes > 0 {
+            returnStr += "\(remainingMinutes)m"
+        }
+
+        
+        if remainingMinutes <= 0 && remainingHours <= 0 && remainingDays <= 0 {
             return "0m"
         }
         
-        return "\(remainingHours)h \(remainingMinutes)m"
+        return returnStr
     }
     
     
@@ -370,7 +375,7 @@ class EmployeeEventCell: UITableViewCell {
                 taskCheckboxImages[buttonIndex].transform = CGAffineTransformScale(taskCheckboxImages[buttonIndex].transform, 0.58, 0.58)
                 
                 let stringAttributes = [ NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleNone.rawValue ]
-                let labelText = NSAttributedString(string: String(tasks[buttonIndex].desc), attributes: stringAttributes)
+                let labelText = NSAttributedString(string: String(), attributes: stringAttributes)
                 taskLabels[buttonIndex].attributedText = labelText
             }
             

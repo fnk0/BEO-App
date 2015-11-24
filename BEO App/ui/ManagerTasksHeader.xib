@@ -10,7 +10,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerTasksHeader" customModule="BEO_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerTasksHeader" customModule="Jumeirah" customModuleProvider="target">
             <connections>
                 <outlet property="cleanByLabel" destination="Ylv-fr-u6q" id="Swq-dF-qKp"/>
                 <outlet property="clockIcon" destination="Geo-pP-1gJ" id="sgy-gi-KSE"/>
@@ -66,7 +66,7 @@
                                 <action selector="info:" destination="-1" eventType="touchUpInside" id="EcJ-bN-9cm"/>
                             </connections>
                         </button>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRt-7D-X9c" customClass="ProgressBarView" customModule="BEO_App" customModuleProvider="target">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRt-7D-X9c" customClass="ProgressBarView" customModule="Jumeirah" customModuleProvider="target">
                             <rect key="frame" x="10" y="80" width="355" height="15"/>
                             <animations/>
                             <userDefinedRuntimeAttributes>

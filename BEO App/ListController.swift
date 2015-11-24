@@ -208,7 +208,7 @@ class ListController : UIViewController, UITableViewDelegate, UITableViewDataSou
     
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return 80
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

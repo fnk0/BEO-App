@@ -16,6 +16,7 @@ class ManagerTasksTableCell : UITableViewCell {
     
     var tasks : [Task] = [Task]() {
         didSet {
+            tasks.sortInPlace { $0.due.compare($1.due) == .OrderedAscending }
             for t in tasks {
                 let tv = SingleTask(frame: CGRect(x: 0, y: 0, width: 245, height: 30))
                 tv.task = t

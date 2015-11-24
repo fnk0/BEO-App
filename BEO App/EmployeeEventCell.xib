@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeeEventCell" rowHeight="129" id="cJG-2D-Y5O" customClass="EmployeeEventCell" customModule="BEO_App" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeeEventCell" rowHeight="129" id="cJG-2D-Y5O" customClass="EmployeeEventCell" customModule="Jumeirah" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="340" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJG-2D-Y5O" id="tHK-fI-BxE">
@@ -121,7 +121,7 @@
                 <outlet property="infoButton" destination="rX8-Cs-jMA" id="RLc-jy-pDE"/>
                 <outlet property="separatorView" destination="1bK-xs-lWn" id="5Va-8o-Zac"/>
             </connections>
-            <point key="canvasLocation" x="795" y="918.5"/>
+            <point key="canvasLocation" x="813" y="919.5"/>
         </tableViewCell>
     </objects>
     <resources>

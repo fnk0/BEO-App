@@ -25,7 +25,6 @@ class ManagerEventListTableCell : UITableViewCell {
             if let beo = beo {
                 titleLabel.text = beo.title
                 timeLabel.text = beo.timePeriod
-                
                 completeLabel.text = "Complete by \(beo.due.formatTime().lowercaseString)"
                 cleanLabel.text = "Clean by \(beo.clean.formatTime().lowercaseString)"
             }

@@ -24,6 +24,21 @@ extension NSDate {
         return uFormatter.stringFromDate(self)
     }
     
+    func getDay() -> String {
+        uFormatter.dateFormat = "d"
+        return uFormatter.stringFromDate(self)
+    }
+    
+    func getHour() -> String {
+        uFormatter.dateFormat = "h"
+        return uFormatter.stringFromDate(self)
+    }
+    
+    func getMinute() -> String {
+        uFormatter.dateFormat = "m"
+        return uFormatter.stringFromDate(self)
+    }
+    
     func isGreaterThanDate(dateToCompare : NSDate) -> Bool {
         //Declare Variables
         var isGreater = false

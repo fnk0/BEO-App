@@ -18,6 +18,8 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
     var sections = [NSDate]()
     var beos: [NSDate: [BEO]] = [NSDate: [BEO]]()
     
+    let manager = PFUser.currentUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +49,7 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
         let end: NSDate = cal.dateBySettingHour(23, minute: 59, second: 59, ofDate: date, options: NSCalendarOptions())!
         query?.whereKey(Const.DATE, greaterThan: start)
         query?.whereKey(Const.DATE, lessThan: end)
-        
+        query?.whereKey("manager", equalTo: self.manager!)
         query!.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
@@ -71,7 +73,15 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.sections.count
+        var count = 0
+        for s in self.sections {
+            if let bs = self.beos[s] {
+                if bs.count > 0 {
+                    count++
+                }
+            }
+        }
+        return count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,10 +98,11 @@ class ManagerEventListController : UIViewController, UITableViewDataSource, UITa
                 let headerView = ManagerEventHeader(frame: CGRect(x: 0, y: 0, width: 375, height: 30))
                 headerView.dateLabel.text = sections[section].formatDate()
                 headerView.dateLabel.sizeToFit()
+                headerView.arrowImage.hidden = true
                 return headerView
             }
         }
-        return UIView(frame: CGRectZero)
+        return nil
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

@@ -9,9 +9,9 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerTasksTableCell" customModule="BEO_App" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagerTasksTableCell" customModule="Jumeirah" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ManagerTasksTableCell" rowHeight="61" id="CCq-pa-TdP" customClass="ManagerTasksTableCell" customModule="BEO_App" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ManagerTasksTableCell" rowHeight="61" id="CCq-pa-TdP" customClass="ManagerTasksTableCell" customModule="Jumeirah" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CCq-pa-TdP" id="IC7-Uu-1dr">
@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marcus G." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPS-Qn-bL5">
-                        <rect key="frame" x="10" y="8" width="100" height="24"/>
+                        <rect key="frame" x="4" y="5" width="90" height="24"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.20784313730000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="uKY-QF-Ihr">
-                        <rect key="frame" x="113" y="10" width="265" height="53"/>
+                        <rect key="frame" x="95" y="5" width="280" height="56"/>
                         <animations/>
                     </stackView>
                 </subviews>
