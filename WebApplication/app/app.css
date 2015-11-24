@@ -1,0 +1,106 @@
+/* app css stylesheet */
+
+body {
+    background: url("images/bg.png");
+}
+
+select {
+    background: ghostwhite;
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+}
+
+.white-t {
+    color: whitesmoke;
+}
+
+a.ir-logo {
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 0;
+    width: 159px;
+    height: 60px;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background: url("images/Logo_small.png");
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.sixty-p {
+    width: 60%;
+    margin: auto;
+}
+
+#input .inputs {
+    width: 80%;
+}
+
+#input .form-control-wrapper {
+    margin: 30px 0;
+}
+
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar.navbar, .navbar-default.navbar  {
+    background-color: transparent;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading{
+    background: #00356e !important;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(240, 240, 240, 0.9) !important;
+}
+
+.btn-warning:not(.btn-link):not(.btn-flat) {
+    background-color: #a39165;
+}
+
+.btn-warning:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #a18040;
+}

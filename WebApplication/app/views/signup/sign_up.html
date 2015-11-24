@@ -1,0 +1,41 @@
+<div ng-controller="SignUpController as ctrl" class="sixty-p">
+    <div class="panel panel-primary panel-transparent login-panel text-center center">
+        <div class="panel-heading">
+            <h3>New Account</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-group">
+                <p>&nbsp;</p>
+                <div class="col-md-6 center">
+                    <div class="form-group has-success center">
+                        <input type="text" id="username" class="form-control floating-label"  ng-model="user.username" placeholder="Email" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="name" class="form-control floating-label"  ng-model="user.name" placeholder="Name" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="lastName" class="form-control floating-label"  ng-model="user.lastName" placeholder="Last Name" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input class="form-control floating-label" id="password" ng-model="user.password" type="password" placeholder="Password">
+                    </div>
+                    <div class="form-group has-success center">
+                        <input class="form-control floating-label" id="confirm_password" ng-model="user.confirm_password" type="password" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group has-success center">
+                        <input class="form-control floating-label" id="phone_number" ng-model="user.phone_number" type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group has-success center">
+                        <input class="form-control floating-label" id="is_manager" ng-model="user.isManager" type="checkbox" placeholder="Is Manager?">
+                    </div>
+
+                    <button type="submit" ng-click="submit()" class="btn btn-warning btn-raised"> Create Account</button>
+                </div>
+            </form>
+        </div>
+        <p class="text-warning"> {{ message }} </p>
+    </div>
+</div>

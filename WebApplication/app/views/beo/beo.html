@@ -1,0 +1,99 @@
+<div ng-controller="BeoController as ctrl">
+
+    <div class="panel panel-primary panel-transparent login-panel text-center center">
+        <div class="panel-heading">
+            <h3>New BEO <span><h4>Please fill in ALL fields</h4></span></h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-group">
+                <p>&nbsp;</p>
+
+                <div class="col-md-6 center">
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="title" class="form-control floating-label" ng-model="beo.title"
+                               placeholder="Title">
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="expecting" class="form-control floating-label" ng-model="beo.expecting"
+                               placeholder="Expecting (NUMBER OF TOTAL EXPECTING PEOPLE)">
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="rsvp" class="form-control floating-label" ng-model="beo.rsvp"
+                               placeholder="RSVP (NUMBER OF PEOPLE WHO RSVP ALREADY)">
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="notes" class="form-control floating-label" ng-model="beo.notes"
+                               placeholder="Notes">
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="timePeriod" class="form-control floating-label" ng-model="beo.timePeriod"
+                               placeholder="Time Period - Ex: 6-8am">
+                    </div>
+
+                    <div class="row form-group has-success col-md-12">
+                        <div class="col-md-3">
+                            <label for="date">Date:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="datetime-local" id="date" class="form-control" ng-model="beo.date"
+                                   placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group has-success center row">
+                        <div class="col-md-3">
+                            <label for="due">Due:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="datetime-local" id="due" class="form-control floating-label col-md-9"
+                                   ng-model="beo.due" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success center row">
+                        <div class="col-md-3">
+                            <label for="due">Clean:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="datetime-local" id="clean" class="form-control floating-label col-md-9"
+                                   ng-model="beo.clean" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group has-success center row">
+                        <h4 class="col-md-3">Menu: </h4>
+                        <select ng-model='beo.menu' id="menu"
+                                ng-options='menu.get("entre") for menu in menus' class="col-md-9">
+                            <!--<option selected disabled>Menu</option>-->
+                        </select>
+                    </div>
+
+
+                    <div class="form-group has-success center row">
+                        <h4 class="col-md-3">Style: </h4>
+                        <select ng-model='beo.dinnerStyle' id="dinnerStyle"
+                                ng-options='style for style in dinnerStyles' class="col-md-9">
+                        </select>
+                    </div>
+
+                    <div class="form-group has-success center row">
+                        <h4 class="col-md-3">Manager: </h4>
+                        <select ng-model='beo.manager' id="manager"
+                                ng-options='getManagerName(manager) for manager in managers' class="col-md-9">
+                        </select>
+                    </div>
+
+                    <!--<pre>BEO = {{beo | json}}</pre>-->
+
+                    <button type="submit" ng-click="submit()" class="btn btn-warning btn-raised"> Create BEO</button>
+                </div>
+            </form>
+        </div>
+        <p class="text-warning"> {{ message }} </p>
+    </div>
+
+</div>

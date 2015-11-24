@@ -1,0 +1,39 @@
+<div ng-controller="MenuController as ctrl">
+
+    <div class="panel panel-primary panel-transparent login-panel text-center center">
+        <div class="panel-heading">
+            <h3>New Menu</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-group">
+                <p>&nbsp;</p>
+                <div class="col-md-6 center">
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="appetizer" class="form-control floating-label"  ng-model="menu.appetizer" placeholder="Appetizer" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="entre" class="form-control floating-label"  ng-model="menu.entre" placeholder="Entre" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <input type="text" id="dessert" class="form-control floating-label"  ng-model="menu.dessert" placeholder="Dessert" >
+                    </div>
+
+                    <div class="form-group has-success center">
+                        <label for="food_type" class="col-md-3">Food Type: </label>
+                        <select ng-options="food for food in options" class="col-md-9" id="food_type" ng-model="menu.typeOfFood"></select>
+                    </div>
+                    <p>&nbsp;</p>
+
+                    <!--<pre>menu = {{menu | json}}</pre>-->
+
+                    <button type="submit" ng-click="submit()" class="btn btn-warning btn-raised"> Create Menu</button>
+                </div>
+            </form>
+        </div>
+        <p class="text-warning"> {{ message }} </p>
+    </div>
+
+</div>
